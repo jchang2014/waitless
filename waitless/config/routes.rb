@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'home/index'
+	root 'home#index'
 
   scope constraints: {format: 'json'}, defaults: {format: 'json'} do
 
