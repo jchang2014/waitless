@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   # scope constraints: {format: 'json'}, defaults: {format: 'json'} do
 
-  	# resource :session, only: [:create, :show, :destroy]
+  	resource :session, only: [:create, :show, :destroy]
 
 	  resources :users do
 	    resources :reservations
