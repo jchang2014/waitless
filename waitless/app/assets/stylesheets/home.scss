@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+#map-canvas {
+  height: 400px;
+}
+
 nav {
   background-color: #4CAF50;
   display: flex;
@@ -64,8 +68,6 @@ main {
 }
 
 .google-maps {
-  border: 1px dotted #B6B6B6;
-  height: 400px;
   margin: 10px 0px 0px 0px;
 }
 
