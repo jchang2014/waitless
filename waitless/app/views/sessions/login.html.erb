@@ -1,15 +1,15 @@
 <div class="container">
 
-  <% if @errors %>
-  <div class="error">
-    <p class="error_message">ERROR:
-      <%= @errors %>
-    </p>
-  </div>
-  <% end %>
+
 
   <h1>Login</h1>
-
+ <% if @errors %>
+  <p class="error_message">
+    <% @errors.each do |error| %>
+      <div class="error"><%= error %></div>
+    <% end %>
+  </p>
+<% end %>
   <%= form_tag('/login', method: 'post')do %>
 
   Email: <%= text_field_tag :email %>

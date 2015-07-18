@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
 
   def index
+    if !current_user
+      redirect_to '/'
+    end
   end
 
   def show
@@ -15,7 +18,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to users_path
     else
-      puts "WTF" * 100
+      @errors = @user.errors.full_messages
+      render :new
     end
   end
 

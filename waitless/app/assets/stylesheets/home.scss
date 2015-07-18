@@ -9,7 +9,13 @@ body {
 }
 
 #map-canvas {
-  height: 400px;
+  height: 600px;
+}
+
+.separator {
+  background-color: #4CAF50;
+  height: 40px;
+  margin-top: 10px;
 }
 
 nav {
@@ -87,6 +93,7 @@ main {
 }
 
 .home-info {
+  border-right: 1px solid #B6B6B6;
   display: inline-block;
   width: 50%;
   padding: 10px;
