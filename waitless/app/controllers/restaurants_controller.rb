@@ -10,8 +10,10 @@ class RestaurantsController < ApplicationController
   		@results.push(
   		{
 	  	name: "#{@business['name']}",
-	  	location: "#{@business['location']['address'][0]}",
+	  	location: @business['location']['display_address'],
 	  	image: "#{@business['image_url']}",
+	  	rating: @business['rating_img_url'],
+	  	categories: @business['categories'],
 	  	latitude: @business['location']['coordinate']['latitude'],
 	  	longitude: @business['location']['coordinate']['longitude']
 	  	})
