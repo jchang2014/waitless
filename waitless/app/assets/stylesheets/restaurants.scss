@@ -2,7 +2,72 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
  .restaurant-results h1{
+  color: #004b00;
   font-family: helvetica;
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
- }
+}
+
+
+.result-wrapper {
+  color: #727272;
+  display: flex;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.result-img {
+  border: 1px solid black;
+  display: inline-block;
+  width: 33%;
+}
+
+.result-info {
+  display: inline-block;
+  line-height: 20px;
+  padding: 10px;
+  width: 33%;
+}
+
+.result-wait-time {
+  border: 1px solid #CD9B9B;
+  border-radius: 20px;
+  color: #811212;
+  display: inline-block;
+  padding: 5px;
+  width: 33%;
+}
+
+.result-wait-time-text0 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.result-wait-time-number {
+  font-size: 150px;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.result-wait-time-text1 {
+  font-size: 20px;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.result-info label{
+  font-weight: bold;
+}
+
+.result-nav {
+  display: block;
+  width:100%;
+}
+
+.result-button a{
+  border: 1px solid #000000;
+  border-radius: 10px;
+  text-decoration:none;
+}
