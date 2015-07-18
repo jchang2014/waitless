@@ -1,0 +1,23 @@
+<div class="container">
+
+  <% if @errors %>
+  <div class="error">
+    <p class="error_message">ERROR:
+      <%= @errors %>
+    </p>
+  </div>
+  <% end %>
+
+  <h1>Login</h1>
+
+  <%= form_tag '/login' do %>
+
+  Email: <%= text_field_tag :email %>
+  Password: <%= password_field_tag :password %>
+  <%= submit_tag "Submit" %>
+
+  <% end %>
+
+  <div class="login_logout">
+    (or <a href='/users/new'>signup</a>)
+  </div>

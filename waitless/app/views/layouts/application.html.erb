@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Waitless</title>
+  <title>WaitLess</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!-- Google maps scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
 </head>
 <body>
 
-<%= yield %>
+<nav>
+
+  <div class="nav-title">WaitLess</div>
+
+  <div class="user-login">
+     |
+     <%= link_to "Login", session_path %>
+       |
+   <%= link_to "Signup", new_user_path %>
+  </div>
+
+</nav>
+
+<main>
+	<%= yield %>
+</main>
 
 </body>
 </html>
