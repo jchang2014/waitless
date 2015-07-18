@@ -1,3 +1,75 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #FFFFFF;
+  font-family: helvetica;
+  margin: 0;
+}
+
+nav {
+  background-color: #4CAF50;
+  display: flex;
+  font-family: helvetica;
+  font-size: 20px;
+  margin: 0;
+  padding: 15px;
+}
+
+.nav-title {
+  display:inline-block;
+  color: #F5F5F5;
+  font-family: Inconsolata;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.user-login {
+  color: #8BC34A;
+  display:inline-block;
+  font-family: helvetica;
+  font-size: 15px;
+  text-align: right;
+  text-decoration: none;
+  width: 50%;
+}
+.user-login a{
+  color:#BCED91;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.google-maps {
+  border: 1px dotted #B6B6B6;
+  height: 400px;
+  margin: 10px 0px 0px 0px;
+}
+
+.home-wrapper {
+  display: flex;
+  padding: 10px;
+}
+
+.home-wrapper h1 {
+  color: #586949;
+  font-size: 50px;
+}
+
+.home-info {
+  display: inline-block;
+  width: 50%;
+}
+
+.home-explore {
+  display: inline-block;
+  width: 50%;
+}
