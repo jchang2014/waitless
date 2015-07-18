@@ -5,10 +5,29 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Google maps scripts -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <style type="text/css">
+    #map-canvas {
+      height: 400px;
+    }
+  </style>
 </head>
 <body>
 
-<%= yield %>
+<nav>
+  <div class="nav-title">WaitLess</div>
+  <div class="user-login">
+    <a href="#">Login</a> |
+    <a href="#">Signup</a>
+  </div>
+
+</nav>
+
+<main>
+	<%= yield %>
+</main>
 
 </body>
 </html>
