@@ -1,2 +1,17 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="google-maps">
+</div>
+
+<div class="info">
+</div>
+
+<div class="explore">
+
+	<div class="search">
+	<%= form_tag(restaurants_path, :method => "get", id:"search-form") do %>
+		<%= text_field_tag :search, params[:search], placeholder: "Mexican, Philz Coffee, etc." %>
+		<%= submit_tag "Search" %>
+	<% end %>
+
+	</div>
+
+</div>
