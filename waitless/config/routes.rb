@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
 	resource :home, only: [:search, :show]
 
+
   # scope constraints: {format: 'json'}, defaults: {format: 'json'} do
+
 
   	resource :session, only: [:create, :show, :destroy]
 
@@ -17,6 +19,8 @@ Rails.application.routes.draw do
 	  resources :types do
 	    resources :restaurants
 	  end
+
 	# end
+
 
 end
