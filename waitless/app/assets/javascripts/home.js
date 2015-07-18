@@ -48,6 +48,8 @@ $(document).on("page:change", function() {
   }
 });
 
+var map;
+var infowindow;
 
 //Google maps function definition
 function createMap(lat, longit) {
@@ -59,10 +61,49 @@ function createMap(lat, longit) {
   };
 
   var mapDiv = document.getElementById('map-canvas');
-  var map = new google.maps.Map(mapDiv, mapOptions);
+  map = new google.maps.Map(mapDiv, mapOptions);
 
+    //Add wolfjob restaurant
+  var request = {
+    location: userLoc,
+    radius: 400,
+    types: ['restaurant']
+  };
+
+  infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
+  service.nearbySearch(request, callback);
+};
+
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    //change results.length to <= 10 to narrow down
+    for (var i = 0; i < results.length; i++) {
+      createMarker(results[i]);
+    }
+  }
+}
+
+function createMarker(place) {
+  var placeLoc = place.geometry.location;
   var marker = new google.maps.Marker({
-    position: userLoc,
-    map: map
+    map: map,
+    position: place.geometry.location
+  });
+
+  //fake wait time
+  var waitTime = "20 minutes wait";
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.setContent(
+      place.name +
+      '<br />' +
+      place.vicinity +
+      '<br />' +
+      waitTime +
+      '<br />' +
+      '<a href="restaurants/show">' + "Put partial here" + '</a>')
+;
+    infowindow.open(map, this);
   });
 };
