@@ -8,15 +8,12 @@
 	    <div><label>Restaurant Name</label></div>
 	      <div><%=result[:name]%></div>
 	    <div><label>Category</label></div>
-	      <div><%=result[:categories]%></div>
+	      <div>
+		      <%=result[:categories]%>
+	      </div>
 	    <div><label>Location</label></div>
 	      <div><%=result[:location][0]%></div>
-	      <div><%=result[:location][1]%></div>
 	      <div><%=result[:location][2]%></div>
-	    <!-- <div>
-	      <label>Price Range</label>
-	      DOLLAR SIGNS
-	    </div> -->
 	    <div>
 	      <label>Rating</label>
 	      <img src="<%=result[:rating]%>">

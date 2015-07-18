@@ -7,13 +7,18 @@ class RestaurantsController < ApplicationController
   	@results = []
   	for i in 0..9
   		@business = response['hash']['businesses'][i]
+  		@categories = []
+  		@business['categories'].each do |category|
+  			@categories.push(category[0])
+  		end
+  		
   		@results.push(
   		{
 	  	name: "#{@business['name']}",
 	  	location: @business['location']['display_address'],
 	  	image: "#{@business['image_url']}",
 	  	rating: @business['rating_img_url'],
-	  	categories: @business['categories'],
+	  	categories: @categories.join(', '),
 	  	latitude: @business['location']['coordinate']['latitude'],
 	  	longitude: @business['location']['coordinate']['longitude']
 	  	})
