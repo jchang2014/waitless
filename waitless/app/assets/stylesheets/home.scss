@@ -8,6 +8,10 @@ body {
   margin: 0;
 }
 
+#map-canvas {
+  height: 400px;
+}
+
 nav {
   background-color: #4CAF50;
   display: flex;
@@ -37,7 +41,22 @@ nav {
   text-decoration: none;
   width: 50%;
 }
+
 .user-login a{
+  color:#BCED91;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.user-login a:hover{
+  color:#F0FFF0;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.user-login a:visited{
   color:#BCED91;
   letter-spacing: 1px;
   text-decoration: none;
@@ -49,12 +68,11 @@ main {
 }
 
 .google-maps {
-  border: 1px dotted #B6B6B6;
-  height: 400px;
   margin: 10px 0px 0px 0px;
 }
 
 .home-wrapper {
+  color: #727272;
   display: flex;
   padding: 10px;
   font-size: 15px;
@@ -82,5 +100,13 @@ main {
 
 .search-form td{
   font-family: helvetica;
+  font-size: 20px;
   padding: 10px;
 }
+
+.search-form input{
+  font-family: helvetica;
+  font-size: 15px;
+  padding: 5px;
+}
+

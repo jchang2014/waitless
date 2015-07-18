@@ -1,16 +1,19 @@
-<div class="something">show up</div>
+<div class="restaurant-results">
 
-<div class="bullshit">
+  <h1>Match Results</h1>
 
-<h1>Match Results</h1>
+  <section class="results-list-wrapper">
 
-<div class="results-list">
-	<% @results %>
+  <% if @results %>
 		<% @results.each do |result| %>
-			<%= render 'result', locals: {result: result}%>
-		<% end %>
-	<% end %>
-</div>
+	  	<%= render :partial => "result", layout: false, locals: {result: result}%>
+	  <% end %>
+
+  <% else %>
+	  <h3>Sorry, your search yielded no results</h3>
+  <% end %>
+
+  </section>
 
 </div>
 

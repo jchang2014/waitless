@@ -1,1 +1,38 @@
-<h1>Hi</h1>
+<div class="result-block">
+
+	<div class="result-wrapper">
+
+	  <div class="result-img"><img src="<%=result[:image]%>"></div>
+
+	  <div class="result-info">
+	    <div><label>Restaurant Name</label></div>
+	      <div><%=result[:name]%></div>
+	    <div><label>Category</label></div>
+	      <div>
+		      <%=result[:categories]%>
+	      </div>
+	    <div><label>Location</label></div>
+	      <div><%=result[:location][0]%></div>
+	      <div><%=result[:location][2]%></div>
+	    <div>
+	      <label>Rating</label>
+	      <img src="<%=result[:rating]%>">
+	    </div>
+	  </div>
+
+	  <div class="result-wait-time">
+	    <div class="result-wait-time-text0">Current wait time</div>
+	    <div class="result-wait-time-number">89</div>
+	    <div class="result-wait-time-text1">minute(s)</div>
+	  </div>
+
+	</div>
+
+	<div class="link-wrapper">
+
+	  <a href="#" class="result-button">Sign Waitlist</a>
+	  <a href="#" class="result-button">See More</a>
+
+	</div>
+
+</div>
