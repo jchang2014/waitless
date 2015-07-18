@@ -5,12 +5,11 @@
 <h1>Match Results</h1>
 
 <div class="results-list">
-	<% @results %>
+	<% if @results %>
 		<% @results.each do |result| %>
-			<%= render 'result', locals: {result: result}%>
+			<%= render '_result', locals: {result: result} %>
 		<% end %>
 	<% end %>
 </div>
 
 </div>
-

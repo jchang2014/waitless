@@ -3,31 +3,22 @@ class RestaurantsController < ApplicationController
 		parameters = { term: params[:search], limit:10}
 		params[:location].length > 0 ? @location_filter = params[:location] : @location_filter = "San Francisco"
 
-  	results = Yelp.client.search(@location_filter, parameters).as_json
-  	array = []
+  	response = Yelp.client.search(@location_filter, parameters).as_json
+  	@results = []
   	for i in 0..9
-  		@business = results['hash']['businesses'][i]
-  		array.push(
-  		[
-	  	@name = @business['name'],
-	  	@location = @business['location']['address'][0],
-	  	@image = @business['image_url']
-	  	])
-	  	@lat_long = @business['location']['coordinate']
-	  end
+  		@business = response['hash']['businesses'][i]
+  		@results.push(
+  		{
+	  	name: "#{@business['name']}",
+	  	location: "#{@business['location']['address'][0]}",
+	  	image: "#{@business['image_url']}",
+	  	latitude: @business['location']['coordinate']['latitude'],
+	  	longitude: @business['location']['coordinate']['longitude']
+	  	})
+  	end
 
+  	render 'index', locals: {results: @results}
+  	#render json: array
 
-  # 	array = []
-  # 	for i in 0..9
-  # 		@business = results['hash']['businesses'][i]
-  # 		array.push(
-  # 		[
-	 #  	@name = @business['name'],
-	 #  	@location = @business['location']['address'][0],
-	 #  	@image = @business['image_url']
-	 #  	])
-	 #  end
-
-	 #  render json: array
 	end
 end
