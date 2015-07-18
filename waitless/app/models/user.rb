@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
+  has_secure_password
+
   has_many :reservations
 
-  validates :password, length: { minimum: 1}, allow_nil: true
-  has_secure_password
+  validates :name, presence: true
+  validates :email, presence: true
+
 end

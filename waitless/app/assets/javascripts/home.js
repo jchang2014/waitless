@@ -1,6 +1,6 @@
 $(document).on("page:change", function() {
 	//Yelp search ajax function
-	$('form').on('submit', function() {
+	$('#search-form').on('submit', function() {
 		event.preventDefault();
 
 		formData = $('#search-form').serialize();

@@ -4,13 +4,10 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      # redirect_to '/restaurants'
+      redirect_to '/'
     else
       @errors = ["Invalid Username or Password."]
-      p "****************************"
-      p @errors
-      p "****************************"
-      # render :login
+      render :login
     end
   end
 
