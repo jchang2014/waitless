@@ -57,19 +57,30 @@ main {
 .home-wrapper {
   display: flex;
   padding: 10px;
+  font-size: 15px;
 }
 
 .home-wrapper h1 {
   color: #586949;
   font-size: 50px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .home-info {
   display: inline-block;
   width: 50%;
+  padding: 10px;
 }
 
 .home-explore {
   display: inline-block;
   width: 50%;
+  padding: 10px;
+}
+
+.search-form td{
+  font-family: helvetica;
+  padding: 10px;
 }
