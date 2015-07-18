@@ -18,4 +18,8 @@ class RestaurantsController < ApplicationController
 
 	 #  render json: array
 	end
+
+  def show
+    render :_result
+  end
 end

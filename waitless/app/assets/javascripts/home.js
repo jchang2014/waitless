@@ -95,7 +95,15 @@ function createMarker(place) {
   var waitTime = "20 minutes wait";
 
   google.maps.event.addListener(marker, 'click', function() {
-    infowindow.setContent(place.name + "<br />" + place.vicinity + "<br />" + waitTime);
+    infowindow.setContent(
+      place.name +
+      '<br />' +
+      place.vicinity +
+      '<br />' +
+      waitTime +
+      '<br />' +
+      '<a href="restaurants/show">' + "Put partial here" + '</a>')
+;
     infowindow.open(map, this);
   });
 };
