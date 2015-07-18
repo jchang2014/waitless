@@ -49,10 +49,14 @@ ActiveRecord::Schema.define(version: 20150716230815) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "password_hash"
+    t.string   "password_digest"
     t.string   "phone_number"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "uid"
+    t.string   "refresh_token"
+    t.string   "access_token"
+    t.string   "expires"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
