@@ -1,0 +1,13 @@
+<div class="bullshit">
+
+<h1>Match Results</h1>
+
+<div class="results-list">
+	<% @results %>
+		<% @results.each do |result| %>
+			<%= render 'result', locals: {result: result}%>
+		<% end %>
+	<% end %>
+</div>
+
+</div>
