@@ -2,13 +2,14 @@
 
   <h1>Match Results</h1>
 
-  <div class="results-list">
-
     <% if @results %>
       <% @results.each do |result| %>
        <%= render 'result', locals: {result: result}%>
       <% end %>
-   <% end %>
+    <% end %>
+
+  <section class="results-list-wrapper">
+
     <div class="result-wrapper">
       <div class="result-img">Image goes here</div>
 
@@ -35,14 +36,15 @@
         <div class="result-wait-time-text1">minute(s)</div>
       </div>
 
+    </div>
 
+    <div class="link-wrapper">
+
+      <a href="#" class="result-button">Sign Waitlist</a>
+      <a href="#" class="result-button">See More</a>
 
     </div>
 
-    <div class="result-nav">
-       <a class="result-button" href="#">Sign Waitlist</a>
-    </div>
-
-  </div>
+  </section>
 
 </div>
