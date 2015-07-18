@@ -1,16 +1,51 @@
-<div class="something">show up</div>
+<div class="restaurant-results">
 
-<div class="bullshit">
+  <h1>Match Results</h1>
 
-<h1>Match Results</h1>
+    <% if @results %>
+      <% @results.each do |result| %>
+       <%= render 'result', locals: {result: result}%>
+      <% end %>
+    <% end %>
 
-<div class="results-list">
-	<% @results %>
-		<% @results.each do |result| %>
-			<%= render 'result', locals: {result: result}%>
-		<% end %>
-	<% end %>
-</div>
+  <section class="results-list-wrapper">
+
+    <div class="result-wrapper">
+      <div class="result-img">Image goes here</div>
+
+      <div class="result-info">
+        <div><label>Restaurant Name</label></div>
+          <div>Your Restaurant Name</div>
+        <div><label>Category</label></div>
+          <div>Some type of food</div>
+        <div><label>Location</label></div>
+          <div>Somewhere in the world, Universe</div>
+        <div>
+          <label>Price Range</label>
+          DOLLAR SIGNS
+        </div>
+        <div>
+          <label>Rating</label>
+          Stars and such
+        </div>
+      </div>
+
+      <div class="result-wait-time">
+        <div class="result-wait-time-text0">Current wait time</div>
+        <div class="result-wait-time-number">89</div>
+        <div class="result-wait-time-text1">minute(s)</div>
+      </div>
+
+    </div>
+
+    <div class="link-wrapper">
+
+      <a href="#" class="result-button">Sign Waitlist</a>
+      <a href="#" class="result-button">See More</a>
+
+    </div>
+
+  </section>
 
 </div>
 
