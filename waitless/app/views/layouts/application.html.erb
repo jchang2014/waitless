@@ -22,11 +22,16 @@
     <% if current_user %>
       Welcome, <%= link_to "#{current_user.name}", users_path %> 
       <div><%= link_to "Signout", logout_path, method: 'delete' %></div>
+
     <% else %>
       <%= link_to "Login", session_path %>
        |
       <%= link_to "Signup", new_user_path %>
       <div>Welcome, User</div>
+    
+
+      <button class="nav-toggle">test</button>
+      <div class="test-me">hi</div>
     <% end %>
   </div>
 
