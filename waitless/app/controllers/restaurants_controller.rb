@@ -7,6 +7,13 @@ class RestaurantsController < ApplicationController
   	@results = []
   	for i in 0..9
   		@business = response['hash']['businesses'][i]
+      @restaurant = Restaurant.where(yelp_id: @business['id']).first
+      if @restaurant == nil 
+        @id = 'new' 
+      else
+        @id = @restaurant.id
+      end
+
   		@categories = []
   		@business['categories'].each do |category|
   			@categories.push(category[0])
@@ -20,7 +27,8 @@ class RestaurantsController < ApplicationController
 	  	rating: @business['rating_img_url'],
 	  	categories: @categories.join(', '),
 	  	latitude: @business['location']['coordinate']['latitude'],
-	  	longitude: @business['location']['coordinate']['longitude']
+	  	longitude: @business['location']['coordinate']['longitude'],
+      id: @id
 	  	})
   	end
 
