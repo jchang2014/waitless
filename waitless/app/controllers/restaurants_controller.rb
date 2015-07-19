@@ -61,7 +61,6 @@ class RestaurantsController < ApplicationController
               latitude: @response['location']['coordinate']['latitude'],
               longitude: @response['location']['coordinate']['longitude']
               }
-    p @result
     render :_result, locals: {result: @result}
   end
 end
