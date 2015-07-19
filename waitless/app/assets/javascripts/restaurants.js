@@ -16,6 +16,7 @@ function queryResults() {
     request.done(function(json){
       var markers = json.results;
       updateMap(markers);
+      console.log(json);
     });//end done
     request.fail(function(error){
       alert("sorry your search yielded no results");
@@ -44,7 +45,12 @@ function updateMap(markers) {
     });
     (function (marker, spot) {
       google.maps.event.addListener(marker, "click", function() {
-          infoWindow.setContent(spot.name);
+          infoWindow.setContent(
+            spot.name +
+            "<br /> " +
+            spot.location[0] +
+            "<br /> " +
+            "Current wait time: ");
           infoWindow.open(map, marker);
       });
     })(marker, spot);

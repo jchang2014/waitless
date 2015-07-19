@@ -39,6 +39,6 @@ class RestaurantsController < ApplicationController
 
 
   def show
-    render :_result
+    render "_result"
   end
 end
