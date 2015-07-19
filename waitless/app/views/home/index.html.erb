@@ -4,6 +4,7 @@
 
 <div class="separator"></div>
 
+<div class="body-wrapper">
 <div class="home-wrapper">
   <section class="home-info">
     <h1>WaitLess</h1>
@@ -19,7 +20,7 @@
     <h1>Find a Restaurant</h1>
       <%= form_tag(restaurants_path, :method => "get", id:"search-form") do %>
 
-        <table align=cen ter class="search-form">
+        <table align=center class="search-form">
           <tr>
             <td>Restaurant Name/Food Type</td>
             <td>
@@ -31,7 +32,7 @@
             <td><%= text_field_tag :location, params[:location] %></td>
 		      </tr>
           <tr>
-            <td><%= submit_tag "Search" %></td>
+            <td><%= submit_tag "Search", :class => 'home-search'  %></td>
             <td>Powered by <a href="http://www.yelp.com">Yelp</a></td>
           </tr>
         </table>
@@ -41,4 +42,4 @@
   </section>
 
 </div>
-
+</div>
