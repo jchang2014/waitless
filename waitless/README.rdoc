@@ -26,3 +26,5 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+Configuration: To update a user admin attribute in the console without having to pass password validations use  a = User.find(:id).update_attribute(:admin => true) then save it with a.save(:validate => false) ~~~~Scoobz
