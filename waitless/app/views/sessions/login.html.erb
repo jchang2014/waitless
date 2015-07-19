@@ -1,0 +1,23 @@
+<div class="container">
+
+
+
+  <h1>Login</h1>
+ <% if @errors %>
+  <p class="error_message">
+    <% @errors.each do |error| %>
+      <div class="error"><%= error %></div>
+    <% end %>
+  </p>
+<% end %>
+  <%= form_tag('/login', method: 'post')do %>
+
+  Email: <%= text_field_tag :email %>
+  Password: <%= password_field_tag :password %>
+  <%= submit_tag "Submit" %>
+
+  <% end %>
+
+  <div class="login_logout">
+    (or <a href='/users/new'>signup</a>)
+  </div>

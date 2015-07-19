@@ -1,0 +1,119 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-color: #FFFFFF;
+  font-family: helvetica;
+  margin: 0;
+}
+
+#map-canvas {
+  height: 600px;
+}
+
+.separator {
+  background-color: #4CAF50;
+  height: 40px;
+  margin-top: 10px;
+}
+
+nav {
+  background-color: #4CAF50;
+  display: flex;
+  font-family: helvetica;
+  font-size: 20px;
+  margin: 0;
+  padding: 15px;
+}
+
+.nav-title {
+  display:inline-block;
+  color: #F5F5F5;
+  font-family: Inconsolata;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+.user-login {
+  color: #8BC34A;
+  display:inline-block;
+  font-family: helvetica;
+  font-size: 15px;
+  text-align: right;
+  text-decoration: none;
+  width: 50%;
+}
+
+.user-login a{
+  color:#BCED91;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.user-login a:hover{
+  color:#F0FFF0;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.user-login a:visited{
+  color:#BCED91;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.google-maps {
+  margin: 10px 0px 0px 0px;
+}
+
+.home-wrapper {
+  color: #727272;
+  display: flex;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.home-wrapper h1 {
+  color: #586949;
+  font-size: 50px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.home-info {
+  border-right: 1px solid #B6B6B6;
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+}
+
+.home-explore {
+  display: inline-block;
+  width: 50%;
+  padding: 10px;
+}
+
+.search-form td{
+  font-family: helvetica;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.search-form input{
+  font-family: helvetica;
+  font-size: 15px;
+  padding: 5px;
+}
+
