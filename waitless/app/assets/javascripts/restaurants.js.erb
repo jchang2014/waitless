@@ -17,10 +17,29 @@ function queryResults() {
       var markers = json.results;
       updateMap(markers);
       console.log(json);
+      $('home-wrapper').hide();
+      $('.body-wrapper').html(json.html);
+      //$('.body-wrapper').append('<%#=j render 'restaurants/index'  %>');
     });//end done
     request.fail(function(error){
       alert("sorry your search yielded no results");
     });//end fail
+
+    // var secondRequest = $.ajax({
+    //     debugger
+    //     url: "/restaurants/1",
+    //     action: "GET",
+    // });
+    // secondRequest.done(function(response){
+    //   console.log("dddddone");
+    //   console.log(response);
+    //   $('.home-wrapper').hide();
+    //   $('.body-wrapper').html();
+    // });
+    // secondRequest.fail(function(response){
+    //   alert("Failed");
+    // });
+
   }); //end search-form
 } //end queryResults
 
