@@ -1,21 +1,35 @@
 class RestaurantsController < ApplicationController
 	def index
-		# parameters = { term: params[:search], limit:10}
-		# params[:location].length > 0 ? @location_filter = params[:location] : @location_filter = "San Francisco"
+		parameters = { term: params[:search], limit:10}
+		params[:location].length > 0 ? @location_filter = params[:location] : @location_filter = "San Francisco"
 
-  # 	results = Yelp.client.search(@location_filter, parameters).as_json
+  	response = Yelp.client.search(@location_filter, parameters).as_json
+  	@results = []
+  	for i in 0..9
+  		@business = response['hash']['businesses'][i]
+  		@categories = []
+  		@business['categories'].each do |category|
+  			@categories.push(category[0])
+  		end
+  		
+  		@results.push(
+  		{
+	  	name: "#{@business['name']}",
+	  	location: @business['location']['display_address'],
+	  	image: "#{@business['image_url']}",
+	  	rating: @business['rating_img_url'],
+	  	categories: @categories.join(', '),
+	  	latitude: @business['location']['coordinate']['latitude'],
+	  	longitude: @business['location']['coordinate']['longitude']
+	  	})
+  	end
 
-  # 	array = []
-  # 	for i in 0..9
-  # 		@business = results['hash']['businesses'][i]
-  # 		array.push(
-  # 		[
-	 #  	@name = @business['name'],
-	 #  	@location = @business['location']['address'][0],
-	 #  	@image = @business['image_url']
-	 #  	])
-	 #  end
+  	render 'index', locals: {results: @results}
+  	#render json: array
 
-	 #  render json: array
 	end
+
+  def show
+    render :_result
+  end
 end
