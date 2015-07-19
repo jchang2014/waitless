@@ -49,6 +49,6 @@ group :development, :test do
 
   gem "omniauth-google-oauth2", "~> 0.2.1"
 
-  gem 'bcrypt-ruby'
+  gem 'bcrypt'
 end
 
