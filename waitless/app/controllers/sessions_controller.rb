@@ -17,6 +17,7 @@ class SessionsController < ApplicationController
   end
 
   def show
+    @user = User.new
     if session[:user_id]
       redirect_to '/'
     else
