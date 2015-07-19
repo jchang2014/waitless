@@ -1,17 +1,23 @@
 class RestaurantsController < ApplicationController
+
 	def index
 		parameters = { term: params[:search], limit:10}
-		params[:location].length > 0 ? @location_filter = params[:location] : @location_filter = "San Francisco"
+		location_filter = (params[:location].length > 0) ? params[:location] : "San Francisco"
+    p "*" * 50
+    puts params[:search]
+    puts params[:location]
+    puts location_filter
 
-  	response = Yelp.client.search(@location_filter, parameters).as_json
-  	@results = []
+  	response = Yelp.client.search(location_filter, parameters).as_json
+    @results = []
+    puts response
   	for i in 0..9
   		@business = response['hash']['businesses'][i]
-  		@categories = []
+      @categories = []
   		@business['categories'].each do |category|
   			@categories.push(category[0])
   		end
-  		
+
   		@results.push(
   		{
 	  	name: "#{@business['name']}",
@@ -22,12 +28,15 @@ class RestaurantsController < ApplicationController
 	  	latitude: @business['location']['coordinate']['latitude'],
 	  	longitude: @business['location']['coordinate']['longitude']
 	  	})
-  	end
+    end
 
-  	render 'index', locals: {results: @results}
-  	#render json: array
+    respond_to do |format|
+      format.json {
+        render json: { results: @results }
+      }
+    end
+  end
 
-	end
 
   def show
     render :_result

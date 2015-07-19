@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 	    resources :reservations
 	  end
 
-	  resources :restaurants
+	  resources :restaurants, defaults: { format: 'json' }
 
 	  resources :types do
 	    resources :restaurants
