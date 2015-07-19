@@ -25,6 +25,8 @@
 
 	</div>
 
+	<div class="section-separator"></div>
+
 	<div class="make-reservation">
 		<h1>Make a Reservation</h1>
 
@@ -39,10 +41,10 @@
           </tr>
           <tr>
             <td>Location</td>
-            <td><%= text_field_tag :location, params[:location] %></td>
+            <td><%= text_field_tag :location, params[:location], placeholder: "San Francisco, CA"  %></td>
 		      </tr>
           <tr>
-            <td><%= submit_tag "Search" %></td>
+            <td><%= submit_tag "Search", :class => 'search-submit' %></td>
             <td>Powered by <a href="http://www.yelp.com">Yelp</a></td>
           </tr>
         </table>

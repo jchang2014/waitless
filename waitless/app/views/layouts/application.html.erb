@@ -18,6 +18,7 @@
   <div class="user-login">
     <% if current_user %>
       <%= link_to "#{current_user.name}", users_path %> |
+      Make a Reservation |
       <%= link_to "Signout", logout_path, method: 'delete' %>
     <% else %>
       <%= link_to "Login", session_path %>

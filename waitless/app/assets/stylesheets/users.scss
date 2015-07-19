@@ -45,6 +45,13 @@
   width: 33%;
 }
 
+.section-separator {
+  background-color: #B6B6B6;
+  height: 1px;
+  margin: 20px auto 20px auto;
+  width: 60%;
+}
+
 .user-options {
 	display: inline-block;
   padding: 10px;
@@ -75,4 +82,11 @@
   font-family: helvetica;
   font-size: 15px;
   padding: 5px;
+}
+
+.search-form input.search-submit {
+  background-color: #CFD8DC;
+  border-radius: 8px;
+  font-size: 20px;
+  text-transform: uppercase;
 }
