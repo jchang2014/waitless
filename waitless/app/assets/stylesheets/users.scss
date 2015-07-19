@@ -31,3 +31,29 @@
 .user-options {
 	display: inline-block;
 }
+
+.signup-form a:link {
+  color: #B6B6B6;
+  text-decoration: underline;
+}
+
+.signup-form a:hover {
+  text-decoration: none;
+}
+
+.signup-form a:visited {
+  color: #B6B6B6;
+  text-decoration: underline;
+}
+
+.signup-form td{
+  font-family: helvetica;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.signup-form input{
+  font-family: helvetica;
+  font-size: 15px;
+  padding: 5px;
+}

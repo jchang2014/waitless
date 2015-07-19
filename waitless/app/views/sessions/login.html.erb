@@ -8,7 +8,7 @@
 
   <%= form_tag('/login', method: 'post')do %>
 
-    <table align=center class="search-form">
+    <table align=center class="login-form">
       <tr>
         <td><label>Email</label></td>
         <td><%= text_field_tag :email %></td>
@@ -19,8 +19,7 @@
       </tr>
       <tr>
         <td><%= submit_tag "Submit" %></td>
-        <td>
-          <div class="login_logout">(or <a href='/users/new'>signup</a>)</div>
+        <td>(or <a href='/users/new'>signup</a>)</td>
       </tr>
     </table>
 
