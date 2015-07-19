@@ -1,23 +1,28 @@
-<div class="container">
+<h1>Login</h1>
 
+  <% if @errors %>
+      <% @errors.each do |error| %>
+        <div class="error"><%= error %></div>
+      <% end %>
+  <% end %>
 
-
-  <h1>Login</h1>
- <% if @errors %>
-  <p class="error_message">
-    <% @errors.each do |error| %>
-      <div class="error"><%= error %></div>
-    <% end %>
-  </p>
-<% end %>
   <%= form_tag('/login', method: 'post')do %>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
+    <table align=center class="search-form">
+      <tr>
+        <td><label>Email</label></td>
+        <td><%= text_field_tag :email %></td>
+      </tr>
+      <tr>
+        <td><label>Password</label></td>
+        <td><%= password_field_tag :password %></td>
+      </tr>
+      <tr>
+        <td><%= submit_tag "Submit" %></td>
+        <td>
+          <div class="login_logout">(or <a href='/users/new'>signup</a>)</div>
+      </tr>
+    </table>
 
   <% end %>
 
-  <div class="login_logout">
-    (or <a href='/users/new'>signup</a>)
-  </div>
