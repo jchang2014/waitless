@@ -1,5 +1,7 @@
-<h1>Welcome Back User</h1>
+<h1>Welcome User</h1>
 
+
+	<h1>Current Reservation</h1>
 	<div class="current-reservation-wrapper">
 
 		<div class="current-wait-time">
@@ -25,5 +27,27 @@
 
 	<div class="make-reservation">
 		<h1>Make a Reservation</h1>
+
+		  <%= form_tag(restaurants_path, :method => "get", id:"search-form") do %>
+
+        <table align=center class="search-form">
+          <tr>
+            <td>Restaurant Name/Food Type</td>
+            <td>
+              <%= text_field_tag :search, params[:search], placeholder: "Mexican, Philz Coffee, etc." %>
+            </td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td><%= text_field_tag :location, params[:location] %></td>
+		      </tr>
+          <tr>
+            <td><%= submit_tag "Search" %></td>
+            <td>Powered by <a href="http://www.yelp.com">Yelp</a></td>
+          </tr>
+        </table>
+
+      <% end %>
+
 	</div>
 
