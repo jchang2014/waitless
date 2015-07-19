@@ -89,6 +89,7 @@ results_soma.map {
 
 results_mission.map {
   |result| Restaurant.create(yelp_id: result)
+}
 
 results_embarcadero.map {
   |result| Restaurant.create(yelp_id: result)
