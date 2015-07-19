@@ -27,16 +27,16 @@ nav {
   padding: 15px;
 }
 
-.search-form a:link { 
+.search-form a:link {
   color: #B6B6B6;
   text-decoration: underline;
 }
 
-.search-form a:hover { 
+.search-form a:hover {
   text-decoration: none;
 }
 
-.search-form a:visited { 
+.search-form a:visited {
   color: #B6B6B6;
   text-decoration: underline;
 }
@@ -88,6 +88,10 @@ main {
 
 .google-maps {
   margin: 10px 0px 0px 0px;
+}
+
+label {
+  color:#727272;
 }
 
 .home-wrapper {
