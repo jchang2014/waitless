@@ -15,7 +15,7 @@ class RestaurantsController < ApplicationController
         #Potential flaw: doesn't let the user know this waitlist is inaccurate(because it's new)
         #@restaurant = Restaurant.create(yelp_id: @business['id']) if @restaurant == nil 
         
-        @id = @restaurant.id
+        @id = @restaurant ? @restaurant.id : 'new'
 
 
         #Pull only the "pretty" category names
@@ -45,6 +45,23 @@ class RestaurantsController < ApplicationController
 	end
 
   def show
-    render :_result
+    @restaurant = Restaurant.find(params[:id]).yelp_id
+    @response = Yelp.client.business(@restaurant).as_json['hash']
+
+    @categories = []
+    @response['categories'].each do |category|
+      @categories.push(category[0])
+    end
+
+    @result = {name: @response['name'],
+              location: @response['location']['display_address'],
+              image: @response['image_url'],
+              rating: @response['rating_img_url'],
+              categories: @categories.join(', '),
+              latitude: @response['location']['coordinate']['latitude'],
+              longitude: @response['location']['coordinate']['longitude']
+              }
+    p @result
+    render :_result, locals: {result: @result}
   end
 end
