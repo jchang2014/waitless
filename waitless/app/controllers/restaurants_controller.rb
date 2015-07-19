@@ -1,6 +1,7 @@
 class RestaurantsController < ApplicationController
 	def index
-		parameters = { term: params[:search], limit:20}
+    @search = (params[:search].length > 0) ? params[:search] : "restaurants"
+		parameters = { term: @search, limit:20}
 		@location_filter = (params[:location].length > 0) ? params[:location] : "San Francisco"
   	@response = Yelp.client.search(@location_filter, parameters).as_json
 
@@ -9,7 +10,13 @@ class RestaurantsController < ApplicationController
     	for i in 0..9
     		@business = @response['hash']['businesses'][i]
         @restaurant = Restaurant.where(yelp_id: @business['id']).first
-        @restaurant == nil ? @id = 'new' : @id = @restaurant.id
+        
+        #Auto create a new restaurant in database if it doesnt exist already
+        #Potential flaw: doesn't let the user know this waitlist is inaccurate(because it's new)
+        #@restaurant = Restaurant.create(yelp_id: @business['id']) if @restaurant == nil 
+        
+        @id = @restaurant.id
+
 
         #Pull only the "pretty" category names
     		@categories = []
