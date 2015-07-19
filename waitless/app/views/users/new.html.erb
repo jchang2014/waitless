@@ -26,7 +26,7 @@
       <td><%= f.password_field :password_confirmation %></td>
     </tr>
     <tr>
-      <td><%= f.submit "Submit" %></td>
+      <td><%= f.submit "Submit", :class => 'signup-button' %></td>
       <td>or <%= link_to "login", session_path %> if you have an account.</td>
     </tr>
   </table>

@@ -16,13 +16,13 @@
 }
 
 .login-form td{
-  font-family: helvetica;
-  font-size: 20px;
   padding: 10px;
 }
 
-.login-form input{
-  font-family: helvetica;
+.login-form input.login-button{ 
+  background-color: #8BC34A;
+  border-radius: 10px;
+  letter-spacing: 2px;
   font-size: 15px;
-  padding: 5px;
+  color: #FFFFFF;
 }

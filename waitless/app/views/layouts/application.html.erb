@@ -9,7 +9,7 @@
   <!-- Google maps scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-  <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -20,13 +20,13 @@
 
   <div class="user-login">
     <% if current_user %>
-      <%= link_to "#{current_user.name}", users_path %> |
-      Make a Reservation |
-      <%= link_to "Signout", logout_path, method: 'delete' %>
+      Welcome, <%= link_to "#{current_user.name}", users_path %> 
+      <div><%= link_to "Signout", logout_path, method: 'delete' %></div>
     <% else %>
       <%= link_to "Login", session_path %>
        |
       <%= link_to "Signup", new_user_path %>
+      <div>Welcome, User</div>
     <% end %>
   </div>
 
