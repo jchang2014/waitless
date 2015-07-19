@@ -3,14 +3,14 @@
 
 
   <h1>Login</h1>
- <% if @errors %>
+  <% if @errors %>
   <p class="error_message">
     <% @errors.each do |error| %>
-      <div class="error"><%= error %></div>
+    <div class="error"><%= error %></div>
     <% end %>
   </p>
-<% end %>
-  <%= form_tag('/login', method: 'post')do %>
+  <% end %>
+  <%= form_tag('/session', method: 'post')do %>
 
   Email: <%= text_field_tag :email %>
   Password: <%= password_field_tag :password %>

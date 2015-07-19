@@ -18,7 +18,7 @@
   <div class="user-login">
     <% if current_user %>
       <%= current_user.name %> |
-      <%= link_to "Signout", logout_path, method: 'delete' %>
+      <%= link_to "Signout", session_path, method: 'delete' %>
     <% else %>
       <%= link_to "Login", session_path %>
        |
