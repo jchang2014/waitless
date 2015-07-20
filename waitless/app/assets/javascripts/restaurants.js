@@ -3,9 +3,10 @@ $(document).ready(function() {
 });
 
 function queryResults() {
-  $('#search-form').on('click', '#search-button', function(e){
+  console.log("starting query");
+  $('.search-form').on('click', '.home-search', function(e){
     e.preventDefault();
-
+    debugger
     var mapRequest = $.ajax({
       url: "/restaurants",
       action: "get",

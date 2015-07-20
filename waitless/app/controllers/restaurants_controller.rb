@@ -1,5 +1,4 @@
 class RestaurantsController < ApplicationController
-<<<<<<< HEAD
 
   before_filter :admin?, :except => [:index, :show]
 
@@ -8,12 +7,12 @@ class RestaurantsController < ApplicationController
     parameters = { term: @search, limit:10}
     location_filter = (params[:location].length > 0) ? params[:location] : "San Francisco"
 
-    response = Yelp.client.search(location_filter, parameters).as_json
+    @response = Yelp.client.search(location_filter, parameters).as_json
 
     if @response['hash']['total'] != 0
       @results = []
       for i in 0..9
-        @business = response['hash']['businesses'][i]
+        @business = @response['hash']['businesses'][i]
         @categories = []
         @business['categories'].each do |category|
           @categories.push(category[0])
