@@ -30,17 +30,18 @@
             </tr>
             <tr>
               <td>Location</td>
-              <td><%= text_field_tag :location, params[:location] %></td>
+              <td><%= text_field_tag :location, params[:location], placeholder: "San Francisco, CA" %></td>
   		      </tr>
             <tr>
-            <td><%= submit_tag "Search", :class => 'home-search'  %></td>
-            <td>Powered by <a href="http://www.yelp.com">Yelp</a></td>
-          </tr>
-        </table>
+              <td id="search-button"><%= submit_tag "Search" %></td>
+              <td>Powered by <a href="http://www.yelp.com">Yelp</a></td>
+            </tr>
+          </table>
 
-        <% end %>
-
+          <% end %>
     </section>
-
   </div>
+
+  <div class="separator"></div>
 </div>
+
