@@ -4,7 +4,7 @@
 	</div>
 
 	<div class="waitlist">
-		<%= form_for @reservation, :url => url_for(:controller => 'reservations', :action => 'index')  do |f| %>
+		<%= form_for [@restaurant, @new_reservation]  do |f| %>
 			<%= f.label :party_number %>
 			<%= f.number_field :number_in_party %>
 			<%= f.submit %>
