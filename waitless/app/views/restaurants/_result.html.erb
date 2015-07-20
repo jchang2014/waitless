@@ -1,0 +1,45 @@
+<div class="result-block">
+
+	<div class="result-wrapper">
+
+	  <div class="result-img">
+
+	  	<div class="result-img-position">
+	  		<img src="<%=result[:image]%>">
+	  	</div>
+
+	  		<div class="link-wrapper">
+					<button class="result-button">Sign Waitlist</button>
+
+	  			<a href="/restaurants/<%= result[:id] %>" class="result-button">See More</a>
+				</div>
+
+	  </div>
+
+	  <div class="result-info">
+	    <div><label>Restaurant Name</label></div>
+	      <div><%=result[:name]%></div>
+	    <div><label>Category</label></div>
+	      <div>
+		      <%=result[:categories]%>
+	      </div>
+	    <div><label>Location</label></div>
+	    	<% result[:location].each do |line| %>
+	      	<div><%=line%></div>
+	      <% end %>
+	    <div>
+	      <label>Rating</label>
+	      <img src="<%=result[:rating]%>">
+	    </div>
+	  </div>
+
+	  <div class="result-wait-time">
+	    <div class="result-wait-time-text0">Current wait time</div>
+	    <div class="result-wait-time-number">89</div>
+	    <div class="result-wait-time-text1">minute(s)</div>
+	  </div>
+
+	</div>
+
+
+</div>

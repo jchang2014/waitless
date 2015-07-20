@@ -1,3 +1,110 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ h1{
+  color: #004b00;
+  font-family: helvetica;
+  font-size: 30px;
+  text-align: center;
+}
+
+.results-list-wrapper {
+  margin: 10px 0px 10px 0px;
+}
+
+.result-wrapper {
+  background-color: #FFF9C4;
+  color: #727272;
+  display: flex;
+  padding: 20px;
+  width: 70%;
+  margin: 0px auto 10px auto;
+}
+
+.result-img {
+  display: inline-block;
+  margin-top: 50px;
+  width: 33%;
+}
+
+.result-info {
+  display: inline-block;
+  line-height: 25px;
+  padding: 10px;
+  width: 33%;
+}
+
+.result-wait-time {
+  color: #811212;
+  display: inline-block;
+  margin-top: 10px;
+  width: 33%;
+}
+
+.result-wait-time-text0 {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.result-wait-time-number {
+  border: 10px solid #CD9B9B;
+  border-radius: 20px;
+  font-size: 100px;
+  text-align: center;
+}
+
+.result-wait-time-text1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.result-info label{
+  font-weight: bold;
+}
+
+.result-nav {
+  display: block;
+  width:100%;
+}
+
+.result-button {
+  background-color: #FF5252;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.link-wrapper {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.result-img-position {
+  text-align: center;
+}
+
+.result-img-position img {
+  border-radius: 60px;
+}
+
+.quick-waitlist-form {
+  display:block;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+}
+.waitlist-table {
+    margin: auto;
+}
+.waitlist-table td{
+  padding: 5px;
+  text-align: center;
+}
+
+.create-wait-list-position input.create-position {
+  font-size: 15px;
+}

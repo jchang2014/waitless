@@ -1,1 +1,14 @@
-<div class="something">show up</div>
+<div class="restaurant-results">
+  <h1>Match Results</h1>
+
+  <section class="results-list-wrapper">
+
+  <% if @results %>
+  	<%= render :partial => "restaurants/result", collection: @results, as: :result%>
+  <% else %>
+	  <h3>Sorry, your search yielded no results</h3>
+  <% end %>
+  </section>
+
+</div>
+

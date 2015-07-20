@@ -1,0 +1,14 @@
+<div class="restaurant">
+	<div class="restaurant-info">
+		<%= render :partial => "result", layout: false, locals: {result: result}%>
+	</div>
+
+	<div class="waitlist">
+		<%= form_for [@restaurant, @new_reservation]  do |f| %>
+			<%= f.label :party_number %>
+			<%= f.number_field :number_in_party %>
+			<%= f.submit %>
+		<% end %>
+		<button class="view-my-reservation" id="goes back to home">view my reservation</button>
+	</div>
+</div>
