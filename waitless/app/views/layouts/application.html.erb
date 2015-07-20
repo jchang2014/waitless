@@ -26,10 +26,9 @@
     <% else %>
       <button class="nav-toggle">&dArr;</button>
         <div class="test-me">
-          <ul>
-            <li><%= link_to "Login", session_path %></li>
-            <li><%= link_to "Signup", new_user_path %></li>
-          </ul>
+          <div>&nbsp;</div>
+          <div><%= link_to "Login", session_path %></div>
+          <div><%= link_to "Signup", new_user_path %></div>
         </div>
     <% end %>
   </div>
