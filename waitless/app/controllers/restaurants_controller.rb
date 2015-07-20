@@ -1,5 +1,7 @@
 class RestaurantsController < ApplicationController
-	def index
+	before_filter :admin?, :except => [:index, :show]
+
+  def index
 		parameters = { term: "restaurants", limit:20}
 		@location_filter = "Embarcadero"
     iterator = 0
@@ -8,8 +10,8 @@ class RestaurantsController < ApplicationController
   	for i in 0..9
   		@business = response['hash']['businesses'][i]
       @restaurant = Restaurant.where(yelp_id: @business['id']).first
-      if @restaurant == nil 
-        @id = 'new' 
+      if @restaurant == nil
+        @id = 'new'
       else
         @id = @restaurant.id
       end
@@ -38,5 +40,8 @@ class RestaurantsController < ApplicationController
 
   def show
     render :_result
+  end
+
+  def new
   end
 end

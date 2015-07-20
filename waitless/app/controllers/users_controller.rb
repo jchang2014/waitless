@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+  before_action :authorize, :except => [:index]
   def index
     if !current_user
       redirect_to '/'
