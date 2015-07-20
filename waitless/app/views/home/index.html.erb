@@ -4,7 +4,8 @@
 
 <div class="separator"></div>
 
-<div class="home-wrapper">
+<div class="body-wrapper">
+  <div class="home-wrapper">
   <section class="home-info">
     <h1>WaitLess</h1>
       <p>
@@ -31,7 +32,7 @@
             <td><%= text_field_tag :location, params[:location] %></td>
 		      </tr>
           <tr>
-            <td><%= submit_tag "Search" %></td>
+            <td id="search-button"><%= submit_tag "Search" %></td>
             <td>Powered by <a href="http://www.yelp.com">Yelp</a></td>
           </tr>
         </table>
@@ -41,4 +42,4 @@
   </section>
 
 </div>
-
+</div>

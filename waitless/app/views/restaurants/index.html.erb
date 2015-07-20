@@ -1,19 +1,13 @@
-
 <div class="restaurant-results">
-
   <h1>Match Results</h1>
 
   <section class="results-list-wrapper">
 
   <% if @results %>
-		<% @results.each do |result| %>
-	  	<%= render :partial => "result", layout: false, locals: {result: result}%>
-	  <% end %>
-
+  	<%= render :partial => "restaurants/result", collection: @results, as: :result%>
   <% else %>
 	  <h3>Sorry, your search yielded no results</h3>
   <% end %>
-
   </section>
 
 </div>
