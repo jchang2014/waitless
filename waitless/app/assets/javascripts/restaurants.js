@@ -69,3 +69,4 @@ function updateMap(markers) {
   }// end for loop
 };
 
+

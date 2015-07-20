@@ -12,8 +12,18 @@ body {
   height: 600px;
 }
 
-.separator {
+.nav-toggle {
+  border: 3px solid #FFFFFF;
   background-color: #4CAF50;
+  border-radius: 5px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+.separator {
+  background:#4CAF50;
   height: 40px;
   margin-top: 10px;
 }
@@ -27,38 +37,44 @@ nav {
   padding: 15px;
 }
 
-.search-form a:link { 
+.search-form a:link {
   color: #B6B6B6;
   text-decoration: underline;
 }
 
-.search-form a:hover { 
+.search-form a:hover {
   text-decoration: none;
 }
 
-.search-form a:visited { 
+.search-form a:visited {
   color: #B6B6B6;
   text-decoration: underline;
 }
 .nav-title {
   display:inline-block;
-  color: #F5F5F5;
-  font-family: Inconsolata;
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  // font-weight: bold;
+  letter-spacing: 5px;
+  // text-transform: uppercase;
   width: 50%;
+ text-shadow: 4px 4px 0px #689F38, 7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.nav-title a {
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .user-login {
-  color: #8BC34A;
+  color: #8ED95B;
   display:inline-block;
   font-family: helvetica;
-  font-size: 15px;
+  font-size: 18px;
   text-align: right;
   text-decoration: none;
   width: 50%;
+  margin-top: 10px;
 }
 
 .user-login a{
@@ -90,6 +106,10 @@ main {
   margin: 10px 0px 0px 0px;
 }
 
+label {
+  color:#727272;
+}
+
 .home-wrapper {
   color: #727272;
   display: flex;
@@ -99,7 +119,7 @@ main {
 
 .home-wrapper h1 {
   color: #586949;
-  font-size: 50px;
+  font-size: 30px;
   letter-spacing: 1px;
   margin-top: 10px;
   text-align: center;
@@ -120,7 +140,7 @@ main {
 
 .search-form td{
   font-family: helvetica;
-  font-size: 20px;
+  font-size: 15px;
   padding: 10px;
 }
 
@@ -130,3 +150,10 @@ main {
   padding: 5px;
 }
 
+.search-form input.home-search{
+  background-color: #8BC34A;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: #FFFFFF;
+}

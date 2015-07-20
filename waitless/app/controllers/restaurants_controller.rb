@@ -3,7 +3,6 @@ class RestaurantsController < ApplicationController
   before_filter :admin?, :except => [:index, :show]
 
   def index
-
     parameters = { term: params[:search], limit:10}
     location_filter = (params[:location].length > 0) ? params[:location] : "San Francisco"
 

@@ -2,7 +2,19 @@
 
 	<div class="result-wrapper">
 
-	  <div class="result-img"><img src="<%=result[:image]%>"></div>
+	  <div class="result-img">
+
+	  	<div class="result-img-position">
+	  		<img src="<%=result[:image]%>">
+	  	</div>
+
+	  		<div class="link-wrapper">
+					<button class="result-button">Sign Waitlist</button>
+
+	  			<a href="/restaurants/<%= result[:id] %>" class="result-button">See More</a>
+				</div>
+
+	  </div>
 
 	  <div class="result-info">
 	    <div><label>Restaurant Name</label></div>
@@ -28,11 +40,6 @@
 
 	</div>
 
-	<div class="link-wrapper">
 
-	  <a href="/restaurants/<%= result[:id] %>" class="result-button">Sign Waitlist</a>
-	  <a href="#" class="result-button">See More</a>
-
-	</div>
 
 </div>
