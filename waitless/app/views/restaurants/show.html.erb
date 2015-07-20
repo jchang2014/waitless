@@ -1,0 +1,18 @@
+<div class="restaurant">
+	<div class="restaurant-info">
+		<%= render :partial => "result", layout: false, locals: {result: result}%>
+	</div>
+
+	<div class="waitlist">
+		<%= form_for @reservation, :url => url_for(:controller => 'reservations_controller', :action => '/reservations')  do |f| %>
+			<%= f.label :first_name %>
+			<%= f.text_field :first_name %>
+			<%= f.label :last_name %>
+			<%= f.text_field :last_name %>
+			<%= f.label :party_size %>
+			<%= f.number_field :party_size %>
+			<%= f.submit %>x
+		<% end %>
+		<button class="view-my-reservation" id="goes back to home">view my reservation</button>
+	</div>
+</div>
