@@ -1,12 +1,13 @@
 class UsersController < ApplicationController
   before_action :authorize, :except => [:index]
   def index
-    if !current_user
-      redirect_to '/'
-    end
+
   end
 
   def show
+    if !current_user
+      redirect_to '/'
+    end
     @user = User.find(params[:id])
   end
 

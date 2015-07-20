@@ -24,8 +24,9 @@
 		      <%=result[:categories]%>
 	      </div>
 	    <div><label>Location</label></div>
-	      <div><%=result[:location][0]%></div>
-	      <div><%=result[:location][2]%></div>
+	    	<% result[:location].each do |line| %>
+	      	<div><%=line%></div>
+	      <% end %>
 	    <div>
 	      <label>Rating</label>
 	      <img src="<%=result[:rating]%>">
@@ -39,7 +40,6 @@
 	  </div>
 
 	</div>
-
 
 
 </div>

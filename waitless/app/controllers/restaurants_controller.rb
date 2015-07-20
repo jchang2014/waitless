@@ -1,38 +1,41 @@
 class RestaurantsController < ApplicationController
+<<<<<<< HEAD
 
   before_filter :admin?, :except => [:index, :show]
 
   def index
-    parameters = { term: params[:search], limit:10}
+    @search = (params[:search].length > 0) ? params[:search] : "restaurants"
+    parameters = { term: @search, limit:10}
     location_filter = (params[:location].length > 0) ? params[:location] : "San Francisco"
 
     response = Yelp.client.search(location_filter, parameters).as_json
-    @results = []
-    for i in 0..9
-      @business = response['hash']['businesses'][i]
-      @categories = []
-      @business['categories'].each do |category|
-        @categories.push(category[0])
-      end
 
-      @restaurant = Restaurant.where(yelp_id: @business['id']).first
-      if @restaurant == nil
-        @id = 'new'
-      else
-        @id = @restaurant.id
-      end
+    if @response['hash']['total'] != 0
+      @results = []
+      for i in 0..9
+        @business = response['hash']['businesses'][i]
+        @categories = []
+        @business['categories'].each do |category|
+          @categories.push(category[0])
+        end
 
-      @results.push(
-      {
-      name: "#{@business['name']}",
-      location: @business['location']['display_address'],
-      image: "#{@business['image_url']}",
-      rating: @business['rating_img_url'],
-      categories: @categories.join(', '),
-      latitude: @business['location']['coordinate']['latitude'],
-      longitude: @business['location']['coordinate']['longitude'],
-      id: @id
-      })
+        @restaurant = Restaurant.where(yelp_id: @business['id']).first
+        @id = @restaurant ? @restaurant.id : 'new'
+
+        @results.push(
+        {
+        name: "#{@business['name']}",
+        location: @business['location']['display_address'],
+        image: "#{@business['image_url']}",
+        rating: @business['rating_img_url'],
+        categories: @categories.join(', '),
+        latitude: @business['location']['coordinate']['latitude'],
+        longitude: @business['location']['coordinate']['longitude'],
+        id: @id
+        })
+    	end
+    else
+      @results = nil
     end
 
     respond_to do |format|
@@ -46,9 +49,26 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    #render "_result", layout: false, locals: { results: @results }
+    @restaurant = Restaurant.find(params[:id])
+    @response = Yelp.client.business(@restaurant.yelp_id).as_json['hash']
+    @new_reservation = Reservation.new(restaurant: @restaurant)
+    @categories = []
+    @response['categories'].each do |category|
+      @categories.push(category[0])
+    end
+
+    @result = {name: @response['name'],
+              location: @response['location']['display_address'],
+              image: @response['image_url'],
+              rating: @response['rating_img_url'],
+              categories: @categories.join(', '),
+              latitude: @response['location']['coordinate']['latitude'],
+              longitude: @response['location']['coordinate']['longitude']
+              }
+    render :show, locals: {result: @result}
   end
 
   def new
+    #admin stuff
   end
 end
