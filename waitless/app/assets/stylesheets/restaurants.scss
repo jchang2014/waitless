@@ -23,7 +23,7 @@
 
 .result-img {
   display: inline-block;
-  margin-top: 50px; 
+  margin-top: 50px;
   width: 33%;
 }
 
@@ -71,6 +71,7 @@
 .result-button {
   background-color: #FF5252;
   border-radius: 5px;
+  font-size: 15px;
   color: #FFFFFF;
   text-decoration: none;
   padding: 5px;
@@ -86,6 +87,24 @@
   text-align: center;
 }
 
-.result-img-position img { 
+.result-img-position img {
   border-radius: 60px;
+}
+
+.quick-waitlist-form {
+  display:block;
+  margin: auto;
+  text-align: center;
+  width: 50%;
+}
+.waitlist-table {
+    margin: auto;
+}
+.waitlist-table td{
+  padding: 5px;
+  text-align: center;
+}
+
+.create-wait-list-position input.create-position {
+  font-size: 15px;
 }

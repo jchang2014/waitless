@@ -5,12 +5,13 @@
 	  <div class="result-img">
 
 	  	<div class="result-img-position">
-	  		<img src="<%=result[:image]%>" class="place-img">
+	  		<img src="<%=result[:image]%>">
 	  	</div>
 
 	  		<div class="link-wrapper">
-					<a href="/restaurants/<%= result[:id] %>" class="result-button">Sign Waitlist</a>
-	  			<a href="#" class="result-button">See More</a>
+					<button class="result-button">Sign Waitlist</button>
+
+	  			<a href="/restaurants/<%= result[:id] %>" class="result-button">See More</a>
 				</div>
 
 	  </div>
@@ -39,6 +40,23 @@
 
 	</div>
 
+	<div class="quick-waitlist-form">
 
+		<form class="create-waitlist-position">
+
+			<table class="waitlist-table">
+				<tr>
+					<td><label>Name</label></td>
+					<td><input type="text" placeholder="<%= current_user ? current_user.name : 'Your Name' %>"></td>
+					<td><label>Number of People</label></td>
+					<td><input type="text" placeholder="Minimum(1)"></td>
+				</tr>
+			</table>
+
+			<input type="submit" class="create-position" value="Save Your Spot">
+
+		</form>
+
+	</div>
 
 </div>
