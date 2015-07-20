@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorize, :except => [:index]
+  before_action :authorize, :except => [:index, :new, :create]
   def index
 
   end
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to @user
     else
-      render 'new'
+      render :new
     end
   end
 
