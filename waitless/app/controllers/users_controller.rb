@@ -8,7 +8,9 @@ class UsersController < ApplicationController
     if !current_user
       redirect_to '/'
     end
+
     @user = User.find(params[:id])
+    @reservations = @user.reservations
   end
 
   def new
