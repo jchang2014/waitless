@@ -12,12 +12,10 @@ Rails.application.routes.draw do
 	    resources :reservations
 	  end
 
-	  resources :restaurants
-
 	  resources :types do
 	    resources :restaurants
 	  end
-
+    resources :restaurants
 	# end
 
   get 'auth/:provider/callback', to: 'sessions#create'

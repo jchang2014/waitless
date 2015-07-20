@@ -1,10 +1,10 @@
 class SessionsController < ApplicationController
 
   def create
-    user = User.find_by(email: params[:email])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to users_path
+    @user = User.find_by(email: params[:email])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      redirect_to @user
     else
       @errors = ["Invalid Username or Password."]
       render :login

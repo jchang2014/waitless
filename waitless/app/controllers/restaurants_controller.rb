@@ -1,5 +1,9 @@
 class RestaurantsController < ApplicationController
+
+  before_filter :admin?, :except => [:index, :show]
+
   def index
+
     parameters = { term: params[:search], limit:10}
     location_filter = (params[:location].length > 0) ? params[:location] : "San Francisco"
 
@@ -13,8 +17,8 @@ class RestaurantsController < ApplicationController
       end
 
       @restaurant = Restaurant.where(yelp_id: @business['id']).first
-      if @restaurant == nil 
-        @id = 'new' 
+      if @restaurant == nil
+        @id = 'new'
       else
         @id = @restaurant.id
       end
@@ -44,5 +48,8 @@ class RestaurantsController < ApplicationController
 
   def show
     #render "_result", layout: false, locals: { results: @results }
+  end
+
+  def new
   end
 end
