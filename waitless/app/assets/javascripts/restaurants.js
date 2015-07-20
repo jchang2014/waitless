@@ -28,7 +28,6 @@ function queryResults() {
   });
   htmlRequest.done(function(response){
     console.log('inside htmlRequest ajax call');
-    $('.home-wrapper').hide();
     $('.body-wrapper').append(response);
   });
 
