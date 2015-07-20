@@ -29,9 +29,15 @@ function queryResults() {
   });
   htmlRequest.done(function(response){
     console.log('inside htmlRequest ajax call');
-    var separator = $('.separator').clone();
-    $('.body-wrapper').append(separator);
+
+    $('.restaurant-results').remove();
+    $('.search-text').remove();
+
     $('.body-wrapper').append(response);
+    var textResponse = "<div class='search-text'><p align=center>You can view your search results below</p></div>";
+    $('.home-explore').append(textResponse);
+    $('input#search').val('');
+    $('input#location').val('');
   });
 
   }); //end search-form
