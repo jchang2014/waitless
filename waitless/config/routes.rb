@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
 	  resources :users 
 
-	    resources :reservations
+    resources :reservations
 	  
 
 	  resources :restaurants
