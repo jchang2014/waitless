@@ -6,7 +6,6 @@ function queryResults() {
   console.log("starting query");
   $('.search-form').on('click', '.home-search', function(e){
     e.preventDefault();
-    debugger
     var mapRequest = $.ajax({
       url: "/restaurants",
       action: "get",
