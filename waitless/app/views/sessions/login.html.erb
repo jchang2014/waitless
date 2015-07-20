@@ -15,7 +15,7 @@
       </tr>
       <tr>
         <td><%= submit_tag "Submit", :class => 'login-button' %></td>
-        <td>(or <a href='/users/new'>signup</a>)</td>
+        <td>(or <%= link_to 'signup', new_user_path %></a>)</td>
       </tr>
     </table>
 
