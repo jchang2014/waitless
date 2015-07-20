@@ -3,14 +3,10 @@ class RestaurantsController < ApplicationController
 	def index
 		parameters = { term: params[:search], limit:10}
 		location_filter = (params[:location].length > 0) ? params[:location] : "San Francisco"
-    p "*" * 50
-    puts params[:search]
-    puts params[:location]
-    puts location_filter
 
   	response = Yelp.client.search(location_filter, parameters).as_json
     @results = []
-    puts response
+    # puts response
   	for i in 0..9
   		@business = response['hash']['businesses'][i]
       @categories = []
@@ -31,14 +27,17 @@ class RestaurantsController < ApplicationController
     end
 
     respond_to do |format|
+      format.html {
+        render "index", layout: false, locals: {results: @result}
+      }
       format.json {
-        render json: { results: @results }
+        render json: @results
       }
     end
   end
 
 
   def show
-    render "_result"
+    render "_result", layout: false, locals: { results: @results }
   end
 end

@@ -7,21 +7,34 @@ function queryResults() {
   $('#search-form').on('click', '#search-button', function(e){
     e.preventDefault();
 
-    var request = $.ajax({
+    var mapRequest = $.ajax({
       url: "/restaurants",
       action: "get",
       dataType: "JSON",
       data: $('#search-form').serialize()
     }); //end getJSON
-    request.done(function(json){
-      var markers = json.results;
-      updateMap(markers);
-      console.log(json);
+    mapRequest.done(function(data){
+      updateMap(data);
+
     });//end done
-    request.fail(function(error){
+    mapRequest.fail(function(error){
       alert("sorry your search yielded no results");
     });//end fail
+
+  var htmlRequest = $.ajax({
+    url: "/restaurants",
+    action: "get",
+    dataType: "html",
+    data: $('#search-form').serialize()
+  });
+  htmlRequest.done(function(response){
+    console.log('inside htmlRequest ajax call');
+    $('.home-wrapper').hide();
+    $('.body-wrapper').append(response);
+  });
+
   }); //end search-form
+
 } //end queryResults
 
 //Google maps
