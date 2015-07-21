@@ -48,7 +48,7 @@
             <tr>
               <td><%=reservation.user.name%></td>
               <td><%=reservation.number_in_party%></td>
-              <td><%=reservation.created_at%></td>
+              <td><%= reservation.created_at.strftime('%r')%></td>
               <td><%=reservation.timer%></td>
             </tr>
           <% end %>
