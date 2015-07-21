@@ -9,5 +9,4 @@ class Reservation < ActiveRecord::Base
     update_column(:notified?, false)
     update_column(:table_ready?, false)
   end
-
 end
