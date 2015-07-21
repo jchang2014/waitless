@@ -34014,3 +34014,120 @@ WHERE c.contype = 'f'
   AND t3.nspname = ANY (current_schemas(false))
 ORDER BY c.conname
 [0m
+
+
+Started GET "/" for ::1 at 2015-07-20 18:57:30 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 837ms (Views: 828.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/home.self-b5123dde1468e10fb5cc81332ce115daf130252f8d337daf5ce24dd5a549c1b6.css?body=1" for ::1 at 2015-07-20 18:57:31 -0700
+
+
+Started GET "/assets/restaurants.self-4418230f56e0e7dc071c73b9390ec8ad90e0170bedb3e6a91854d9ac4ace4d85.css?body=1" for ::1 at 2015-07-20 18:57:31 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-20 18:57:31 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-20 18:57:31 -0700
+
+
+Started GET "/session" for ::1 at 2015-07-20 18:57:37 -0700
+Processing by SessionsController#show as HTML
+  Rendered sessions/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 60ms (Views: 46.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/session" for ::1 at 2015-07-20 18:57:41 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FqLwnUTzRE+AbwKx97ScbiINi72b9qNh9z0uWpSoriA6ZFuC2YVoRZINjAOExQPh/rhC8yHsPKyF3gaKpr54iQ==", "email"=>"tom", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "tom"]]
+  Rendered sessions/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 70ms (Views: 58.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-20 18:57:43 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (2.5ms)
+  Rendered users/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 83ms (Views: 82.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-07-20 18:57:47 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sJOKuteEXUAdvBnp0KobGMfsXL2dLCEl1iKIBB11RbCcVSGlSvJxSg/el1uj24SXG1mV8yc2vuikwaDUL2OTGQ==", "user"=>{"name"=>"tom", "email"=>"tom", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "tom"], ["email", "tom"], ["password_digest", "$2a$10$prs82n.E4pPWus/wptGeuOC9GnjE07Qu.taNNh0ek4sDuE15IctsS"], ["created_at", "2015-07-21 01:57:47.954196"], ["updated_at", "2015-07-21 01:57:47.954196"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/users/19
+Completed 302 Found in 77ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/19" for ::1 at 2015-07-20 18:57:47 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReservation Exists (0.3ms)[0m  SELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1  [["user_id", 19]]
+  Rendered users/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 84ms (Views: 62.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=tacos&location=" for ::1 at 2015-07-20 18:57:50 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"tacos", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "el-farolito-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "street-taco-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-taco-shop-at-underdogs-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "bayshore-taqueria-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "nicks-crispy-tacos-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "garaje-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "taqueria-guadalajara-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tropisueño-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "taqueria-castillo-mason-san-francisco"]]
+Completed 200 OK in 713ms (Views: 1.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=tacos&location=" for ::1 at 2015-07-20 18:57:51 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"tacos", "location"=>""}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "el-farolito-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "street-taco-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-taco-shop-at-underdogs-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "bayshore-taqueria-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "nicks-crispy-tacos-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "garaje-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "taqueria-guadalajara-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tropisueño-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "taqueria-castillo-mason-san-francisco"]]
+  Rendered restaurants/_result.html.erb (1.5ms)
+  Rendered restaurants/index.html.erb (4.0ms)
+Completed 200 OK in 602ms (Views: 6.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/restaurants/29" for ::1 at 2015-07-20 18:57:55 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 29]]
+  Rendered restaurants/_result.html.erb (0.4ms)
+  Rendered restaurants/show.html.erb within layouts/application (13.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+Completed 200 OK in 212ms (Views: 70.1ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/session" for ::1 at 2015-07-20 18:57:58 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"s2oz2qabhUY+pvB/ySiGFMh9xdz37vgBnrF+xEXhcAKfrJjFO+2pTCzEfs26WRmbFMgMkk30Z8zsUlYUd/emqw=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-20 18:57:58 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 54ms (Views: 53.5ms | ActiveRecord: 0.0ms)
