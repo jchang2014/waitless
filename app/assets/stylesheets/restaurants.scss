@@ -134,17 +134,25 @@
 .show {
 }
 .waitlist-table { 
-  border-radius: 20px;
-  background-color: ghostwhite;
   width: 100%;
   border-collapse: collapse;
 }
 
-.waitlist-table td, th { 
+.waitlist-table th{ 
+  background-color: #607D8B;
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+.waitlist-table td{ 
+  background-color: #607D8B;
+}
+.waitlist-table td { 
+  background-color: ghostwhite;
   padding: 20px;
 }
 
 .waitlist-table tr{
-  border-bottom: 1px solid grey;
+  border-bottom: 1px dotted #607D8B;
 
 }
