@@ -1,5 +1,12 @@
 <div class="top-block">
   <div class="waitlist-window">
+
+    <div class="result-show">
+        <div class="result-wait-time-text0">Current wait time</div>
+        <div class="result-wait-time-number">89</div>
+        <div class="result-wait-time-text1">minute(s)</div>
+    </div>
+
     <div class="waitlist">
       <%= form_for [@restaurant, @new_reservation] do |f| %>
         <%= f.label :party_number %>
@@ -7,6 +14,7 @@
         <%= f.submit %>
       <% end %>
     </div>
+
   </div>
 
   <div class="restaurant-info">
@@ -42,9 +50,6 @@
 
 	</div>
 </div>
-
-
-
 
   <div class="restaurant-waitlist-info">
     <div class="show">
