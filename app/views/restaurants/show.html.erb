@@ -2,6 +2,7 @@
 	<div class="restaurant-info">
 
     <img src="<%=result[:image]%>" class="restaurant-img"/>
+
     <table class="restaurant-data">
       <tr>
           <td><label>Restaurant</label></td>
@@ -28,21 +29,13 @@
 	</div>
 
   <div class="restaurant-waitlist-info">
-    <div class="waitlist">
-		  <%= form_for [@restaurant, @new_reservation] do |f| %>
-			 <%= f.label :party_number %>
-			 <%= f.number_field :number_in_party %>
-			 <%= f.submit %>
-		  <% end %>
-  	</div>
-
     <div class="show">
-		  <table align=center>
+		  <table class="waitlist-table">
         <tr>
-          <td>Name</td>
-          <td>Party Size</td>
-          <td>Signed at:</td>
-          <td>Wait Time</td>
+          <td><label>Name</label></td>
+          <td><label>Party Size</label></td>
+          <td><label>Signed at</label></td>
+          <td><label>Wait Time</label></td>
         </tr>
           <% @reservations.each do |reservation| %>
             <tr>
@@ -53,6 +46,14 @@
             </tr>
           <% end %>
       </table>
+    </div>
+
+    <div class="waitlist">
+      <%= form_for [@restaurant, @new_reservation] do |f| %>
+       <%= f.label :party_number %>
+       <%= f.number_field :number_in_party %>
+       <%= f.submit %>
+      <% end %>
     </div>
 
   </div>

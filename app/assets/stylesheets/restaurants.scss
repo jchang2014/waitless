@@ -87,12 +87,13 @@
   text-align: center;
 }
 
-.result-img-position img {
+.result-img-position {
   border-radius: 60px;
 }
 
 .restaurant-data {
-  background-color:#F2F2F2;
+  text-align: left;
+  width: 100%;
 }
 
 .restaurant-data td{
@@ -104,13 +105,26 @@
 }
 
 .restaurant-info {
+  background-color:#F2F2F2;
   display: inline-block;
+  width: 50%;
+  padding: 5px;
 }
 
 .restaurant-waitlist-info {
   display:inline-block;
+  text-align: left;
+  width: 50%;
+  padding: 5px;
 }
 
 .restaurant-img {
   border-radius: 50px;
+}
+
+.restaurant {
+  margin: 10px auto 0px auto;
+  text-align: center; 
+  width: 70%;
+  display: flex;
 }
