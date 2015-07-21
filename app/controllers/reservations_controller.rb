@@ -6,12 +6,12 @@ class ReservationsController < ApplicationController
 	def create
 		@restaurant = Restaurant.find(params[:restaurant_id])
 		@reservation = @restaurant.reservations.new(number_in_party: params[:reservation][:number_in_party], 
-																	 user_id: session[:user_id], restaurant_id: params[:restaurant_id], timers: @restaurant.wait_time)
+																	 user_id: session[:user_id], restaurant_id: params[:restaurant_id], timer: @restaurant.wait_time)
 		if @reservation.save
 			redirect_to "/users/#{session[:user_id]}"
 		else
 			@errors = @reservation.errors.full_messages
-			redirect restaurant_path
+			redirect "/restaurant/#{params[:restaurant_id]}"
 		end
 	end
 
