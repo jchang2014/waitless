@@ -91,9 +91,9 @@
   border-radius: 60px;
 }
 
-.restaurant-data {
+.restaurant-data-table {
   text-align: left;
-  width: 100%;
+  
 }
 
 .restaurant-data td{
@@ -101,20 +101,22 @@
   vertical-align: top;
 }
 .restaurant {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .restaurant-info {
   background-color:#F2F2F2;
-  display: inline-block;
-  width: 50%;
+  align-self: flex-start;
+  width: 30%;
   padding: 5px;
 }
 
 .restaurant-waitlist-info {
-  display:inline-block;
+  align-self: flex-start;
   text-align: left;
-  width: 50%;
+  width: 70%;
   padding: 5px;
 }
 
@@ -125,6 +127,24 @@
 .restaurant {
   margin: 10px auto 0px auto;
   text-align: center; 
-  width: 70%;
+  width: 85%;
   display: flex;
+}
+
+.show {
+}
+.waitlist-table { 
+  border-radius: 20px;
+  background-color: ghostwhite;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.waitlist-table td, th { 
+  padding: 20px;
+}
+
+.waitlist-table tr{
+  border-bottom: 1px solid grey;
+
 }

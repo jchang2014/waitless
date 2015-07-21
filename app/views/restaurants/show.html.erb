@@ -3,7 +3,7 @@
 
     <img src="<%=result[:image]%>" class="restaurant-img"/>
 
-    <table class="restaurant-data">
+    <table class="restaurant-data-table">
       <tr>
           <td><label>Restaurant</label></td>
           <td><%= @result[:name] %></td>
@@ -32,10 +32,10 @@
     <div class="show">
 		  <table class="waitlist-table">
         <tr>
-          <td><label>Name</label></td>
-          <td><label>Party Size</label></td>
-          <td><label>Signed at</label></td>
-          <td><label>Wait Time</label></td>
+          <th><label>Name</label></th>
+          <th><label>Party Size</label></th>
+          <th><label>Signed at</label></th>
+          <th><label>Wait Time</label></th>
         </tr>
           <% @reservations.each do |reservation| %>
             <tr>
