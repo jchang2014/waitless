@@ -35153,3 +35153,742 @@ Processing by UsersController#show as HTML
   [1m[35mReservation Exists (0.7ms)[0m  SELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1  [["user_id", 20]]
   Rendered users/show.html.erb within layouts/application (18.1ms)
 Completed 200 OK in 73ms (Views: 69.8ms | ActiveRecord: 1.3ms)
+  [1m[36m (114.9ms)[0m  [1mDROP DATABASE IF EXISTS "waitless_development"[0m
+  [1m[35m (112.0ms)[0m  DROP DATABASE IF EXISTS "waitless_test"
+  [1m[36m (316.8ms)[0m  [1mCREATE DATABASE "waitless_development" ENCODING = 'unicode'[0m
+  [1m[35m (232.8ms)[0m  CREATE DATABASE "waitless_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (19.9ms)[0m  CREATE TABLE "reservations" ("id" serial primary key, "number_in_party" integer, "timer" integer, "user_id" integer, "restaurant_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "table_ready_time" time, "notify_time" time, "notified?" boolean, "table_ready?" boolean) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_reservations_on_restaurant_id" ON "reservations" USING btree ("restaurant_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_reservations_on_user_id" ON "reservations" USING btree ("user_id")
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "restaurant_types" ("id" serial primary key, "restaurant_id" integer, "type_id" integer) [0m
+  [1m[35m (20.4ms)[0m  CREATE TABLE "restaurants" ("id" serial primary key, "yelp_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "wait_time" integer DEFAULT 0, "user_id" integer) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_restaurants_on_user_id" ON "restaurants" USING btree ("user_id")[0m
+  [1m[35m (2.1ms)[0m  CREATE TABLE "types" ("id" serial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "admin" boolean, "proprietor" boolean, "phone_number" character varying) [0m
+  [1m[35m (2.2ms)[0m  ALTER TABLE "restaurants" ADD CONSTRAINT "fk_rails_aef57e41ec"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (12.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (11.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720221707')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150716225350')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150716225407')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150716225420')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150716230258')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150716230815')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150718214831')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150718215448')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150718215649')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150719180323')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720165729')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150720215807')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720220345')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150720220503')[0m
+  [1m[35mSQL (0.3ms)[0m  CREATE EXTENSION IF NOT EXISTS "plpgsql"
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "reservations" ("id" serial primary key, "number_in_party" integer, "timer" integer, "user_id" integer, "restaurant_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "table_ready_time" time, "notify_time" time, "notified?" boolean, "table_ready?" boolean) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_reservations_on_restaurant_id" ON "reservations" USING btree ("restaurant_id")
+  [1m[36m (1.1ms)[0m  [1mCREATE  INDEX  "index_reservations_on_user_id" ON "reservations" USING btree ("user_id")[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "restaurant_types" ("id" serial primary key, "restaurant_id" integer, "type_id" integer) 
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "yelp_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "wait_time" integer DEFAULT 0, "user_id" integer) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_restaurants_on_user_id" ON "restaurants" USING btree ("user_id")
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "types" ("id" serial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "admin" boolean, "proprietor" boolean, "phone_number" character varying) 
+  [1m[36m (1.6ms)[0m  [1mALTER TABLE "restaurants" ADD CONSTRAINT "fk_rails_aef57e41ec"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.3ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150720221707')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150716225350')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150716225407')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150716225420')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150716230258')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150716230815')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150718214831')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150718215448')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150718215649')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150719180323')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150720165729')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720215807')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150720220345')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720220503')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "scooby"], ["email", "dooby@gmail.com"], ["password_digest", "$2a$10$7FZL6SxkE5UyHDixRI0CCe8IuTI4qNqUuq8rLDZOk237.tKe8n0M6"], ["created_at", "2015-07-21 18:27:21.485334"], ["updated_at", "2015-07-21 18:27:21.485334"]]
+  [1m[35m (6.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "scrappy"], ["email", "dappy@gmail.com"], ["password_digest", "$2a$10$U1oU7vfQ7NIokSjzwWHQ5.tjbYI9qrdKyC4X9eW3Gr2smcEHYVk7y"], ["created_at", "2015-07-21 18:27:21.564341"], ["updated_at", "2015-07-21 18:27:21.564341"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "velma"], ["email", "daphne@gmail.com"], ["password_digest", "$2a$10$.W000hQKc3hRE2GLz.mSt.xOcNix8Tryg/l6CPFVn/u.W/hRbWDES"], ["created_at", "2015-07-21 18:27:21.633899"], ["updated_at", "2015-07-21 18:27:21.633899"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "derek"], ["email", "jeter@gmail.com"], ["password_digest", "$2a$10$ghXnwYc0OCbDv0zuPCFVTuSVXHyxOizQzJAsIENkBMd4W1Q/MuhWW"], ["created_at", "2015-07-21 18:27:21.702615"], ["updated_at", "2015-07-21 18:27:21.702615"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "mark"], ["email", "mcguire@gmail.com"], ["password_digest", "$2a$10$HnUfJMVyDCtsaPm1hWptqeFwozou6lLg9OWLb.r6zVsPCJQE/2mlS"], ["created_at", "2015-07-21 18:27:21.771689"], ["updated_at", "2015-07-21 18:27:21.771689"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Patrick"], ["email", "Shelby@gmail.com"], ["password_digest", "$2a$10$TBB7yE3PFteow09D.ti.9uUJCdykIALpmK68JZjxRdSwpcIQp9bJm"], ["created_at", "2015-07-21 18:27:21.840848"], ["updated_at", "2015-07-21 18:27:21.840848"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "WolfJob"], ["email", "WolfJob@gmail.com"], ["password_digest", "$2a$10$aQQCaSlW3taRAn8RXnBKd.4Gs/rp6y5IiPB4j5iNGOJsNXqaIhekG"], ["created_at", "2015-07-21 18:27:21.910610"], ["updated_at", "2015-07-21 18:27:21.910610"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Barry"], ["email", "Bonds@gmail.com"], ["password_digest", "$2a$10$z3/GW/LivBH1YwAsHV24VOCZCHUfApQxhDc7OGrv88Ze7SzwJJ73C"], ["created_at", "2015-07-21 18:27:21.982184"], ["updated_at", "2015-07-21 18:27:21.982184"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "sonic"], ["email", "the@the.com"], ["password_digest", "$2a$10$th3TctLAMG7NvKJjtwwZXOulNs4TukkJOK0FoAknU6LwQ2Ghdebo."], ["created_at", "2015-07-21 18:27:22.051037"], ["updated_at", "2015-07-21 18:27:22.051037"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.4ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'mourad-restaurant-san-francisco' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "mourad-restaurant-san-francisco"], ["created_at", "2015-07-21 18:27:22.080026"], ["updated_at", "2015-07-21 18:27:22.080026"]]
+  [1m[35m (6.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.3ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-flying-falafel-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"], ["created_at", "2015-07-21 18:27:22.090131"], ["updated_at", "2015-07-21 18:27:22.090131"]]
+  [1m[35m (6.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.3ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'marlowe-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "marlowe-san-francisco-2"], ["created_at", "2015-07-21 18:27:22.100224"], ["updated_at", "2015-07-21 18:27:22.100224"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'cockscomb-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "cockscomb-san-francisco"], ["created_at", "2015-07-21 18:27:22.103401"], ["updated_at", "2015-07-21 18:27:22.103401"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'garaje-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "garaje-san-francisco"], ["created_at", "2015-07-21 18:27:22.105716"], ["updated_at", "2015-07-21 18:27:22.105716"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.3ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'zero-zero-san-francisco' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "zero-zero-san-francisco"], ["created_at", "2015-07-21 18:27:22.108529"], ["updated_at", "2015-07-21 18:27:22.108529"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'box-kitchen-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "box-kitchen-san-francisco"], ["created_at", "2015-07-21 18:27:22.111542"], ["updated_at", "2015-07-21 18:27:22.111542"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'so-san-francisco-4' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "so-san-francisco-4"], ["created_at", "2015-07-21 18:27:22.113961"], ["updated_at", "2015-07-21 18:27:22.113961"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'tropisueño-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "tropisueño-san-francisco-3"], ["created_at", "2015-07-21 18:27:22.116385"], ["updated_at", "2015-07-21 18:27:22.116385"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-pink-elephant-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "the-pink-elephant-san-francisco-3"], ["created_at", "2015-07-21 18:27:22.118666"], ["updated_at", "2015-07-21 18:27:22.118666"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'citizens-band-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "citizens-band-san-francisco"], ["created_at", "2015-07-21 18:27:22.120942"], ["updated_at", "2015-07-21 18:27:22.120942"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'little-skillet-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "little-skillet-san-francisco-2"], ["created_at", "2015-07-21 18:27:22.123101"], ["updated_at", "2015-07-21 18:27:22.123101"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'jamber-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "jamber-san-francisco"], ["created_at", "2015-07-21 18:27:22.125135"], ["updated_at", "2015-07-21 18:27:22.125135"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'picnic-on-third-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "picnic-on-third-san-francisco"], ["created_at", "2015-07-21 18:27:22.131093"], ["updated_at", "2015-07-21 18:27:22.131093"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hrd-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "hrd-san-francisco-2"], ["created_at", "2015-07-21 18:27:22.133335"], ["updated_at", "2015-07-21 18:27:22.133335"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'dragoneats-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "dragoneats-san-francisco-3"], ["created_at", "2015-07-21 18:27:22.135361"], ["updated_at", "2015-07-21 18:27:22.135361"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'freshroll-vietnamese-rolls-and-bowls-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "freshroll-vietnamese-rolls-and-bowls-san-francisco"], ["created_at", "2015-07-21 18:27:22.137406"], ["updated_at", "2015-07-21 18:27:22.137406"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'red-dog-restaurant-and-bar-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "red-dog-restaurant-and-bar-san-francisco"], ["created_at", "2015-07-21 18:27:22.139389"], ["updated_at", "2015-07-21 18:27:22.139389"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'bluestem-brasserie-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "bluestem-brasserie-san-francisco"], ["created_at", "2015-07-21 18:27:22.141309"], ["updated_at", "2015-07-21 18:27:22.141309"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'archive-bar-and-kitchen-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "archive-bar-and-kitchen-san-francisco"], ["created_at", "2015-07-21 18:27:22.143278"], ["updated_at", "2015-07-21 18:27:22.143278"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'sous-beurre-kitchen-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"], ["created_at", "2015-07-21 18:27:22.145076"], ["updated_at", "2015-07-21 18:27:22.145076"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'thistle-san-francisco-8' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "thistle-san-francisco-8"], ["created_at", "2015-07-21 18:27:22.147834"], ["updated_at", "2015-07-21 18:27:22.147834"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'bistro-l-aviateur-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "bistro-l-aviateur-san-francisco-2"], ["created_at", "2015-07-21 18:27:22.149951"], ["updated_at", "2015-07-21 18:27:22.149951"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hoffmanns-grill-and-rotisserie-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "hoffmanns-grill-and-rotisserie-san-francisco"], ["created_at", "2015-07-21 18:27:22.151898"], ["updated_at", "2015-07-21 18:27:22.151898"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'loló-san-francisco-4' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "loló-san-francisco-4"], ["created_at", "2015-07-21 18:27:22.153809"], ["updated_at", "2015-07-21 18:27:22.153809"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = '20-spot-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "20-spot-san-francisco"], ["created_at", "2015-07-21 18:27:22.155750"], ["updated_at", "2015-07-21 18:27:22.155750"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'stuffed-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "stuffed-san-francisco"], ["created_at", "2015-07-21 18:27:22.157634"], ["updated_at", "2015-07-21 18:27:22.157634"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'beretta-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "beretta-san-francisco"], ["created_at", "2015-07-21 18:27:22.159516"], ["updated_at", "2015-07-21 18:27:22.159516"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'el-farolito-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "el-farolito-san-francisco-2"], ["created_at", "2015-07-21 18:27:22.161390"], ["updated_at", "2015-07-21 18:27:22.161390"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'californios-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "californios-san-francisco"], ["created_at", "2015-07-21 18:27:22.163266"], ["updated_at", "2015-07-21 18:27:22.163266"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'kazan-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "kazan-san-francisco"], ["created_at", "2015-07-21 18:27:22.165141"], ["updated_at", "2015-07-21 18:27:22.165141"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-tradesman-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "the-tradesman-san-francisco-2"], ["created_at", "2015-07-21 18:27:22.167048"], ["updated_at", "2015-07-21 18:27:22.167048"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'prubechu-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "prubechu-san-francisco"], ["created_at", "2015-07-21 18:27:22.169098"], ["updated_at", "2015-07-21 18:27:22.169098"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'als-place-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "als-place-san-francisco"], ["created_at", "2015-07-21 18:27:22.171158"], ["updated_at", "2015-07-21 18:27:22.171158"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'limón-rotisserie-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "limón-rotisserie-san-francisco-3"], ["created_at", "2015-07-21 18:27:22.173136"], ["updated_at", "2015-07-21 18:27:22.173136"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'lazy-bear-san-francisco-5' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "lazy-bear-san-francisco-5"], ["created_at", "2015-07-21 18:27:22.175014"], ["updated_at", "2015-07-21 18:27:22.175014"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'local-mission-eatery-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "local-mission-eatery-san-francisco"], ["created_at", "2015-07-21 18:27:22.176896"], ["updated_at", "2015-07-21 18:27:22.176896"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-front-porch-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "the-front-porch-san-francisco"], ["created_at", "2015-07-21 18:27:22.178773"], ["updated_at", "2015-07-21 18:27:22.178773"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'paprika-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "paprika-san-francisco"], ["created_at", "2015-07-21 18:27:22.180712"], ["updated_at", "2015-07-21 18:27:22.180712"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hog-and-rocks-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "hog-and-rocks-san-francisco"], ["created_at", "2015-07-21 18:27:22.182575"], ["updated_at", "2015-07-21 18:27:22.182575"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'coqueta-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "coqueta-san-francisco"], ["created_at", "2015-07-21 18:27:22.184443"], ["updated_at", "2015-07-21 18:27:22.184443"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hog-island-oyster-co-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "hog-island-oyster-co-san-francisco"], ["created_at", "2015-07-21 18:27:22.186320"], ["updated_at", "2015-07-21 18:27:22.186320"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'roli-roti-gourmet-rotisserie-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "roli-roti-gourmet-rotisserie-san-francisco"], ["created_at", "2015-07-21 18:27:22.188239"], ["updated_at", "2015-07-21 18:27:22.188239"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'il-cane-rosso-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "il-cane-rosso-san-francisco"], ["created_at", "2015-07-21 18:27:22.190107"], ["updated_at", "2015-07-21 18:27:22.190107"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'primavera-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "primavera-san-francisco"], ["created_at", "2015-07-21 18:27:22.192290"], ["updated_at", "2015-07-21 18:27:22.192290"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'la-mar-cebichería-peruana-san-francisco-4' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "la-mar-cebichería-peruana-san-francisco-4"], ["created_at", "2015-07-21 18:27:22.194380"], ["updated_at", "2015-07-21 18:27:22.194380"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'waterbar-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "waterbar-san-francisco"], ["created_at", "2015-07-21 18:27:22.196324"], ["updated_at", "2015-07-21 18:27:22.196324"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'palomino-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "palomino-san-francisco-3"], ["created_at", "2015-07-21 18:27:22.198231"], ["updated_at", "2015-07-21 18:27:22.198231"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'chaya-brasserie-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "chaya-brasserie-san-francisco"], ["created_at", "2015-07-21 18:27:22.200099"], ["updated_at", "2015-07-21 18:27:22.200099"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = '4505-meats-san-francisco-7' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "4505-meats-san-francisco-7"], ["created_at", "2015-07-21 18:27:22.201964"], ["updated_at", "2015-07-21 18:27:22.201964"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'frog-hollow-farm-market-and-cafe-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "frog-hollow-farm-market-and-cafe-san-francisco"], ["created_at", "2015-07-21 18:27:22.203860"], ["updated_at", "2015-07-21 18:27:22.203860"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'perrys-san-francisco-6' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "perrys-san-francisco-6"], ["created_at", "2015-07-21 18:27:22.205731"], ["updated_at", "2015-07-21 18:27:22.205731"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'delica-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "delica-san-francisco"], ["created_at", "2015-07-21 18:27:22.207594"], ["updated_at", "2015-07-21 18:27:22.207594"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'boccalone-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "boccalone-san-francisco-2"], ["created_at", "2015-07-21 18:27:22.209454"], ["updated_at", "2015-07-21 18:27:22.209454"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-slanted-door-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "the-slanted-door-san-francisco"], ["created_at", "2015-07-21 18:27:22.211697"], ["updated_at", "2015-07-21 18:27:22.211697"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'el-porteño-empanadas-san-francisco-4' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "el-porteño-empanadas-san-francisco-4"], ["created_at", "2015-07-21 18:27:22.213770"], ["updated_at", "2015-07-21 18:27:22.213770"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hillstone-san-francisco-4' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "hillstone-san-francisco-4"], ["created_at", "2015-07-21 18:27:22.215729"], ["updated_at", "2015-07-21 18:27:22.215729"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'pier-23-cafe-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "pier-23-cafe-san-francisco"], ["created_at", "2015-07-21 18:27:22.217618"], ["updated_at", "2015-07-21 18:27:22.217618"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'fog-city-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "fog-city-san-francisco-2"], ["created_at", "2015-07-21 18:27:22.219504"], ["updated_at", "2015-07-21 18:27:22.219504"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'gotts-roadside-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "gotts-roadside-san-francisco-2"], ["created_at", "2015-07-21 18:27:22.221417"], ["updated_at", "2015-07-21 18:27:22.221417"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE ("restaurants"."yelp_id" = 'dragoneats-san-francisco-3' AND "restaurants"."id" != 16) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "restaurants" SET "user_id" = $1, "updated_at" = $2 WHERE "restaurants"."id" = $3  [["user_id", 1], ["updated_at", "2015-07-21 18:27:22.228975"], ["id", 16]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "lazy-bear-san-francisco-5"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.3ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE ("restaurants"."yelp_id" = 'lazy-bear-san-francisco-5' AND "restaurants"."id" != 36) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "restaurants" SET "user_id" = $1, "updated_at" = $2 WHERE "restaurants"."id" = $3[0m  [["user_id", 2], ["updated_at", "2015-07-21 18:27:22.240065"], ["id", 36]]
+  [1m[35m (6.4ms)[0m  COMMIT
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "hrd-san-francisco-2"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE ("restaurants"."yelp_id" = 'hrd-san-francisco-2' AND "restaurants"."id" != 15) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "restaurants" SET "user_id" = $1, "updated_at" = $2 WHERE "restaurants"."id" = $3  [["user_id", 3], ["updated_at", "2015-07-21 18:27:22.250753"], ["id", 15]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "reservations" ("user_id", "number_in_party", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 5], ["number_in_party", 3], ["restaurant_id", 16], ["created_at", "2015-07-21 18:27:22.287198"], ["updated_at", "2015-07-21 18:27:22.287198"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "table_ready_time" = '2015-07-21 18:42:22.287198' WHERE "reservations"."id" = $1  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "reservations" SET "notify_time" = '2015-07-21 18:37:22.287198' WHERE "reservations"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1  [["id", 1]]
+PG::UndefinedColumn: ERROR:  column "table_ready" of relation "reservations" does not exist
+LINE 1: UPDATE "reservations" SET "table_ready" = 'f' WHERE "reserva...
+                                  ^
+: UPDATE "reservations" SET "table_ready" = 'f' WHERE "reservations"."id" = $1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (112.0ms)[0m  [1mDROP DATABASE IF EXISTS "waitless_development"[0m
+  [1m[35m (113.0ms)[0m  DROP DATABASE IF EXISTS "waitless_test"
+  [1m[36m (231.1ms)[0m  [1mCREATE DATABASE "waitless_development" ENCODING = 'unicode'[0m
+  [1m[35m (229.9ms)[0m  CREATE DATABASE "waitless_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (3.3ms)[0m  CREATE TABLE "reservations" ("id" serial primary key, "number_in_party" integer, "timer" integer, "user_id" integer, "restaurant_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "table_ready_time" time, "notify_time" time, "notified?" boolean, "table_ready?" boolean) 
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_reservations_on_restaurant_id" ON "reservations" USING btree ("restaurant_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_reservations_on_user_id" ON "reservations" USING btree ("user_id")
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "restaurant_types" ("id" serial primary key, "restaurant_id" integer, "type_id" integer) [0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "restaurants" ("id" serial primary key, "yelp_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "wait_time" integer DEFAULT 0, "user_id" integer) 
+  [1m[36m (1.0ms)[0m  [1mCREATE  INDEX  "index_restaurants_on_user_id" ON "restaurants" USING btree ("user_id")[0m
+  [1m[35m (2.5ms)[0m  CREATE TABLE "types" ("id" serial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "admin" boolean, "proprietor" boolean, "phone_number" character varying) [0m
+  [1m[35m (2.1ms)[0m  ALTER TABLE "restaurants" ADD CONSTRAINT "fk_rails_aef57e41ec"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720221707')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150716225350')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150716225407')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150716225420')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150716230258')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150716230815')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150718214831')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150718215448')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150718215649')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150719180323')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720165729')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150720215807')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720220345')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150720220503')[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE EXTENSION IF NOT EXISTS "plpgsql"
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "reservations" ("id" serial primary key, "number_in_party" integer, "timer" integer, "user_id" integer, "restaurant_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "table_ready_time" time, "notify_time" time, "notified?" boolean, "table_ready?" boolean) [0m
+  [1m[35m (1.0ms)[0m  CREATE  INDEX  "index_reservations_on_restaurant_id" ON "reservations" USING btree ("restaurant_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_reservations_on_user_id" ON "reservations" USING btree ("user_id")[0m
+  [1m[35m (1.8ms)[0m  CREATE TABLE "restaurant_types" ("id" serial primary key, "restaurant_id" integer, "type_id" integer) 
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "yelp_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "wait_time" integer DEFAULT 0, "user_id" integer) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_restaurants_on_user_id" ON "restaurants" USING btree ("user_id")
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "types" ("id" serial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.7ms)[0m  CREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "admin" boolean, "proprietor" boolean, "phone_number" character varying) 
+  [1m[36m (1.7ms)[0m  [1mALTER TABLE "restaurants" ADD CONSTRAINT "fk_rails_aef57e41ec"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150720221707')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150716225350')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150716225407')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150716225420')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150716230258')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150716230815')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150718214831')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150718215448')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150718215649')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150719180323')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150720165729')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720215807')
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150720220345')[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150720220503')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "scooby"], ["email", "dooby@gmail.com"], ["password_digest", "$2a$10$WWpu8.bmurR23jUzc5NIoOrIsftSI3IIfJ/jYdNIB7.eMGxBt8j8i"], ["created_at", "2015-07-21 18:29:10.147373"], ["updated_at", "2015-07-21 18:29:10.147373"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "scrappy"], ["email", "dappy@gmail.com"], ["password_digest", "$2a$10$Sb5x8DhYuHuT1WU.3hbJE.2y9btgGSxqJKnB/kCM31gTt2QzCxNyS"], ["created_at", "2015-07-21 18:29:10.221160"], ["updated_at", "2015-07-21 18:29:10.221160"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "velma"], ["email", "daphne@gmail.com"], ["password_digest", "$2a$10$bOZaGtvtUHkr1yv9UIviVOE.osJA7T57fQo5..F9AeKSjX9IEw/7O"], ["created_at", "2015-07-21 18:29:10.290424"], ["updated_at", "2015-07-21 18:29:10.290424"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "derek"], ["email", "jeter@gmail.com"], ["password_digest", "$2a$10$eKG2adiPtJ/nEmKaiAOOj.Z7uI7mny5xl6w/aEeuy0n.AoBHRMYny"], ["created_at", "2015-07-21 18:29:10.366052"], ["updated_at", "2015-07-21 18:29:10.366052"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "mark"], ["email", "mcguire@gmail.com"], ["password_digest", "$2a$10$kp3Trr0ZTILhL1u7HnZO2.GMxH2z2OlnuEnGHGQ0h4ZhzMwf/OVvW"], ["created_at", "2015-07-21 18:29:10.440932"], ["updated_at", "2015-07-21 18:29:10.440932"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Patrick"], ["email", "Shelby@gmail.com"], ["password_digest", "$2a$10$kRI0qkIdhz890qRz75A8sOhoxLvg26KGa.JqbEFXpaMWiGfgUUm5m"], ["created_at", "2015-07-21 18:29:10.522338"], ["updated_at", "2015-07-21 18:29:10.522338"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "WolfJob"], ["email", "WolfJob@gmail.com"], ["password_digest", "$2a$10$9xkXGB24dnQHKL0Qtx4kf.0570NW6hm3c4cfAwvd5i7KEsQ0Tl6Hm"], ["created_at", "2015-07-21 18:29:10.593099"], ["updated_at", "2015-07-21 18:29:10.593099"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Barry"], ["email", "Bonds@gmail.com"], ["password_digest", "$2a$10$YJfV8OFZG4yBKb4OO9w8..RxQ0ukMw1UgZRsXUKkPNlXvS0anu6k2"], ["created_at", "2015-07-21 18:29:10.665169"], ["updated_at", "2015-07-21 18:29:10.665169"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "sonic"], ["email", "the@the.com"], ["password_digest", "$2a$10$F5WCj4Pzr90phFoZP/u6cuEXDPMsSSCTffFrQdrzon2U.ZgsDpsxm"], ["created_at", "2015-07-21 18:29:10.734711"], ["updated_at", "2015-07-21 18:29:10.734711"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.4ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'mourad-restaurant-san-francisco' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "mourad-restaurant-san-francisco"], ["created_at", "2015-07-21 18:29:10.760517"], ["updated_at", "2015-07-21 18:29:10.760517"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-flying-falafel-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"], ["created_at", "2015-07-21 18:29:10.767407"], ["updated_at", "2015-07-21 18:29:10.767407"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'marlowe-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "marlowe-san-francisco-2"], ["created_at", "2015-07-21 18:29:10.769874"], ["updated_at", "2015-07-21 18:29:10.769874"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'cockscomb-san-francisco' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "cockscomb-san-francisco"], ["created_at", "2015-07-21 18:29:10.772145"], ["updated_at", "2015-07-21 18:29:10.772145"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'garaje-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "garaje-san-francisco"], ["created_at", "2015-07-21 18:29:10.774321"], ["updated_at", "2015-07-21 18:29:10.774321"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'zero-zero-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "zero-zero-san-francisco"], ["created_at", "2015-07-21 18:29:10.776456"], ["updated_at", "2015-07-21 18:29:10.776456"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'box-kitchen-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "box-kitchen-san-francisco"], ["created_at", "2015-07-21 18:29:10.778448"], ["updated_at", "2015-07-21 18:29:10.778448"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'so-san-francisco-4' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "so-san-francisco-4"], ["created_at", "2015-07-21 18:29:10.780378"], ["updated_at", "2015-07-21 18:29:10.780378"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'tropisueño-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "tropisueño-san-francisco-3"], ["created_at", "2015-07-21 18:29:10.782277"], ["updated_at", "2015-07-21 18:29:10.782277"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-pink-elephant-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "the-pink-elephant-san-francisco-3"], ["created_at", "2015-07-21 18:29:10.784144"], ["updated_at", "2015-07-21 18:29:10.784144"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'citizens-band-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "citizens-band-san-francisco"], ["created_at", "2015-07-21 18:29:10.786029"], ["updated_at", "2015-07-21 18:29:10.786029"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'little-skillet-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "little-skillet-san-francisco-2"], ["created_at", "2015-07-21 18:29:10.787947"], ["updated_at", "2015-07-21 18:29:10.787947"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'jamber-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "jamber-san-francisco"], ["created_at", "2015-07-21 18:29:10.790001"], ["updated_at", "2015-07-21 18:29:10.790001"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'picnic-on-third-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "picnic-on-third-san-francisco"], ["created_at", "2015-07-21 18:29:10.792030"], ["updated_at", "2015-07-21 18:29:10.792030"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hrd-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "hrd-san-francisco-2"], ["created_at", "2015-07-21 18:29:10.794076"], ["updated_at", "2015-07-21 18:29:10.794076"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'dragoneats-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "dragoneats-san-francisco-3"], ["created_at", "2015-07-21 18:29:10.796035"], ["updated_at", "2015-07-21 18:29:10.796035"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'freshroll-vietnamese-rolls-and-bowls-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "freshroll-vietnamese-rolls-and-bowls-san-francisco"], ["created_at", "2015-07-21 18:29:10.797890"], ["updated_at", "2015-07-21 18:29:10.797890"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'red-dog-restaurant-and-bar-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "red-dog-restaurant-and-bar-san-francisco"], ["created_at", "2015-07-21 18:29:10.799758"], ["updated_at", "2015-07-21 18:29:10.799758"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'bluestem-brasserie-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "bluestem-brasserie-san-francisco"], ["created_at", "2015-07-21 18:29:10.801664"], ["updated_at", "2015-07-21 18:29:10.801664"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'archive-bar-and-kitchen-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "archive-bar-and-kitchen-san-francisco"], ["created_at", "2015-07-21 18:29:10.803503"], ["updated_at", "2015-07-21 18:29:10.803503"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'sous-beurre-kitchen-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"], ["created_at", "2015-07-21 18:29:10.805368"], ["updated_at", "2015-07-21 18:29:10.805368"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'thistle-san-francisco-8' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "thistle-san-francisco-8"], ["created_at", "2015-07-21 18:29:10.807220"], ["updated_at", "2015-07-21 18:29:10.807220"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'bistro-l-aviateur-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "bistro-l-aviateur-san-francisco-2"], ["created_at", "2015-07-21 18:29:10.809128"], ["updated_at", "2015-07-21 18:29:10.809128"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hoffmanns-grill-and-rotisserie-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "hoffmanns-grill-and-rotisserie-san-francisco"], ["created_at", "2015-07-21 18:29:10.811366"], ["updated_at", "2015-07-21 18:29:10.811366"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'loló-san-francisco-4' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "loló-san-francisco-4"], ["created_at", "2015-07-21 18:29:10.813413"], ["updated_at", "2015-07-21 18:29:10.813413"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = '20-spot-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "20-spot-san-francisco"], ["created_at", "2015-07-21 18:29:10.815541"], ["updated_at", "2015-07-21 18:29:10.815541"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'stuffed-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "stuffed-san-francisco"], ["created_at", "2015-07-21 18:29:10.817428"], ["updated_at", "2015-07-21 18:29:10.817428"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'beretta-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "beretta-san-francisco"], ["created_at", "2015-07-21 18:29:10.819320"], ["updated_at", "2015-07-21 18:29:10.819320"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'el-farolito-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "el-farolito-san-francisco-2"], ["created_at", "2015-07-21 18:29:10.821155"], ["updated_at", "2015-07-21 18:29:10.821155"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'californios-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "californios-san-francisco"], ["created_at", "2015-07-21 18:29:10.823032"], ["updated_at", "2015-07-21 18:29:10.823032"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'kazan-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "kazan-san-francisco"], ["created_at", "2015-07-21 18:29:10.824880"], ["updated_at", "2015-07-21 18:29:10.824880"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-tradesman-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "the-tradesman-san-francisco-2"], ["created_at", "2015-07-21 18:29:10.826763"], ["updated_at", "2015-07-21 18:29:10.826763"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'prubechu-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "prubechu-san-francisco"], ["created_at", "2015-07-21 18:29:10.828631"], ["updated_at", "2015-07-21 18:29:10.828631"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.1ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'als-place-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "als-place-san-francisco"], ["created_at", "2015-07-21 18:29:10.830456"], ["updated_at", "2015-07-21 18:29:10.830456"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'limón-rotisserie-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "limón-rotisserie-san-francisco-3"], ["created_at", "2015-07-21 18:29:10.832700"], ["updated_at", "2015-07-21 18:29:10.832700"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'lazy-bear-san-francisco-5' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "lazy-bear-san-francisco-5"], ["created_at", "2015-07-21 18:29:10.834718"], ["updated_at", "2015-07-21 18:29:10.834718"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'local-mission-eatery-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "local-mission-eatery-san-francisco"], ["created_at", "2015-07-21 18:29:10.836690"], ["updated_at", "2015-07-21 18:29:10.836690"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-front-porch-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "the-front-porch-san-francisco"], ["created_at", "2015-07-21 18:29:10.838594"], ["updated_at", "2015-07-21 18:29:10.838594"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'paprika-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "paprika-san-francisco"], ["created_at", "2015-07-21 18:29:10.840557"], ["updated_at", "2015-07-21 18:29:10.840557"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hog-and-rocks-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "hog-and-rocks-san-francisco"], ["created_at", "2015-07-21 18:29:10.842483"], ["updated_at", "2015-07-21 18:29:10.842483"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'coqueta-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "coqueta-san-francisco"], ["created_at", "2015-07-21 18:29:10.844380"], ["updated_at", "2015-07-21 18:29:10.844380"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hog-island-oyster-co-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "hog-island-oyster-co-san-francisco"], ["created_at", "2015-07-21 18:29:10.846279"], ["updated_at", "2015-07-21 18:29:10.846279"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'roli-roti-gourmet-rotisserie-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "roli-roti-gourmet-rotisserie-san-francisco"], ["created_at", "2015-07-21 18:29:10.848164"], ["updated_at", "2015-07-21 18:29:10.848164"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'il-cane-rosso-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "il-cane-rosso-san-francisco"], ["created_at", "2015-07-21 18:29:10.850063"], ["updated_at", "2015-07-21 18:29:10.850063"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'primavera-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "primavera-san-francisco"], ["created_at", "2015-07-21 18:29:10.851919"], ["updated_at", "2015-07-21 18:29:10.851919"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'la-mar-cebichería-peruana-san-francisco-4' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "la-mar-cebichería-peruana-san-francisco-4"], ["created_at", "2015-07-21 18:29:10.853806"], ["updated_at", "2015-07-21 18:29:10.853806"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'waterbar-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "waterbar-san-francisco"], ["created_at", "2015-07-21 18:29:10.855935"], ["updated_at", "2015-07-21 18:29:10.855935"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'palomino-san-francisco-3' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "palomino-san-francisco-3"], ["created_at", "2015-07-21 18:29:10.857956"], ["updated_at", "2015-07-21 18:29:10.857956"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'chaya-brasserie-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "chaya-brasserie-san-francisco"], ["created_at", "2015-07-21 18:29:10.859907"], ["updated_at", "2015-07-21 18:29:10.859907"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = '4505-meats-san-francisco-7' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "4505-meats-san-francisco-7"], ["created_at", "2015-07-21 18:29:10.861851"], ["updated_at", "2015-07-21 18:29:10.861851"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'frog-hollow-farm-market-and-cafe-san-francisco' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "frog-hollow-farm-market-and-cafe-san-francisco"], ["created_at", "2015-07-21 18:29:10.863761"], ["updated_at", "2015-07-21 18:29:10.863761"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'perrys-san-francisco-6' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "perrys-san-francisco-6"], ["created_at", "2015-07-21 18:29:10.866309"], ["updated_at", "2015-07-21 18:29:10.866309"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'delica-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "delica-san-francisco"], ["created_at", "2015-07-21 18:29:10.868456"], ["updated_at", "2015-07-21 18:29:10.868456"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'boccalone-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "boccalone-san-francisco-2"], ["created_at", "2015-07-21 18:29:10.870552"], ["updated_at", "2015-07-21 18:29:10.870552"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-slanted-door-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "the-slanted-door-san-francisco"], ["created_at", "2015-07-21 18:29:10.872540"], ["updated_at", "2015-07-21 18:29:10.872540"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'el-porteño-empanadas-san-francisco-4' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "el-porteño-empanadas-san-francisco-4"], ["created_at", "2015-07-21 18:29:10.874507"], ["updated_at", "2015-07-21 18:29:10.874507"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hillstone-san-francisco-4' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "hillstone-san-francisco-4"], ["created_at", "2015-07-21 18:29:10.876457"], ["updated_at", "2015-07-21 18:29:10.876457"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'pier-23-cafe-san-francisco' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "pier-23-cafe-san-francisco"], ["created_at", "2015-07-21 18:29:10.878393"], ["updated_at", "2015-07-21 18:29:10.878393"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'fog-city-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "fog-city-san-francisco-2"], ["created_at", "2015-07-21 18:29:10.880323"], ["updated_at", "2015-07-21 18:29:10.880323"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'gotts-roadside-san-francisco-2' LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "restaurants" ("yelp_id", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["yelp_id", "gotts-roadside-san-francisco-2"], ["created_at", "2015-07-21 18:29:10.882239"], ["updated_at", "2015-07-21 18:29:10.882239"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE ("restaurants"."yelp_id" = 'dragoneats-san-francisco-3' AND "restaurants"."id" != 16) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "restaurants" SET "user_id" = $1, "updated_at" = $2 WHERE "restaurants"."id" = $3  [["user_id", 1], ["updated_at", "2015-07-21 18:29:10.888607"], ["id", 16]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "lazy-bear-san-francisco-5"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE ("restaurants"."yelp_id" = 'lazy-bear-san-francisco-5' AND "restaurants"."id" != 36) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "restaurants" SET "user_id" = $1, "updated_at" = $2 WHERE "restaurants"."id" = $3[0m  [["user_id", 2], ["updated_at", "2015-07-21 18:29:10.892758"], ["id", 36]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "hrd-san-francisco-2"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE ("restaurants"."yelp_id" = 'hrd-san-francisco-2' AND "restaurants"."id" != 15) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "restaurants" SET "user_id" = $1, "updated_at" = $2 WHERE "restaurants"."id" = $3  [["user_id", 3], ["updated_at", "2015-07-21 18:29:10.895771"], ["id", 15]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "reservations" ("user_id", "number_in_party", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 5], ["number_in_party", 3], ["restaurant_id", 16], ["created_at", "2015-07-21 18:29:10.917136"], ["updated_at", "2015-07-21 18:29:10.917136"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "table_ready_time" = '2015-07-21 18:44:10.917136' WHERE "reservations"."id" = $1  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "reservations" SET "notify_time" = '2015-07-21 18:39:10.917136' WHERE "reservations"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1  [["id", 1]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "reservations" ("user_id", "number_in_party", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 6], ["number_in_party", 3], ["restaurant_id", 16], ["created_at", "2015-07-21 18:29:10.923236"], ["updated_at", "2015-07-21 18:29:10.923236"]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "reservations" SET "table_ready_time" = '2015-07-21 18:44:10.923236' WHERE "reservations"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "reservations" SET "notify_time" = '2015-07-21 18:39:10.923236' WHERE "reservations"."id" = $1  [["id", 2]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reservations" ("user_id", "number_in_party", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 7], ["number_in_party", 3], ["restaurant_id", 16], ["created_at", "2015-07-21 18:29:10.927580"], ["updated_at", "2015-07-21 18:29:10.927580"]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "reservations" SET "table_ready_time" = '2015-07-21 18:44:10.927580' WHERE "reservations"."id" = $1  [["id", 3]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "reservations" SET "notify_time" = '2015-07-21 18:39:10.927580' WHERE "reservations"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1  [["id", 3]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "reservations" ("user_id", "number_in_party", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["user_id", 8], ["number_in_party", 3], ["restaurant_id", 16], ["created_at", "2015-07-21 18:29:10.931471"], ["updated_at", "2015-07-21 18:29:10.931471"]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "reservations" SET "table_ready_time" = '2015-07-21 18:44:10.931471' WHERE "reservations"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "reservations" SET "notify_time" = '2015-07-21 18:39:10.931471' WHERE "reservations"."id" = $1  [["id", 4]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1  [["id", 4]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "reservations" ("user_id", "number_in_party", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 9], ["number_in_party", 3], ["restaurant_id", 16], ["created_at", "2015-07-21 18:29:10.935248"], ["updated_at", "2015-07-21 18:29:10.935248"]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "reservations" SET "table_ready_time" = '2015-07-21 18:44:10.935248' WHERE "reservations"."id" = $1  [["id", 5]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "reservations" SET "notify_time" = '2015-07-21 18:39:10.935248' WHERE "reservations"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1  [["id", 5]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.3ms)[0m  COMMIT
