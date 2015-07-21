@@ -43921,3 +43921,44 @@ Completed 200 OK in 954ms (Views: 136.8ms | ActiveRecord: 1.3ms)
 
 
 Started GET "/assets/restaurants.self-7b99a03d0a7d8b646075c87895f3954e381c597b722d328b25016ecb54c4118e.css?body=1" for ::1 at 2015-07-20 21:07:51 -0700
+
+
+Started GET "/restaurants/16" for ::1 at 2015-07-20 21:33:15 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mReservation Load (0.4ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 16]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  Rendered restaurants/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 349ms (Views: 120.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/restaurants.self-51bf1f744e7e2a1b4259b9aaabc5a3524edebd0fb5e797554eb38f059a1a71ee.css?body=1" for ::1 at 2015-07-20 21:33:16 -0700
+
+
+Started GET "/restaurants/16" for ::1 at 2015-07-20 21:34:01 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mReservation Load (0.2ms)[0m  [1mSELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1[0m  [["restaurant_id", 16]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 9]]
+  Rendered restaurants/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 680ms (Views: 107.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/restaurants.self-1f2c3614b56644324a599a8e0997fa77564d2092291b9b118b191cac716710b1.css?body=1" for ::1 at 2015-07-20 21:34:02 -0700
+
+
+Started GET "/restaurants/16" for ::1 at 2015-07-20 22:00:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 16]]
