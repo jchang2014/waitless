@@ -91,30 +91,15 @@
   border-radius: 60px;
 }
 
-.restaurant-data-table {
-  text-align: left;
-  
-}
 
-.restaurant-data-table td{
-  padding: 5px;
-  vertical-align: top;
-}
 .restaurant {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.restaurant-info {
-  background-color:#F2F2F2;
-  align-self: flex-start;
-  width: 30%;
-  padding: 5px;
-}
-
 .restaurant-waitlist-info {
-  align-self: flex-start;
+  display: none;
   text-align: left;
   width: 70%;
   padding: 5px;
@@ -124,31 +109,53 @@
   border-radius: 50px;
 }
 
-.restaurant {
-  margin: 10px auto 0px auto;
-  text-align: center; 
-  width: 85%;
-  display: flex;
-}
-
-.show {
-}
-.waitlist-table { 
+.waitlist-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.waitlist-table th{ 
+.waitlist-table th{
   background-color: #FFC107;
   padding: 20px;
   color: #FFFFFF;
 }
 
-.waitlist-table td{ 
+.waitlist-table td{
   background-color: ghostwhite;
   padding: 20px;
 }
 
 .waitlist-table tr{
   border-bottom: 1px dotted ghostwhite;
+}
+
+.waitlist-window {
+  display:inline-block;
+  width: 50%;
+}
+
+.restaurant {
+  margin: 10px auto 0px auto;
+  text-align: center;
+  width: 85%;
+}
+
+.top-block {
+  display:flex;
+  margin: 10px auto 0px auto;
+  width: 80%;
+}
+
+.restaurant-info {
+  background-color:#F2F2F2;
+  display: inline-block;
+  width: 50%;
+  padding: 5px;
+  text-align: center;
+}
+
+.restaurant-data-table td{
+  padding: 5px;
+  vertical-align: top;
+  font-size: 20px;
 }
