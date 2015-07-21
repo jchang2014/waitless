@@ -1,6 +1,32 @@
 <div class="restaurant">
 	<div class="restaurant-info">
-		<%= render :partial => "result", layout: false, locals: {result: result}%>
+
+    <div class="result-img-position">
+        <img src="<%=result[:image]%>">
+    </div>
+
+    <table>
+      <tr>
+          <td><label>Restaurant</label></td>
+          <td><%= @result[:name] %></td>
+      </tr>
+      <tr>
+          <td><label>Location</label></td>
+          <td>
+              <% @result[:location].each do |place| %>
+                <div><%= place %></div>
+              <% end %>
+          </td>
+      </tr>
+      <tr>
+          <td><label>Rating</label></td>
+          <td><%= @result[:rating] %></td>
+      </tr>
+      <tr>
+        <td><label>Categories</label></td>
+        <td><%= @result[:categories] %></td>
+      </tr>
+    </table>
 	</div>
 
 	<div class="waitlist">
