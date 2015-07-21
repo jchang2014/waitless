@@ -100,13 +100,6 @@
   justify-content: center;
 }
 
-.restaurant-waitlist-info {
-  display: block;
-  text-align: left;
-  width: 70%;
-  padding: 5px;
-}
-
 .restaurant-img {
   border-radius: 50px;
 }
@@ -122,18 +115,19 @@
   color: #FFFFFF;
 }
 
-.waitlist-table td{
-  background-color: ghostwhite;
-  padding: 20px;
-}
-
 .waitlist-table tr{
   border-bottom: 1px dotted ghostwhite;
+}
+
+.waitlist-table td  {
+  padding: 20px;
 }
 
 .waitlist-window {
   display:inline-block;
   width: 50%;
+  background-color: ghostwhite;
+  margin-right: 10px;
 }
 
 .restaurant {
@@ -149,7 +143,7 @@
 }
 
 .restaurant-info {
-  background-color:#F2F2F2;
+  background-color: ghostwhite;
   display: inline-block;
   width: 50%;
   padding: 5px;
@@ -181,4 +175,19 @@
 .waitlist-button {
   font-size: 40px;
   width: 200px;
+}
+
+.restaurant-waitlist-info {
+  display: block;
+  margin: auto;
+  width: 80%;
+  padding: 5px;
+}
+
+.waitlist-table tr:nth-child(even) {
+  background-color: #FFF9C4;
+}
+
+.waitlist-table tr:nth-child(odd) {
+  background-color: #FFF8DC;
 }
