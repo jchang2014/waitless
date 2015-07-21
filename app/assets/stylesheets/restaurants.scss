@@ -91,6 +91,26 @@
   border-radius: 60px;
 }
 
-.restaurant-info {
+.restaurant-data {
+  background-color:#F2F2F2;
+}
 
+.restaurant-data td{
+  padding: 5px;
+  vertical-align: top;
+}
+.restaurant {
+  display: block;
+}
+
+.restaurant-info {
+  display: inline-block;
+}
+
+.restaurant-waitlist-info {
+  display:inline-block;
+}
+
+.restaurant-img {
+  border-radius: 50px;
 }

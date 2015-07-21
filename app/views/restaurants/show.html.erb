@@ -1,11 +1,8 @@
 <div class="restaurant">
 	<div class="restaurant-info">
 
-    <div class="result-img-position">
-        <img src="<%=result[:image]%>">
-    </div>
-
-    <table>
+    <img src="<%=result[:image]%>" class="restaurant-img"/>
+    <table class="restaurant-data">
       <tr>
           <td><label>Restaurant</label></td>
           <td><%= @result[:name] %></td>
@@ -20,40 +17,44 @@
       </tr>
       <tr>
           <td><label>Rating</label></td>
-          <td><%= @result[:rating] %></td>
+          <td><img src="<%= @result[:rating] %>"></td>
       </tr>
       <tr>
         <td><label>Categories</label></td>
         <td><%= @result[:categories] %></td>
       </tr>
     </table>
+
 	</div>
 
-	<div class="waitlist">
-		<%= form_for [@restaurant, @new_reservation]  do |f| %>
-			<%= f.label :party_number %>
-			<%= f.number_field :number_in_party %>
-			<%= f.submit %>
-		<% end %>
-		<button class="view-my-reservation" id="goes back to home">view my reservation</button>
-	</div>
+  <div class="restaurant-waitlist-info">
+    <div class="waitlist">
+		  <%= form_for [@restaurant, @new_reservation] do |f| %>
+			 <%= f.label :party_number %>
+			 <%= f.number_field :number_in_party %>
+			 <%= f.submit %>
+		  <% end %>
+  	</div>
 
-	<div class="show">
-		<table align=center>
-      <tr>
-        <td>Name</td>
-        <td>Party Size</td>
-        <td>Signed at:</td>
-        <td>Wait Time</td>
-      </tr>
-      <% @reservations.each do |reservation| %>
-      	<tr>
-        <td><%=reservation.user.name%></td>
-        <td><%=reservation.number_in_party%></td>
-        <td><%=reservation.created_at%></td>
-        <td><%=reservation.timer%></td>
-      </tr>
-      <% end %>
-    </table>
-	</div>
+    <div class="show">
+		  <table align=center>
+        <tr>
+          <td>Name</td>
+          <td>Party Size</td>
+          <td>Signed at:</td>
+          <td>Wait Time</td>
+        </tr>
+          <% @reservations.each do |reservation| %>
+            <tr>
+              <td><%=reservation.user.name%></td>
+              <td><%=reservation.number_in_party%></td>
+              <td><%=reservation.created_at%></td>
+              <td><%=reservation.timer%></td>
+            </tr>
+          <% end %>
+      </table>
+    </div>
+
+  </div>
+
 </div>
