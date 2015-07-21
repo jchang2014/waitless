@@ -50,6 +50,7 @@ class RestaurantsController < ApplicationController
   def show
     @restaurant = Restaurant.find(params[:id])
     @response = Yelp.client.business(@restaurant.yelp_id).as_json['hash']
+    @reservations = @restaurant.reservations
     @new_reservation = Reservation.new(restaurant: @restaurant)
     @categories = []
     @response['categories'].each do |category|

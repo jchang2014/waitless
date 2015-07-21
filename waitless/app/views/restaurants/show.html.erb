@@ -11,4 +11,23 @@
 		<% end %>
 		<button class="view-my-reservation" id="goes back to home">view my reservation</button>
 	</div>
+
+	<div class="show">
+		<table align=center>
+      <tr>
+        <td>Name</td>
+        <td>Party Size</td>
+        <td>Signed at:</td>
+        <td>Wait Time</td>
+      </tr>
+      <% @reservations.each do |reservation| %>
+      	<tr>
+        <td><%=reservation.user.name%></td>
+        <td><%=reservation.number_in_party%></td>
+        <td><%=reservation.created_at%></td>
+        <td><%=reservation.timer%></td>
+      </tr>
+      <% end %>
+    </table>
+	</div>
 </div>
