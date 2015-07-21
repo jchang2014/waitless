@@ -1,0 +1,23 @@
+  <h1>Login</h1>
+  <% if @errors %>
+    <div class="error"><%= @errors %></div>
+  <% end %>
+  <%= form_tag('/session', method: 'post')do %>
+
+    <table align=center class="login-form">
+      <tr>
+        <td><label>Email</label></td>
+        <td><%= text_field_tag :email %></td>
+      </tr>
+      <tr>
+        <td><label>Password</label></td>
+        <td><%= password_field_tag :password %></td>
+      </tr>
+      <tr>
+        <td><%= submit_tag "Submit", :class => 'login-button' %></td>
+        <td>(or <%= link_to 'signup', new_user_path %></a>)</td>
+      </tr>
+    </table>
+
+  <% end %>
+

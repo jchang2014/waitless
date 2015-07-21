@@ -1,0 +1,64 @@
+<h1>Welcome Back <%= current_user.name %></h1>
+<h1>Current Reservation</h1>
+
+<div class="body-wrapper">
+  <% if @reservations.any? %>
+
+    <div class="current-reservation-wrapper">
+      <div class="current-wait-time">
+		    <div class="user-wait-time">15</div>
+		    <div class="user-wait-time-text">minute(s) until you are seated</div>
+      </div>
+
+      <div class="current-restaurant">
+        <div><label>Restaurant Name</label></div>
+          <div>Some name</div>
+        <div><label>Position in Line</label></div>
+          <div>Some number</div>
+        <div><label>Amount in Your Party</label></div>
+          <div>Some other number</div>
+      </div>
+
+      <div class="current-restaurant-img">
+        restaurant img goes here
+      </div>
+
+      <div class="user-options">
+        <div><a href="#" class="result-button">Edit Reservation</a></div>
+        <div><a href="#" class="result-button">Remove From List</a></div>
+      </div>
+    </div>
+
+  <% else %>
+    <p align=center><em>You are currently not on any restaurant's waitlist.</em></p>
+  <% end %>
+
+  <div class="section-separator"></div>
+
+  <div class="make-reservation">
+	 <h1>Make a Reservation</h1>
+    <%= form_tag(restaurants_path, :method => "get", id:"search-form") do %>
+      <table align=center class="search-form">
+        <tr>
+          <td>Restaurant Name/Food Type</td>
+          <td><%= text_field_tag :search, params[:search], placeholder: "Mexican, Philz Coffee, etc." %></td>
+        </tr>
+        <tr>
+          <td>Location</td>
+          <td><%= text_field_tag :location, params[:location], placeholder: "San Francisco, CA" %></td>
+        </tr>
+        <tr>
+          <td><%= submit_tag "Search", :class => 'home-search' %></td>
+          <td>Powered by <a href="http://www.yelp.com">Yelp</a></td>
+        </tr>
+      </table>
+    <% end %>
+  </div>
+</div>
+
+<% if current_user.admin? %>
+	<% p '*' * 100 %>
+	<% p current_user.admin? %>
+
+	<%= render 'admin/form' %>
+<% end %>
