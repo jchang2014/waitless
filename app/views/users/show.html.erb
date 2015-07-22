@@ -3,7 +3,7 @@
 <div class="body-wrapper">
   <% if current_user.admin %> 
     <% if @restaurant %>
-        <h1>Your waitlist for <%=@restaurant_hash['name']%></h1>
+        <h1>Here is your waitlist for <%=@restaurant_hash['name']%></h1>
         <% @reservations = @restaurant.reservations %>
         <%= render :partial => "reservations/reservations", locals: {reservations: @reservations} %>
         <% if @reservations.length == 0 %>

@@ -5,7 +5,7 @@
       <th>Party Size</th>
       <th>Signed at</th>
       <th>Wait Time</th>
-      <%if current_user && current_user.admin%><th>Remove Party</th><%end%>
+      <%if current_user && current_user.admin%><th>Modify Party</th><%end%>
     </tr>
       <% @reservations.each do |reservation| %>
         <%= render :partial => "reservations/show", locals: {reservation:reservation} %>

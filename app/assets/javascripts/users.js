@@ -1,8 +1,6 @@
 $(document).on('page:change', function(){
 	$('.delete').on('click', function(event){
-		event.preventDefault;
-
-		var id = $('.delete').attr('id');
+		var id = $(this).attr('id');
 		var path = "/restaurants/1/reservations/"+id
 
 		var request = $.ajax({
@@ -13,14 +11,33 @@ $(document).on('page:change', function(){
 		});
 
 		request.done(function(response){
-			console.log("yeah buddy");
 			$('#'+id).closest('tr').remove();
-			console.log(response);
 		});
 
 		request.fail(function(response){
 			console.log("failed it");
-			console.log(response);
 		});
 	});
+
+	$('.edit').on('click',function(event){
+		var id = $(this).attr('id');
+		var path = "/restaurants/1/reservations/"+id+"/edit"
+
+		var request = $.ajax({
+			url: path,
+			type: "get",
+			data: id,
+			dataType: 'html'
+		});
+
+		request.done(function(response){
+			console.log("did it");
+			debugger
+		});
+
+		request.fail(function(response){
+			alert("failed");
+		});
+
+	})
 });
