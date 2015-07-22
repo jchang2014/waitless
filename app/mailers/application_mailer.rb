@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "alltomorrowsconcerts@gmail.com"
-  layout 'reservation_mailer'
+  default from: "patreek3@gmail.com"
+  layout 'mailer'
 end
