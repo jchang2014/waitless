@@ -40280,3 +40280,129 @@ Processing by RestaurantsController#index as HTML
   Rendered restaurants/_result.html.erb (0.5ms)
   Rendered restaurants/index.html.erb (1.7ms)
 Completed 200 OK in 642ms (Views: 3.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2015-07-21 17:03:58 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 71ms (Views: 70.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=dragon+eats&location=" for ::1 at 2015-07-21 17:05:07 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"dragon eats", "location"=>""}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco"]]
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "perilla-san-francisco"]]
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "le-soleil-san-francisco"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "cordon-bleu-san-francisco"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "vietnam-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "rice-paper-scissors-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "bun-mee-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "urban-picnic-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-slanted-door-san-francisco"]]
+Completed 200 OK in 936ms (Views: 1.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=dragon+eats&location=" for ::1 at 2015-07-21 17:05:08 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"dragon eats", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "perilla-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "le-soleil-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "cordon-bleu-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "vietnam-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "rice-paper-scissors-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "bun-mee-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "urban-picnic-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-slanted-door-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.5ms)
+  Rendered restaurants/index.html.erb (1.6ms)
+Completed 200 OK in 632ms (Views: 3.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/restaurants/16" for ::1 at 2015-07-21 17:05:10 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mReservation Load (0.4ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 16]]
+  Rendered reservations/_reservations.html.erb (2.5ms)
+  Rendered restaurants/show.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 472ms (Views: 115.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/restaurants/16" for ::1 at 2015-07-21 17:06:42 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mReservation Load (0.3ms)[0m  [1mSELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1[0m  [["restaurant_id", 16]]
+  Rendered reservations/_reservations.html.erb (2.5ms)
+  Rendered restaurants/show.html.erb within layouts/application (4.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 1889ms (Views: 1704.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/home.self-3246cc8a9250f1d1864ead641857ca599c11ee19ee46704f1c0a05797a7c42c1.css?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/restaurants.self-ccbd3f3ed676736c4bdeda9761e5c0c9de505911b69104b6374b0c44a926f6a7.css?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/sessions.self-ba17b2c9618732c629545ca8016dfbabbb607befd4ee2e6ff13d7b8cbe2aa900.css?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/users.self-87663c5d41bf5c10d70792ba98b90c773c3ee5d827938d714e6e622d484432cb.css?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/restaurants.self-d5cc91c5bc49b881797bfa6aa20bed6ac491454cb546d291085495bacb4ee5e4.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-21 17:06:44 -0700
