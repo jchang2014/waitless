@@ -51123,3 +51123,921 @@ Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c40
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 15:45:46 -0700
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:46:12 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "basik-cafe-san-francisco"]]
+Completed 200 OK in 577ms (Views: 1.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:46:13 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "basik-cafe-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.6ms)
+  Rendered restaurants/index.html.erb (2.0ms)
+Completed 200 OK in 490ms (Views: 4.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/21" for ::1 at 2015-07-22 15:47:03 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mReservation Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1[0m  [["user_id", 21]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 161ms (Views: 156.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/home.self-6bb07a7b280abba44e201e0902e5fe661de2329bdd6a3caf4e9999fe9ed59488.css?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/sessions.self-ba17b2c9618732c629545ca8016dfbabbb607befd4ee2e6ff13d7b8cbe2aa900.css?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/restaurants.self-383fef65048c733da1441f2de23f81a4c192b3ccc48ec580cae001bb2292ae18.css?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/users.self-87663c5d41bf5c10d70792ba98b90c773c3ee5d827938d714e6e622d484432cb.css?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/sessions.self-7e5e59a4af172a36ac8127837b0d14ee3eb0346e3d2322e8fa8177ac0c612666.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 15:47:03 -0700
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:08 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.6ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.5ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+Completed 200 OK in 1917ms (Views: 2.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:10 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+  Rendered restaurants/_result.html.erb (1.0ms)
+  Rendered restaurants/index.html.erb (2.5ms)
+Completed 200 OK in 751ms (Views: 4.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:12 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+Completed 200 OK in 675ms (Views: 1.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:12 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.6ms)
+  Rendered restaurants/index.html.erb (2.1ms)
+Completed 200 OK in 699ms (Views: 3.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:13 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+Completed 200 OK in 901ms (Views: 2.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:14 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.5ms)
+  Rendered restaurants/index.html.erb (1.6ms)
+Completed 200 OK in 749ms (Views: 2.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:19 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.5ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+Completed 200 OK in 699ms (Views: 1.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:20 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.7ms)
+  Rendered restaurants/index.html.erb (2.0ms)
+Completed 200 OK in 806ms (Views: 3.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:35 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+Completed 200 OK in 785ms (Views: 1.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:36 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.6ms)
+  Rendered restaurants/index.html.erb (2.1ms)
+Completed 200 OK in 780ms (Views: 3.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:43 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+Completed 200 OK in 674ms (Views: 1.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:44 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.6ms)
+  Rendered restaurants/index.html.erb (1.8ms)
+Completed 200 OK in 857ms (Views: 3.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:45 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+Completed 200 OK in 694ms (Views: 2.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=&location=" for ::1 at 2015-07-22 15:47:46 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"", "location"=>""}
+  [1m[35mRestaurant Load (0.5ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "liholiho-yacht-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "manos-nouveau-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mourad-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tycoon-thai-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-social-study-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-flying-falafel-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "pianofight-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "basik-cafe-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.7ms)
+  Rendered restaurants/index.html.erb (2.1ms)
+Completed 200 OK in 664ms (Views: 3.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 15:48:59 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 21]]
+  Rendered home/index.html.erb (127.2ms)
+Completed 200 OK in 130ms (Views: 128.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/restaurants.self-6fc1acdedde7f0f68b60faf312d1c29d758b73e5714381ea0eef8236746d3cd5.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/assets/sessions.self-7e5e59a4af172a36ac8127837b0d14ee3eb0346e3d2322e8fa8177ac0c612666.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 15:48:59 -0700
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=mexican&location=" for ::1 at 2015-07-22 15:49:06 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"mexican", "location"=>""}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "el-farolito-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tropisueño-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "don-pistos-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "colibri-mexican-bistro-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "garaje-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "papito-hayes-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "padrecito-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "taqueria-castillo-mason-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "los-hermanos-taqueria-san-francisco"]]
+Completed 200 OK in 498ms (Views: 1.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=mexican&location=" for ::1 at 2015-07-22 15:49:06 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"mexican", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (1.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "el-farolito-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.6ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tropisueño-san-francisco-3"]]
+  [1m[35mRestaurant Load (1.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "don-pistos-san-francisco-2"]]
+  [1m[36mRestaurant Load (1.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "colibri-mexican-bistro-san-francisco"]]
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "garaje-san-francisco"]]
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "papito-hayes-san-francisco"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "padrecito-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "taqueria-castillo-mason-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "los-hermanos-taqueria-san-francisco"]]
+  Rendered restaurants/_result.html.erb (1.2ms)
+  Rendered restaurants/index.html.erb (2.8ms)
+Completed 200 OK in 427ms (Views: 4.4ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/21" for ::1 at 2015-07-22 15:49:14 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mReservation Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1[0m  [["user_id", 21]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 87ms (Views: 84.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/21" for ::1 at 2015-07-22 15:49:14 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mReservation Exists (0.2ms)[0m  SELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1  [["user_id", 21]]
+  Rendered users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 113ms (Views: 109.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=dragon+eats&location=" for ::1 at 2015-07-22 15:49:28 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"dragon eats", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "perilla-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "le-soleil-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "cordon-bleu-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "vietnam-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "rice-paper-scissors-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "bun-mee-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "urban-picnic-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-slanted-door-san-francisco"]]
+Completed 200 OK in 424ms (Views: 1.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=dragon+eats&location=" for ::1 at 2015-07-22 15:49:29 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"dragon eats", "location"=>""}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco"]]
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "perilla-san-francisco"]]
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "le-soleil-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "cordon-bleu-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "vietnam-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "rice-paper-scissors-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "bun-mee-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "urban-picnic-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-slanted-door-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.4ms)
+  Rendered restaurants/index.html.erb (1.4ms)
+Completed 200 OK in 403ms (Views: 2.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/restaurants/16" for ::1 at 2015-07-22 15:49:32 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 21]]
+  Rendered restaurants/show.html.erb within layouts/application (29.9ms)
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (Missing partial reservations/_reservations with {:locale=>[:en], :formats=>[:html, :xml], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/apprentice/Desktop/waitless/app/views"
+):
+    68: 	</div>
+    69: </div>
+    70: 
+    71: <%= render :partial => "/reservations/reservations", locals: {reservations: @reservations} %>
+  app/views/restaurants/show.html.erb:71:in `_app_views_restaurants_show_html_erb__1446447336769669089_70230033648200'
+  app/controllers/restaurants_controller.rb:69:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (59.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (128.3ms)
+
+
+Started GET "/restaurants/16" for ::1 at 2015-07-22 15:49:33 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mRestaurant Load (0.5ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 21]]
+  Rendered restaurants/show.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (Missing partial reservations/_reservations with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/apprentice/Desktop/waitless/app/views"
+):
+    68: 	</div>
+    69: </div>
+    70: 
+    71: <%= render :partial => "/reservations/reservations", locals: {reservations: @reservations} %>
+  app/views/restaurants/show.html.erb:71:in `_app_views_restaurants_show_html_erb__1446447336769669089_70229976942780'
+  app/controllers/restaurants_controller.rb:69:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (124.5ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=asdasdasd&location=" for ::1 at 2015-07-22 15:49:48 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"asdasdasd", "location"=>""}
+Completed 200 OK in 208ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=asdasdasd&location=" for ::1 at 2015-07-22 15:49:48 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asdasdasd", "location"=>""}
+  Rendered restaurants/index.html.erb (0.1ms)
+Completed 200 OK in 249ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/session" for ::1 at 2015-07-22 15:50:01 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rvL7+M3MZbzA67AqGkziOha85QqetWgl46BfG6gauVRvTiaCRwF1gpspxVDE+pTvDJy9ziVxmrNNa01sQ8Y0gQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 15:50:01 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (50.7ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session" for ::1 at 2015-07-22 15:50:06 -0700
+Processing by SessionsController#show as HTML
+  Rendered sessions/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 83ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/session" for ::1 at 2015-07-22 15:50:06 -0700
+Processing by SessionsController#show as HTML
+  Rendered sessions/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 99ms (Views: 98.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=mexican&location=" for ::1 at 2015-07-22 15:50:10 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"mexican", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "el-farolito-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tropisueño-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "don-pistos-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "colibri-mexican-bistro-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "garaje-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "papito-hayes-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "padrecito-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "taqueria-castillo-mason-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "los-hermanos-taqueria-san-francisco"]]
+Completed 200 OK in 501ms (Views: 1.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=mexican&location=" for ::1 at 2015-07-22 15:50:10 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"mexican", "location"=>""}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "el-farolito-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tropisueño-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "don-pistos-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "colibri-mexican-bistro-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "garaje-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "papito-hayes-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "padrecito-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "taqueria-castillo-mason-san-francisco"]]
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "los-hermanos-taqueria-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.7ms)
+  Rendered restaurants/index.html.erb (2.3ms)
+Completed 200 OK in 431ms (Views: 4.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/session" for ::1 at 2015-07-22 15:52:46 -0700
+Processing by SessionsController#show as HTML
+  Rendered sessions/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 94ms (Views: 93.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for ::1 at 2015-07-22 15:52:52 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JG8TTPazTNC+SuYtSDSJc+TgFzLMZ28L4VtSujh54crl0842fH5c7uWIk1eWgv+m/sBP9nejnZ1PkEDN06VsHw==", "email"=>"okay", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "okay"]]
+Redirected to http://localhost:3000/users/10
+Completed 302 Found in 79ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/10" for ::1 at 2015-07-22 15:52:52 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mReservation Exists (0.2ms)[0m  SELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1  [["user_id", 10]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 79ms (Views: 76.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=pizza&location=" for ::1 at 2015-07-22 15:52:57 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"pizza", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tonys-pizza-napoletana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "little-star-pizza-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "long-bridge-pizza-company-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "golden-boy-pizza-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "cybelles-pizza-and-ice-cream-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "zero-zero-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-pizza-shop-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "marcellos-pizza-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "patxis-pizza-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "goat-hill-pizza-san-francisco"]]
+Completed 200 OK in 529ms (Views: 1.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=pizza&location=" for ::1 at 2015-07-22 15:52:58 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pizza", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "tonys-pizza-napoletana-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "little-star-pizza-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "long-bridge-pizza-company-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "golden-boy-pizza-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "cybelles-pizza-and-ice-cream-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "zero-zero-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-pizza-shop-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "marcellos-pizza-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "patxis-pizza-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "goat-hill-pizza-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.5ms)
+  Rendered restaurants/index.html.erb (1.7ms)
+Completed 200 OK in 365ms (Views: 3.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 15:54:27 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  Rendered home/index.html.erb (38.0ms)
+Completed 200 OK in 40ms (Views: 39.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 15:54:27 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered home/index.html.erb (45.2ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 15:56:15 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  Rendered home/index.html.erb (64.4ms)
+Completed 200 OK in 66ms (Views: 65.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 15:56:15 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 15:56:15 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 15:56:15 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:56:15 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:56:16 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 15:56:16 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:56:16 -0700
+
+
+Started GET "/assets/sessions.self-7e5e59a4af172a36ac8127837b0d14ee3eb0346e3d2322e8fa8177ac0c612666.js?body=1" for ::1 at 2015-07-22 15:56:16 -0700
+
+
+Started GET "/assets/restaurants.self-6fc1acdedde7f0f68b60faf312d1c29d758b73e5714381ea0eef8236746d3cd5.js?body=1" for ::1 at 2015-07-22 15:56:16 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:56:16 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 15:56:16 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 15:56:16 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 15:58:32 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered home/index.html.erb (53.3ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/assets/restaurants.self-6fc1acdedde7f0f68b60faf312d1c29d758b73e5714381ea0eef8236746d3cd5.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/assets/sessions.self-7e5e59a4af172a36ac8127837b0d14ee3eb0346e3d2322e8fa8177ac0c612666.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 15:58:32 -0700
+
+
+Started GET "/users/21" for ::1 at 2015-07-22 15:59:43 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 21]]
+  [1m[36mReservation Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1[0m  [["user_id", 21]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 180ms (Views: 177.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/home.self-b4d74fc791e680a7126c860558ea33058588d99ed66cdbcc2f5fe223db89373f.css?body=1" for ::1 at 2015-07-22 15:59:43 -0700
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/restaurants.self-383fef65048c733da1441f2de23f81a4c192b3ccc48ec580cae001bb2292ae18.css?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/sessions.self-ba17b2c9618732c629545ca8016dfbabbb607befd4ee2e6ff13d7b8cbe2aa900.css?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/users.self-87663c5d41bf5c10d70792ba98b90c773c3ee5d827938d714e6e622d484432cb.css?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/restaurants.self-6fc1acdedde7f0f68b60faf312d1c29d758b73e5714381ea0eef8236746d3cd5.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/sessions.self-7e5e59a4af172a36ac8127837b0d14ee3eb0346e3d2322e8fa8177ac0c612666.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 15:59:44 -0700
+
+
+Started GET "/users/21" for ::1 at 2015-07-22 16:00:40 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 21]]
+  [1m[35mReservation Exists (0.3ms)[0m  SELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1  [["user_id", 21]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 170ms (Views: 167.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/home.self-5548a465bfb83cc560e5af89c1e064a825a43eebbddca6dfa82b0eded750c99e.css?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/restaurants.self-383fef65048c733da1441f2de23f81a4c192b3ccc48ec580cae001bb2292ae18.css?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/sessions.self-ba17b2c9618732c629545ca8016dfbabbb607befd4ee2e6ff13d7b8cbe2aa900.css?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/users.self-87663c5d41bf5c10d70792ba98b90c773c3ee5d827938d714e6e622d484432cb.css?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 16:00:40 -0700
+
+
+Started GET "/assets/restaurants.self-6fc1acdedde7f0f68b60faf312d1c29d758b73e5714381ea0eef8236746d3cd5.js?body=1" for ::1 at 2015-07-22 16:00:41 -0700
+
+
+Started GET "/assets/sessions.self-7e5e59a4af172a36ac8127837b0d14ee3eb0346e3d2322e8fa8177ac0c612666.js?body=1" for ::1 at 2015-07-22 16:00:41 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 16:00:41 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 16:00:41 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 16:00:41 -0700

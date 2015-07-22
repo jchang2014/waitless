@@ -93,7 +93,6 @@ nav {
 .right-nav {
   width: 10%;
   text-align: right;
-  margin: 5px 10px 5px 0px;
   font-size: 18px;
 }
 
@@ -123,51 +122,52 @@ color: #FFFFFF;
 }
 
 .separator {
-background:#4CAF50;
-height: 20px;
-margin-top: 10px;
+  background:#4CAF50;
+  height: 20px;
+  margin-top: 10px;
 }
 
 nav {
-background-color: #4CAF50;
-display: flex;
-font-family: helvetica;
-font-size: 20px;
-margin: 0;
-padding: 15px;
+  background-color: #4CAF50;
+  display: flex;
+  font-family: helvetica;
+  font-size: 20px;
+  margin: 0;
+  padding: 15px;
 }
 
 .nav-title {
-display:inline-block;
-font-family: 'Lobster', cursive;
-font-size: 50px;
-letter-spacing: 5px;
-text-shadow: 4px 4px 0px #689F38, 7px 7px 0px rgba(0, 0, 0, 0.2);
+  display:inline-block;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-shadow: 4px 4px 0px #689F38, 7px 7px 0px rgba(0, 0, 0, 0.2);
+  width: 20%;
 }
 
 .user-login {
-color: #8ED95B;
-display:inline-block;
-font-family: helvetica;
-font-size: 18px;
-text-align: right;
-text-decoration: none;
-width: 50%;
-margin-top: 10px;
+  color: #8ED95B;
+  display:inline-block;
+  font-family: helvetica;
+  font-size: 18px;
+  text-align: right;
+  text-decoration: none;
+  width: 50%;
+  margin-top: 10px;
 }
 
 .user-login a{
-color:#BCED91;
-letter-spacing: 1px;
-text-decoration: none;
-text-transform: uppercase;
+  color:#BCED91;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .user-login a:hover{
-color:#F0FFF0;
-letter-spacing: 1px;
-text-decoration: none;
-text-transform: uppercase;
+  color:#F0FFF0;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .user-login a:visited{

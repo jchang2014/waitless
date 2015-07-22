@@ -77,8 +77,8 @@ function updateMap(markers) {
 // NAV BAR HOMEPAGE
 var mapSearchUpdate = function() {
   console.log("starting query");
-  $('.home-search-bar').on('click', '.nav-form', function(e){
-    e.preventDefault();
+  $('.home-search-bar').on('click', '.nav-form-button', function(event){
+    event.preventDefault();
     var mapRequest = $.ajax({
       url: "/restaurants",
       action: "get",
