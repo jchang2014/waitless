@@ -24,7 +24,7 @@
           <div>&nbsp;</div>
 
           <% if current_user %>
-            <%= current_user.name %>
+            <a href="/users/<%= current_user.id %>"><%= current_user.name %></a>
             <div><%= link_to "Signout", session_path, method: 'delete' %></div>
           <% else %>
             <div><%= link_to "Login", session_path %></div>
