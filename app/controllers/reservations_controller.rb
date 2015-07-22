@@ -14,12 +14,7 @@ class ReservationsController < ApplicationController
 			timer: @restaurant.wait_time, name: params[:reservation][:name])
 
 		if @reservation.save
-<<<<<<< HEAD
-			NotifyUsersWorker.perform_in(@reservation.get_time, @reservation.id)
-=======
-			NotifyUsersWorker.perform_in(@reservation.get_time, @reservation)
-
->>>>>>> controllers done
+			NotifyUsersWorker.perform_in(@reservation.notification_delay.minutes, @reservation.id)
 			redirect_to "/users/#{session[:user_id]}"
 		else
 			@errors = @reservation.errors.full_messages

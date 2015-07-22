@@ -1,9 +1,9 @@
 class ReservationMailer < ApplicationMailer
 
-  def notify_email(user)
-    mail(to: user.email) do |format|
-      format.html { render layout: 'mailer' }
-      format.text
-    end
+
+  def notification(reservation)
+    @reservation = reservation
+    mail(to: @reservation.user.email)
   end
+
 end
