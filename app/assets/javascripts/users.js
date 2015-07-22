@@ -1,41 +1,26 @@
-// $( document ).ready(function() {
-//   if (navigator.geolocation) {
-//     console.log('Geolocation is supported!');
-//     var success = function(position){
-//       var lat = position.coords.latitude;
-//       var longit = position.coords.longitude;
-//       createMap(lat, longit);
-//     };
-//     var fail = function(message){
-//       alert('using default location');
-//       var lat = 37.7849162;
-//       var longit = -122.39799699999999;
-//       createMap(lat, longit);
-//     };
-//     navigator.geolocation.getCurrentPosition(success, fail);
+$(document).on('page:change', function(){
+	$('.delete').on('click', function(event){
+		event.preventDefault;
 
-//   } else {
-//     console.log('Geolocation is not supported.');
-//     var lat = 37.7849162;
-//     var longit = -122.39799699999999;
-//     createMap(lat, longit);
-//   }
+		var id = $('.delete').attr('id');
+		var path = "/restaurants/1/reservations/"+id
 
-// });
+		var request = $.ajax({
+			url: path,
+			type: "DELETE",
+			data: id,
+			dataType: 'json'
+		});
 
-// function createMap(lat, longit) {
-//   var userLoc = new google.maps.LatLng(lat, longit);
+		request.done(function(response){
+			console.log("yeah buddy");
+			$('#'+id).closest('tr').remove();
+			console.log(response);
+		});
 
-//   var mapOptions = {
-//     zoom: 15,
-//     center: userLoc
-//   };
-
-//   var mapDiv = document.getElementById('map-canvas');
-//   var map = new google.maps.Map(mapDiv, mapOptions);
-
-//   var marker = new google.maps.Marker({
-//     position: userLoc,
-//     map: map
-//   });
-// };
+		request.fail(function(response){
+			console.log("failed it");
+			console.log(response);
+		});
+	});
+});

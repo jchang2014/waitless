@@ -3202,3 +3202,1695 @@ Started GET "/sidekiq/stats" for 127.0.0.1 at 2015-07-22 14:21:47 -0700
 
 
 Started GET "/sidekiq/stats" for 127.0.0.1 at 2015-07-22 14:21:50 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 14:38:19 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.3) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.3) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (51.5ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (112.7ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 14:38:20 -0700
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.3) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.3) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.9ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTitleToRestaurants (20150722193542)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (5.1ms)[0m  [1mALTER TABLE "restaurants" ADD "title" text[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150722193542"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'reservations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'restaurant_types'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (2.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'restaurants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'types'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.6ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for ::1 at 2015-07-22 14:38:39 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  Rendered home/index.html.erb (271.3ms)
+Completed 200 OK in 287ms (Views: 275.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:38:39 -0700
+
+
+Started GET "/users/19" for ::1 at 2015-07-22 14:38:50 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mRestaurant Load (0.6ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."user_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["user_id", 19]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 2.2ms)
+
+SyntaxError (/Users/Jeff/Desktop/waitless/app/views/users/show.html.erb:79: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Jeff/Desktop/waitless/app/views/users/show.html.erb:81: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/users/show.html.erb:79: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/users/show.html.erb:81: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.0ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.1ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (55.1ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (127.7ms)
+
+
+Started GET "/users/19" for ::1 at 2015-07-22 14:40:02 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."user_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["user_id", 19]]
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 0.6ms)
+
+SyntaxError (/Users/Jeff/Desktop/waitless/app/views/users/show.html.erb:77: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Jeff/Desktop/waitless/app/views/users/show.html.erb:79: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/users/show.html.erb:77: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/users/show.html.erb:79: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.9ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.8ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (97.5ms)
+
+
+Started GET "/users/19" for ::1 at 2015-07-22 14:41:05 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."user_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["user_id", 19]]
+  [1m[35mReservation Load (0.4ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 19]]
+  Rendered reservations/_reservations.html.erb (2.3ms)
+  Rendered admin/_form.html.erb (0.3ms)
+  Rendered users/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 491ms (Views: 136.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/home.self-707d4a659fc34ba871b34b8db81e27c10fc885faac1987fbf6f8923208007d22.css?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/reservees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/restaurants.self-61da26ce25daf78339e18af7625daf304bb62330d899701de8e6511791b96ddd.css?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:41:06 -0700
+
+
+Started GET "/users/19" for ::1 at 2015-07-22 14:41:57 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."user_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["user_id", 19]]
+  [1m[35mReservation Load (0.3ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 19]]
+  Rendered reservations/_reservations.html.erb (0.8ms)
+  Rendered admin/_form.html.erb (0.0ms)
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 425ms (Views: 84.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/home.self-707d4a659fc34ba871b34b8db81e27c10fc885faac1987fbf6f8923208007d22.css?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/reservees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/restaurants.self-61da26ce25daf78339e18af7625daf304bb62330d899701de8e6511791b96ddd.css?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:41:58 -0700
+
+
+Started GET "/users/19" for ::1 at 2015-07-22 14:42:55 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."user_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["user_id", 19]]
+  [1m[35mReservation Load (0.2ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 19]]
+  Rendered reservations/_reservations.html.erb (0.7ms)
+  Rendered admin/_form.html.erb (0.0ms)
+  Rendered users/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 423ms (Views: 76.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/restaurants.self-61da26ce25daf78339e18af7625daf304bb62330d899701de8e6511791b96ddd.css?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/reservees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/home.self-707d4a659fc34ba871b34b8db81e27c10fc885faac1987fbf6f8923208007d22.css?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:42:56 -0700
+
+
+Started GET "/users/19" for ::1 at 2015-07-22 14:44:18 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."user_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["user_id", 19]]
+  [1m[35mReservation Load (0.3ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 19]]
+  Rendered reservations/_reservations.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 359ms (Views: 84.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/home.self-707d4a659fc34ba871b34b8db81e27c10fc885faac1987fbf6f8923208007d22.css?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/reservees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/restaurants.self-61da26ce25daf78339e18af7625daf304bb62330d899701de8e6511791b96ddd.css?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:44:19 -0700
+
+
+Started GET "/users/19" for ::1 at 2015-07-22 14:44:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."user_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["user_id", 19]]
+  [1m[35mReservation Load (0.2ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 19]]
+  Rendered reservations/_reservations.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 306ms (Views: 73.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/home.self-707d4a659fc34ba871b34b8db81e27c10fc885faac1987fbf6f8923208007d22.css?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/reservees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/restaurants.self-61da26ce25daf78339e18af7625daf304bb62330d899701de8e6511791b96ddd.css?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:44:38 -0700
+
+
+Started GET "/users/19" for ::1 at 2015-07-22 14:44:45 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."user_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["user_id", 19]]
+  [1m[35mReservation Load (0.3ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 19]]
+  Rendered reservations/_reservations.html.erb (0.8ms)
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 236ms (Views: 68.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:45 -0700
+
+
+Started GET "/assets/home.self-707d4a659fc34ba871b34b8db81e27c10fc885faac1987fbf6f8923208007d22.css?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/restaurants.self-61da26ce25daf78339e18af7625daf304bb62330d899701de8e6511791b96ddd.css?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/reservees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:44:46 -0700
+
+
+Started GET "/users/19" for ::1 at 2015-07-22 14:44:57 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."user_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["user_id", 19]]
+  [1m[35mReservation Load (0.2ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 19]]
+  Rendered reservations/_reservations.html.erb (0.7ms)
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 263ms (Views: 90.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/home.self-707d4a659fc34ba871b34b8db81e27c10fc885faac1987fbf6f8923208007d22.css?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/reservees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/restaurants.self-61da26ce25daf78339e18af7625daf304bb62330d899701de8e6511791b96ddd.css?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:44:57 -0700
+
+
+Started GET "/restaurants/19" for ::1 at 2015-07-22 14:45:08 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReservation Load (0.2ms)[0m  [1mSELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1[0m  [["restaurant_id", 19]]
+  Rendered reservations/_reservations.html.erb (0.7ms)
+  Rendered restaurants/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 288ms (Views: 99.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/restaurants/19" for ::1 at 2015-07-22 14:45:08 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReservation Load (0.2ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 19]]
+  Rendered reservations/_reservations.html.erb (0.9ms)
+  Rendered restaurants/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 243ms (Views: 89.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/restaurants/19/reservations" for ::1 at 2015-07-22 14:45:13 -0700
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1hbjIAqs8Ct+UDVFou6kAQmAjt79QCyOJ2e7dnXgS9ysNcQYJ3xLrJjncRbdD5MCcAhLRCaUGgKOjj2K+Qd3Kw==", "reservation"=>{"name"=>"Albert", "number_in_party"=>"2"}, "commit"=>"Sign me up!", "restaurant_id"=>"19"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "reservations" ("number_in_party", "user_id", "restaurant_id", "timer", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["number_in_party", 2], ["user_id", 19], ["restaurant_id", 19], ["timer", 0], ["name", "Albert"], ["created_at", "2015-07-22 21:45:13.275596"], ["updated_at", "2015-07-22 21:45:13.275596"]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "table_ready_time" = '2015-07-22 22:00:13.275596' WHERE "reservations"."id" = $1[0m  [["id", 36]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "reservations" SET "notify_time" = '2015-07-22 21:55:13.275596' WHERE "reservations"."id" = $1  [["id", 36]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 36]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1  [["id", 36]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.6ms)
+
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)):
+  app/controllers/reservations_controller.rb:17:in `create'
+
+
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.8ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.9ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.8ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (108.2ms)
+
+
+Started POST "/restaurants/19/reservations" for ::1 at 2015-07-22 14:45:24 -0700
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1hbjIAqs8Ct+UDVFou6kAQmAjt79QCyOJ2e7dnXgS9ysNcQYJ3xLrJjncRbdD5MCcAhLRCaUGgKOjj2K+Qd3Kw==", "reservation"=>{"name"=>"Tony", "number_in_party"=>"5"}, "commit"=>"Sign me up!", "restaurant_id"=>"19"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mRestaurant Load (0.8ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reservations" ("number_in_party", "user_id", "restaurant_id", "timer", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["number_in_party", 5], ["user_id", 19], ["restaurant_id", 19], ["timer", 0], ["name", "Tony"], ["created_at", "2015-07-22 21:45:24.402779"], ["updated_at", "2015-07-22 21:45:24.402779"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "table_ready_time" = '2015-07-22 22:00:24.402779' WHERE "reservations"."id" = $1  [["id", 37]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "reservations" SET "notify_time" = '2015-07-22 21:55:24.402779' WHERE "reservations"."id" = $1[0m  [["id", 37]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1  [["id", 37]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 37]]
+  [1m[35m (6.2ms)[0m  COMMIT
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 8.4ms)
+
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)):
+  app/controllers/reservations_controller.rb:17:in `create'
+
+
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.5ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.5ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (106.5ms)
+
+
+Started POST "/restaurants/19/reservations" for ::1 at 2015-07-22 14:45:29 -0700
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1hbjIAqs8Ct+UDVFou6kAQmAjt79QCyOJ2e7dnXgS9ysNcQYJ3xLrJjncRbdD5MCcAhLRCaUGgKOjj2K+Qd3Kw==", "reservation"=>{"name"=>"Josh", "number_in_party"=>"2"}, "commit"=>"Sign me up!", "restaurant_id"=>"19"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reservations" ("number_in_party", "user_id", "restaurant_id", "timer", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["number_in_party", 2], ["user_id", 19], ["restaurant_id", 19], ["timer", 0], ["name", "Josh"], ["created_at", "2015-07-22 21:45:29.915179"], ["updated_at", "2015-07-22 21:45:29.915179"]]
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "reservations" SET "table_ready_time" = '2015-07-22 22:00:29.915179' WHERE "reservations"."id" = $1[0m  [["id", 38]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "reservations" SET "notify_time" = '2015-07-22 21:55:29.915179' WHERE "reservations"."id" = $1  [["id", 38]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 38]]
+  [1m[35mSQL (0.6ms)[0m  UPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1  [["id", 38]]
+  [1m[36m (5.2ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 8.8ms)
+
+Redis::CannotConnectError (Error connecting to Redis on 127.0.0.1:6379 (Errno::ECONNREFUSED)):
+  app/controllers/reservations_controller.rb:17:in `create'
+
+
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.7ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (104.2ms)
+
+
+Started GET "/restaurants/19" for ::1 at 2015-07-22 14:45:32 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReservation Load (0.2ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 19]]
+  Rendered reservations/_reservations_buttons.html.erb (0.3ms)
+  Rendered reservations/_show.html.erb (2.1ms)
+  Rendered reservations/_reservations_buttons.html.erb (0.0ms)
+  Rendered reservations/_show.html.erb (1.1ms)
+  Rendered reservations/_reservations_buttons.html.erb (0.0ms)
+  Rendered reservations/_show.html.erb (0.9ms)
+  Rendered reservations/_reservations.html.erb (7.7ms)
+  Rendered restaurants/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 316ms (Views: 81.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/home.self-707d4a659fc34ba871b34b8db81e27c10fc885faac1987fbf6f8923208007d22.css?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/restaurants.self-61da26ce25daf78339e18af7625daf304bb62330d899701de8e6511791b96ddd.css?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/reservees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:45:33 -0700
+
+
+Started DELETE "/restaurants/1/reservations/36" for ::1 at 2015-07-22 14:45:36 -0700
+Processing by ReservationsController#destroy as JSON
+  Parameters: {"36"=>nil, "restaurant_id"=>"1", "id"=>"36"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:430:in `block in make_lambda'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:162:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:162:in `block in halting'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `each'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (47.1ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.9ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.1ms)
+
+
+Started GET "/restaurants/19" for ::1 at 2015-07-22 14:45:42 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReservation Load (1.4ms)[0m  [1mSELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1[0m  [["restaurant_id", 19]]
+  Rendered reservations/_reservations_buttons.html.erb (0.1ms)
+  Rendered reservations/_show.html.erb (1.4ms)
+  Rendered reservations/_reservations_buttons.html.erb (0.0ms)
+  Rendered reservations/_show.html.erb (1.1ms)
+  Rendered reservations/_reservations_buttons.html.erb (0.1ms)
+  Rendered reservations/_show.html.erb (1.4ms)
+  Rendered reservations/_reservations.html.erb (9.3ms)
+  Rendered restaurants/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 282ms (Views: 78.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/home.self-707d4a659fc34ba871b34b8db81e27c10fc885faac1987fbf6f8923208007d22.css?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/reservees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/restaurants.self-61da26ce25daf78339e18af7625daf304bb62330d899701de8e6511791b96ddd.css?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:45:42 -0700
+
+
+Started GET "/restaurants/19" for ::1 at 2015-07-22 14:46:24 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mReservation Load (0.2ms)[0m  SELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1  [["restaurant_id", 19]]
+  Rendered reservations/_reservations_buttons.html.erb (0.0ms)
+  Rendered reservations/_show.html.erb (1.2ms)
+  Rendered reservations/_reservations_buttons.html.erb (0.0ms)
+  Rendered reservations/_show.html.erb (1.0ms)
+  Rendered reservations/_reservations_buttons.html.erb (0.1ms)
+  Rendered reservations/_show.html.erb (1.5ms)
+  Rendered reservations/_reservations.html.erb (7.6ms)
+  Rendered restaurants/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 592ms (Views: 79.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/home.self-707d4a659fc34ba871b34b8db81e27c10fc885faac1987fbf6f8923208007d22.css?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/reservees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/restaurants.self-61da26ce25daf78339e18af7625daf304bb62330d899701de8e6511791b96ddd.css?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:46:24 -0700
+
+
+Started DELETE "/restaurants/1/reservations/36" for ::1 at 2015-07-22 14:46:34 -0700
+Processing by ReservationsController#destroy as JSON
+  Parameters: {"36"=>nil, "restaurant_id"=>"1", "id"=>"36"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:430:in `block in make_lambda'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:162:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:162:in `block in halting'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `each'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.0ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (58.6ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.5ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (102.0ms)
+
+
+Started DELETE "/restaurants/1/reservations/36" for ::1 at 2015-07-22 14:46:36 -0700
+Processing by ReservationsController#destroy as JSON
+  Parameters: {"36"=>nil, "restaurant_id"=>"1", "id"=>"36"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.3) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:430:in `block in make_lambda'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:162:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:162:in `block in halting'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `each'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:502:in `call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:88:in `run_callbacks'
+  actionpack (4.2.3) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.3) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.3) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.3) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.3) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.3) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.3) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.3) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.3) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.3) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.3) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.3) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.2) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.2) lib/omniauth/builder.rb:59:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.3) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.3) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.3) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.1ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (64.4ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.3ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/Jeff/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (114.2ms)
+
+
+Started GET "/restaurants/19" for ::1 at 2015-07-22 14:47:06 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 19]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReservation Load (0.2ms)[0m  [1mSELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1[0m  [["restaurant_id", 19]]
+  Rendered reservations/_reservations_buttons.html.erb (0.1ms)
+  Rendered reservations/_show.html.erb (2.0ms)
+  Rendered reservations/_reservations_buttons.html.erb (0.0ms)
+  Rendered reservations/_show.html.erb (1.1ms)
+  Rendered reservations/_reservations_buttons.html.erb (0.0ms)
+  Rendered reservations/_show.html.erb (1.0ms)
+  Rendered reservations/_reservations.html.erb (8.3ms)
+  Rendered restaurants/show.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 520ms (Views: 89.0ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/home.self-707d4a659fc34ba871b34b8db81e27c10fc885faac1987fbf6f8923208007d22.css?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/sessions.self-205b4b5827861c953b6be62eb3d6651b6d8acabc0b2adc6eafe84bd4e6d7527b.css?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/proprietor.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/restaurants.self-61da26ce25daf78339e18af7625daf304bb62330d899701de8e6511791b96ddd.css?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/reservees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/reservations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/types.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/users.self-7d7025b6f0a69fd474049a4b3ebb76b6f074416cad6d524ccc56dd4a78374fc6.css?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 14:47:06 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/reservees.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/sessions.self-3abff4604a760045b9fb7fe0f7c025bac8862c4c97663ac3503107fae87e319c.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/timer.self-ffacc3f455c6c1e20aeb74a6ad8eea982e536ee8a6b6fa8d2f5ed4ff324388be.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 14:47:07 -0700
+
+
+Started DELETE "/restaurants/1/reservations/36" for ::1 at 2015-07-22 14:47:09 -0700
+Processing by ReservationsController#destroy as JSON
+  Parameters: {"36"=>nil, "restaurant_id"=>"1", "id"=>"36"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 19]]
+  [1m[36mReservation Load (0.2ms)[0m  [1mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT 1[0m  [["id", 36]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "reservations" WHERE "reservations"."id" = $1[0m  [["id", 36]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.6ms)

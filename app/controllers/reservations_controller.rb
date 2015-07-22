@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
 	before_action :authorize
-
+	skip_before_filter :verify_authenticity_token, :if => Proc.new { |c| c.request.format == 'application/json' }
 	def index
 
 	end
@@ -30,9 +30,15 @@ class ReservationsController < ApplicationController
 
 	end
 
-	# private
-	# 	def reservation_params
-	# 		params.require(:reservation).permit(:number_in_party, :user_id, :restaurant_id)
-	# 	end
+	def destroy
+		@reservation = Reservation.find(params[:id])
+		@reservation.destroy
+		p @destroyed
 
+		respond_to do |format|
+      format.json {
+        render json: @reservation.id
+      }
+    end
+	end
 end
