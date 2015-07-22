@@ -1,4 +1,6 @@
 class ReservationsController < ApplicationController
+	skip_before_filter :verify_authenticity_token, :if => Proc.new { |c| c.request.format == 'application/json' }
+	
 	def index
 
 	end
@@ -21,5 +23,17 @@ class ReservationsController < ApplicationController
 
 	def update
 
+	end
+
+	def destroy
+		@reservation = Reservation.find(params[:id])
+		@reservation.destroy
+		p @destroyed
+
+		respond_to do |format|
+      format.json {
+        render json: @reservation.id
+      }
+    end
 	end
 end
