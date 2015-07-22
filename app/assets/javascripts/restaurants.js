@@ -75,7 +75,7 @@ function updateMap(markers) {
 };
 
 // NAV BAR HOMEPAGE
-function mapSearchUpdate() {
+var mapSearchUpdate = function() {
   console.log("starting query");
   $('.home-search-bar').on('click', '.nav-form', function(e){
     e.preventDefault();
@@ -109,6 +109,4 @@ function mapSearchUpdate() {
   });
 
   }); //end search-form
-
-} //end queryResults
-
+}; //end queryResults

@@ -43121,3 +43121,2633 @@ Processing by RestaurantsController#index as HTML
   Parameters: {"utf8"=>"✓", "search"=>"wqeqwe", "location"=>""}
   Rendered restaurants/index.html.erb (0.8ms)
 Completed 200 OK in 216ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 11:49:10 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (130.4ms)
+Completed 200 OK in 132ms (Views: 131.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/assets/restaurants.self-4f625ac72a266ccae9c42b80b02d6cdb778a53a7fc4dc3b2b9a42605b3873998.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:49:10 -0700
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=mexican&location=" for ::1 at 2015-07-22 11:49:13 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"mexican", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-farolito-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "tropisueño-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "don-pistos-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "colibri-mexican-bistro-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "garaje-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "papito-hayes-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "padrecito-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "taqueria-castillo-mason-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "los-hermanos-taqueria-san-francisco"]]
+Completed 200 OK in 932ms (Views: 1.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=mexican&location=" for ::1 at 2015-07-22 11:49:14 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"mexican", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "el-mercado-urbano-at-la-urbana-san-francisco"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "el-farolito-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "tropisueño-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "don-pistos-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "colibri-mexican-bistro-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "garaje-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "papito-hayes-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "padrecito-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "taqueria-castillo-mason-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "los-hermanos-taqueria-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.5ms)
+  Rendered restaurants/index.html.erb (2.1ms)
+Completed 200 OK in 646ms (Views: 3.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 11:49:21 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (136.8ms)
+Completed 200 OK in 139ms (Views: 137.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:49:21 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:49:59 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (51.8ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for ::1 at 2015-07-22 11:50:12 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mReservation Exists (0.4ms)[0m  SELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 121ms (Views: 116.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=asd&location=" for ::1 at 2015-07-22 11:50:15 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"asd", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "american-gymnastics-club-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "academy-of-self-defense-santa-clara-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "we-rock-the-spectrum-berkeley-berkeley-2"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "boardsports-california-san-mateo"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "koa-fitness-mountain-view-mountain-view"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "academy-of-combative-defense-and-fitness-san-jose"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "mission-peak-regional-park-fremont"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "fitness-19-milpitas"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "city-sports-club-san-jose-5"]]
+Completed 500 Internal Server Error in 941ms (ActiveRecord: 1.6ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/restaurants_controller.rb:17:in `block in index'
+  app/controllers/restaurants_controller.rb:14:in `index'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (63.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (115.9ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=asd&location=" for ::1 at 2015-07-22 11:50:16 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"asd", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "american-gymnastics-club-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "academy-of-self-defense-santa-clara-2"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "we-rock-the-spectrum-berkeley-berkeley-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "boardsports-california-san-mateo"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "koa-fitness-mountain-view-mountain-view"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "academy-of-combative-defense-and-fitness-san-jose"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "mission-peak-regional-park-fremont"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "fitness-19-milpitas"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "city-sports-club-san-jose-5"]]
+Completed 500 Internal Server Error in 527ms (ActiveRecord: 1.8ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/restaurants_controller.rb:17:in `block in index'
+  app/controllers/restaurants_controller.rb:14:in `index'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (60.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (54.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (124.9ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=dragon+eats&location=" for ::1 at 2015-07-22 11:50:24 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"dragon eats", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "perilla-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "le-soleil-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "cordon-bleu-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "vietnam-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "rice-paper-scissors-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "bun-mee-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "urban-picnic-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-slanted-door-san-francisco"]]
+Completed 200 OK in 618ms (Views: 1.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=dragon+eats&location=" for ::1 at 2015-07-22 11:50:25 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"dragon eats", "location"=>""}
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco"]]
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "perilla-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "le-soleil-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "cordon-bleu-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "vietnam-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "rice-paper-scissors-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "bun-mee-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "urban-picnic-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-slanted-door-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.5ms)
+  Rendered restaurants/index.html.erb (1.7ms)
+Completed 200 OK in 570ms (Views: 3.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 11:51:27 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (36.4ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 11:51:27 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (39.1ms)
+Completed 200 OK in 41ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 11:52:32 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (61.8ms)
+Completed 200 OK in 63ms (Views: 62.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:52:32 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:52:55 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (64.5ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:52:55 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:53:01 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (71.5ms)
+Completed 200 OK in 73ms (Views: 72.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:53:01 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:53:15 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (44.8ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:53:15 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:53:41 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (43.1ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:53:41 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:53:52 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (48.5ms)
+Completed 200 OK in 50ms (Views: 49.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:53:52 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:54:07 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (46.1ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:54:07 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:54:23 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (55.0ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:54:23 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:23 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:54:23 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:23 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:23 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:54:23 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:54:23 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:54:24 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:54:24 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:24 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:54:24 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:54:24 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:54:29 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (40.0ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:54:29 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:54:38 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (45.1ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:54:38 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:54:56 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (46.2ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:54:56 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:55:41 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (52.5ms)
+Completed 200 OK in 54ms (Views: 53.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 11:55:54 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (47.0ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:55:54 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:56:01 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (50.9ms)
+Completed 200 OK in 53ms (Views: 51.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:56:01 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:56:09 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (41.6ms)
+Completed 200 OK in 43ms (Views: 42.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:56:10 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:56:16 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (58.5ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:56:16 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:57:54 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (54.7ms)
+Completed 200 OK in 56ms (Views: 55.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:57:54 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:58:04 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (44.0ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:58:04 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:58:11 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (50.7ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:58:11 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:58:34 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (39.6ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:58:34 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:58:40 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (46.8ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:58:40 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:59:07 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (41.0ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:59:07 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:59:20 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (42.5ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:59:20 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 11:59:49 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (42.8ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 11:59:49 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:00:00 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (48.0ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:00:00 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:00:06 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (54.2ms)
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:00:06 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:03:48 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (41.6ms)
+Completed 200 OK in 43ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-07-22 12:04:06 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (45.1ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:04:06 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:04:23 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (37.2ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:04:23 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:05:09 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (51.1ms)
+Completed 200 OK in 53ms (Views: 52.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:05:09 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:05:37 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (43.3ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:05:37 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:05:42 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (43.4ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:05:43 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:06:04 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (49.7ms)
+Completed 200 OK in 52ms (Views: 50.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:06:04 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:06:17 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (42.8ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:06:17 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:06:25 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (54.0ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:06:26 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:06:33 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (44.1ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:06:33 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:06:39 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (44.7ms)
+Completed 200 OK in 46ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:06:39 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:06:44 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (46.0ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:06:44 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:06:51 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (48.0ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:06:51 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:07:42 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (57.9ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:07:42 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:09:12 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (44.9ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:09:12 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:09:27 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (43.2ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:09:27 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:10:04 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (54.0ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:10:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:10:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:10:04 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:10:04 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:10:04 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:10:05 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:10:05 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:10:05 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:10:05 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:10:05 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:10:05 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:10:05 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:10:57 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (59.1ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:10:57 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:11:10 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (44.2ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:11:10 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:11:14 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (57.2ms)
+Completed 200 OK in 59ms (Views: 58.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:11:14 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:11:37 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (39.8ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:11:38 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:11:48 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (46.0ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:11:48 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:11:49 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:11:49 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:49 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:11:49 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:49 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:49 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:11:49 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:11:49 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:49 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:11:49 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:11:49 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:11:57 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (44.9ms)
+Completed 200 OK in 47ms (Views: 45.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:11:57 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:11:58 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:11:58 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:58 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:58 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:11:58 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:58 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:11:58 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:11:58 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:11:58 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:11:58 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:11:58 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:12:09 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (43.6ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:12:09 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:12:17 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (48.9ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:12:17 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:12:51 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (49.8ms)
+Completed 200 OK in 52ms (Views: 51.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:12:52 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:13:24 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (56.6ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:13:24 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:14:05 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (50.4ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:14:05 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:14:50 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (43.1ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:14:50 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:15:01 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (72.8ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:15:01 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 12:15:33 -0700
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered home/index.html.erb (75.5ms)
+Completed 200 OK in 78ms (Views: 77.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
+
+
+Started GET "/assets/admin.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
+
+
+Started GET "/assets/home.self-b281c3cd3b14693ab8f91194f3f5a3e9974f1ac4069a638fce6802af3f60ffe7.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
+
+
+Started GET "/assets/proprietor.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
+
+
+Started GET "/assets/reservations.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
+
+
+Started GET "/assets/restaurants.self-8e2ae5a6b2e9dd1fd197b1d80279075bc87036992e5e067311d76cb465dceedf.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
+
+
+Started GET "/assets/sessions.self-8c05c96d3f1f3132396bfbdba1299f327bc4978e15edaf32d91dd3a34834fe16.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
+
+
+Started GET "/assets/types.self-19a187bec6cdb96d6de80a61c16c857c613536adf9138476bd367db38d282635.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
+
+
+Started GET "/assets/users.self-800a0187b65b0b99a47d1c70934b0fcfb0bdf59923c01c4014a5f226d2259756.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-22 12:15:33 -0700
