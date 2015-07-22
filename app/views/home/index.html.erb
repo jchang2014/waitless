@@ -1,46 +1,257 @@
-<section class="google-maps">
-  <div id="map-canvas"></div>
-</section>
+<html>
+<head>
+  <title>WaitLess</title>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- Google maps scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
+  <style>
+    #map-canvas {
+      height: 350px;
+      margin: 10px 0px 0px 0px;
+    }
+
+    body {
+      background-color: #FFFFFF;
+      font-family: helvetica;
+      margin: 0;
+    }
+
+    .nav-toggle {
+      border: 3px solid #FFFFFF;
+      background-color: #4CAF50;
+      border-radius: 5px;
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      color: #FFFFFF;
+    }
+
+    .separator {
+      background:#4CAF50;
+      height: 20px;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: #4CAF50;
+      display: flex;
+      font-family: helvetica;
+      font-size: 20px;
+      margin: 0;
+      padding: 15px;
+    }
+
+    .search-form a:link {
+      color: #B6B6B6;
+      text-decoration: underline;
+    }
+
+    .search-form a:hover {
+      text-decoration: none;
+    }
+
+    .search-form a:visited {
+      color: #B6B6B6;
+      text-decoration: underline;
+    }
+    .nav-title {
+      display:inline-block;
+      font-family: 'Lobster', cursive;
+      font-size: 50px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      width: 50%;
+      text-shadow: 4px 4px 0px #689F38, 7px 7px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-title a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    label {
+        color:#727272;
+    }
+
+    .home-wrapper {
+      color: #727272;
+      padding: 10px;
+      font-size: 15px;
+      text-align:center;
+    }
+
+    .home-wrapper h1 {
+      color: #586949;
+      font-size: 30px;
+      letter-spacing: 1px;
+    }
+
+    .search-form td{
+      font-family: helvetica;
+      font-size: 15px;
+      padding: 2px;
+    }
+
+    .search-form input{
+      font-family: helvetica;
+      font-size: 15px;
+      padding: 5px;
+    }
+
+    .search-form input.home-search{
+      background-color: #8BC34A;
+      border-radius: 10px;
+      letter-spacing: 2px;
+      font-size: 20px;
+      color: #FFFFFF;
+    }
+
+    .search-form {
+      color: #000000;
+      font-family: Helvetica;
+      font-size: 20px;
+    }
+
+    /*BEGIN RESTAURANTS RESULT STYLING */
+    h1{
+      color: #004b00;
+      font-family: helvetica;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .results-list-wrapper {
+      margin: 10px 0px 10px 0px;
+    }
+
+    .result-wrapper {
+      background-color: #FFFFE0;
+      color: #727272;
+      display: flex;
+      padding: 20px;
+      width: 70%;
+      margin: 0px auto 10px auto;
+    }
+
+    .result-img {
+      display: inline-block;
+      margin-top: 50px;
+      width: 33%;
+    }
+
+    .result-info {
+      display: inline-block;
+      line-height: 25px;
+      padding: 10px;
+      width: 33%;
+    }
+
+    .result-wait-time {
+      color: #811212;
+      display: inline-block;
+      margin-top: 10px;
+      width: 33%;
+    }
+
+    .result-wait-time-text0 {
+      margin-top: 20px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .result-wait-time-number {
+      border: 10px solid #CD9B9B;
+      border-radius: 20px;
+      font-size: 100px;
+      text-align: center;
+    }
+
+    .result-wait-time-text1 {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .result-info label{
+      font-weight: bold;
+    }
+
+    .result-nav {
+      display: block;
+      width:100%;
+    }
+
+    .result-button {
+      background-color: #FF5252;
+      border-radius: 5px;
+      font-size: 15px;
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 5px;
+    }
+
+    .link-wrapper {
+      display: block;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    .result-img-position {
+      text-align: center;
+    }
+
+    .result-img-position img {
+      border-radius: 60px;
+    }
+
+  </style>
+
+</head>
+<body>
+<nav>
+  <div class="nav-title"><%= link_to "Waitless", root_path %></div>
+
+  <div class="home-search-bar">
+    <%= form_tag(restaurants_path, :method => "get", id:"nav-form") do %>
+      <table align=center class="search-form">
+        <tr>
+          <td>Restaurant or Category</td>
+          <td><%= text_field_tag :search, params[:search], placeholder: "Mexican, Philz Coffee, etc." %></td>
+          <td>Location</td>
+          <td><%= text_field_tag :location, params[:location], placeholder: "San Francisco, CA" %></td>
+          <td><%= submit_tag "Search", :class => 'nav-form' %></td>
+          <td>Powered by <a href="http://www.yelp.com">Yelp</a></td>
+        </tr>
+      </table>
+    <% end %>
+  </div>
+
+  <div class="user-login">
+    <button class="nav-toggle">&dArr;</button>
+      <div class="test-me">
+        <div>&nbsp;</div>
+          <% if current_user %>
+            <%= current_user.name %>
+            <div><%= link_to "Signout", session_path, method: 'delete' %></div>
+          <% else %>
+            <div><%= link_to "Login", session_path %></div>
+            <div><%= link_to "Signup", new_user_path %></div>
+          <% end %>
+      </div>
+  </div>
+</nav>
+
+<div id="map-canvas"></div>
 <div class="separator"></div>
 
 <div class="body-wrapper">
-  <div class="home-wrapper">
-
-    <section class="home-info">
-      <h1>WaitLess</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nibh lectus, volutpat id elementum sit amet, consectetur eu tellus. In rhoncus fringilla nibh, a sollicitudin mi rutrum in. In eu finibus nisl. Donec accumsan tortor vel odio rhoncus gravida. Fusce ultrices ligula a est laoreet, vitae feugiat erat tincidunt. Suspendisse potenti. In hac habitasse platea dictumst. Nunc blandit, purus eget pharetra luctus, tellus augue egestas mauris, eu viverra magna metus condimentum nibh. Donec consectetur ex ligula. Proin tortor nisi, aliquam at iaculis sed, tempus eu massa. Sed mollis orci id tortor condimentum malesuada. In dignissim, lorem ac pellentesque pretium, magna sapien varius tellus, a ultricies nisi elit non nulla. Aenean aliquet ultricies vehicula.
-        </p>
-        <p>
-          Praesent et est justo. Etiam lacus ante, aliquet quis massa a, molestie vestibulum lorem. Aliquam erat volutpat. Nullam egestas semper tincidunt. Donec et nisl vitae dolor eleifend eleifend quis non lacus. Pellentesque eget ligula scelerisque, fermentum lorem id, tempor dui. Vivamus scelerisque mattis erat. Donec pretium ac arcu sit amet venenatis. Etiam lacinia risus tristique mauris tincidunt, id porta turpis placerat. Morbi eleifend tristique fermentum. Aliquam ornare scelerisque efficitur. Vivamus iaculis nibh ut ligula porttitor feugiat. Sed mollis erat ut sapien rutrum feugiat vitae ac lectus. Mauris sit amet diam placerat metus pulvinar consectetur sit amet iaculis ante. Donec eu mauris non lectus rhoncus auctor et finibus orci. Ut mattis a tellus sit amet rutrum.
-        </p>
-    </section>
-
-    <section class="home-explore">
-      <h1>Find a Restaurant</h1>
-        <%= form_tag(restaurants_path, :method => "get", id:"search-form") do %>
-
-          <table align=center class="search-form">
-            <tr>
-              <td>Restaurant Name/Food Type</td>
-              <td>
-                <%= text_field_tag :search, params[:search], placeholder: "Mexican, Philz Coffee, etc." %>
-              </td>
-            </tr>
-            <tr>
-              <td>Location</td>
-              <td><%= text_field_tag :location, params[:location], placeholder: "San Francisco, CA" %></td>
-  		      </tr>
-            <tr>
-              <td><%= submit_tag "Search", :class => 'home-search' %></td>
-              <td>Powered by <a href="http://www.yelp.com">Yelp</a></td>
-            </tr>
-          </table>
-
-          <% end %>
-    </section>
-  </div>
-
+  <section class="home-wrapper">
+    <h1>Welcome to WaitLess</h1>
+    hello
+  </section>
 </div>
-
+</body>
+</html>

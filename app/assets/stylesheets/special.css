@@ -9,8 +9,7 @@ body {
 }
 
 #map-canvas {
-  height: 400px;
-  margin: 10px 0px 0px 0px;
+  height: 600px;
 }
 
 .nav-toggle {
@@ -103,7 +102,9 @@ main {
   margin: 0 auto;
 }
 
-
+.google-maps {
+  margin: 10px 0px 0px 0px;
+}
 
 label {
   color:#727272;
@@ -140,7 +141,7 @@ label {
 .search-form td{
   font-family: helvetica;
   font-size: 15px;
-  padding: 2px;
+  padding: 10px;
 }
 
 .search-form input{
@@ -155,10 +156,4 @@ label {
   letter-spacing: 2px;
   font-size: 20px;
   color: #FFFFFF;
-}
-
-.search-form {
-  color: #000000;
-  font-family: Helvetica;
-  font-size: 20px;
 }
