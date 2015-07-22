@@ -1,10 +1,9 @@
 class ReservationMailer < ApplicationMailer
-  def contact_email(name,email,message)
-    @name = name
-    @email = email
-    @message = message
-    mail(from: @email,
-         to: '',
+
+  def contact_email(user)
+    @user = user
+    @message = 'ready!'
+    mail(to: @user.email,
          subject: 'Reservation Ready' )
   end
 end
