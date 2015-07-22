@@ -47,10 +47,8 @@ gem "launchy"
 # gem 'capistrano-rails', group: :development
 
 gem 'sinatra', '>= 1.3.0', :require => false
-<<<<<<< HEAD
 gem 'slim'
-=======
->>>>>>> 8fcdd97417ede989b331d0370a5532e68441397c
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
