@@ -16,6 +16,7 @@ class Reservation < ActiveRecord::Base
     get_diff <= 5 && self.notified? == false
   end
 
+
   private
     def get_diff
       (self.notify_time - Time.now)/3600
