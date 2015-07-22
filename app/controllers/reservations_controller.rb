@@ -23,11 +23,9 @@ class ReservationsController < ApplicationController
 	end
 
 	def show
-
 	end
 
 	def update
-
 	end
 
 	def destroy

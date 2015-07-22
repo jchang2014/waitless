@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   require 'sidekiq/web'
   root 'home#index'
   mount Sidekiq::Web, at: '/sidekiq'
+  root 'home#index'
 
   resource :home, only: [:search, :show]
 
@@ -13,7 +14,7 @@ Rails.application.routes.draw do
 
 
   resources :restaurants, only: [:index, :show, :create] do
-    resources :reservations
+  	resources :reservations
   end
 
   resources :types, only: [:index, :show]
