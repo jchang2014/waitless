@@ -12,7 +12,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
 
     if current_user.admin
-      @restaurants = @user.restaurants
+      @restaurant = @user.restaurants.first
+      if @restaurant
+        @restaurant_hash = Yelp.client.business(@restaurant.yelp_id).as_json['hash']
+      else
+        @restaurant_hash = nil
+      end
     else
       @reservations = @user.reservations
     end

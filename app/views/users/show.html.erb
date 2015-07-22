@@ -1,13 +1,14 @@
 <h1>Welcome Back <%= current_user.name %></h1>
 
 <div class="body-wrapper">
-  <% if current_user.admin %>
-    <% if current_user.restaurants.length > 0 %>
-      <% @restaurants.each do |restaurant| %>
-        <h1>Your waitlist</h1>
-        <% @reservations = restaurant.reservations %>
+  <% if current_user.admin %> 
+    <% if @restaurant %>
+        <h1>Your waitlist for <%=@restaurant_hash['name']%></h1>
+        <% @reservations = @restaurant.reservations %>
         <%= render :partial => "reservations/reservations", locals: {reservations: @reservations} %>
-      <% end %>
+        <% if @reservations.length == 0 %>
+          <h1>You don't have any reservations yet!</h1>
+        <% end %>
     <% else %>
       <h1>You don't have any restaurants!</h1>
     <% end %>
@@ -16,7 +17,7 @@
       <h1>Current Reservation</h1>
       <div class="current-reservation-wrapper">
         <div class="current-wait-time">
-  		    <div class="user-wait-time">15</div>
+  		    <div class="user-wait-time">@reservations.first.timer</div>
   		    <div class="user-wait-time-text">minute(s) until you are seated</div>
         </div>
 
