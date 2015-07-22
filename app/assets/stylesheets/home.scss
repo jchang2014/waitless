@@ -9,7 +9,8 @@ body {
 }
 
 #map-canvas {
-  height: 600px;
+  height: 400px;
+  margin: 10px 0px 0px 0px;
 }
 
 .nav-toggle {
@@ -102,9 +103,7 @@ main {
   margin: 0 auto;
 }
 
-.google-maps {
-  margin: 10px 0px 0px 0px;
-}
+
 
 label {
   color:#727272;
