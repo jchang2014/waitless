@@ -1,5 +1,4 @@
 class Reservation < ActiveRecord::Base
-
   after_save   :update_times
 	belongs_to   :user
 	belongs_to   :restaurant
@@ -12,12 +11,4 @@ class Reservation < ActiveRecord::Base
     update_column(:table_ready?, false)
   end
 
-  def notify_now?
-    get_diff <= 5 && self.notified? == false
-  end
-
-  private
-    def get_diff
-      (self.notify_time - Time.now)/3600
-    end
 end
