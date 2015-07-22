@@ -1,14 +1,10 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
-
+  require 'sidekiq/web'
   root 'home#index'
-
   mount Sidekiq::Web, at: '/sidekiq'
-
   resource :home, only: [:search, :show]
-
-  # scope constraints: {format: 'json'}, defaults: {format: 'json'} do
 
   resource :session, only: [:create, :show, :destroy]
 
@@ -16,14 +12,11 @@ Rails.application.routes.draw do
 
 
   resources :restaurants, only: [:index, :show, :create] do
-    resources :reservations
-
-
+  	resources :reservations
   end
 
   resources :types, only: [:index, :show]
 
-	# end
 
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')

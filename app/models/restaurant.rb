@@ -7,8 +7,4 @@ class Restaurant < ActiveRecord::Base
   validates :yelp_id, uniqueness: true
 
 
-
-
-
-
 end
