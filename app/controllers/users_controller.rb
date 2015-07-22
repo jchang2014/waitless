@@ -10,7 +10,12 @@ class UsersController < ApplicationController
     end
 
     @user = User.find(params[:id])
-    @reservations = @user.reservations
+
+    if current_user.admin
+      @restaurants = @user.restaurants
+    else
+      @reservations = @user.reservations
+    end
   end
 
   def new
