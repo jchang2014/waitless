@@ -28,11 +28,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Add yelp gem
 gem 'yelp'
 
- gem "omniauth-google-oauth2", "~> 0.2.1"
+gem "omniauth-google-oauth2", "~> 0.2.1"
 
-  gem 'bcrypt'
+gem 'bcrypt'
+
 # background job
 gem 'sidekiq'
+gem "letter_opener"
+gem "launchy"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -42,6 +45,10 @@ gem 'sidekiq'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'sinatra', '>= 1.3.0', :require => false
+gem 'slim'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -53,5 +60,4 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
- 
 end
