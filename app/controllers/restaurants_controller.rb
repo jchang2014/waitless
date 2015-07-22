@@ -30,7 +30,8 @@ class RestaurantsController < ApplicationController
         categories: @categories.join(', '),
         latitude: @business['location']['coordinate']['latitude'],
         longitude: @business['location']['coordinate']['longitude'],
-        id: @id
+        id: @id,
+        #wait_time: @restaurant.wait_time
         })
     	end
     else
