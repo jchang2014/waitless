@@ -151,7 +151,7 @@
     .nav-form td{
       color: #FFFFFF;
       letter-spacing: 1px;
-      padding-right: 15px;
+      padding-right: 10px;
       letter-spacing: -1px;
     }
 
@@ -164,7 +164,7 @@
       font-size: 12px;
     }
 
-    input.nav-form-button{
+    #nav-form input.nav-form-button{
       color: #FFFFFF;
       background-color: #CDDC39;
       border:none;
@@ -215,7 +215,8 @@
     .right-nav {
       width: 10%;
       text-align: right;
-      margin: 5px 10px 0px 0px;
+      margin: 5px 10px 5px 0px;
+      font-size: 18px;
     }
 
     .nav-toggle {
@@ -232,6 +233,12 @@
       margin-top: 5px;
       width: 70%;
     }
+
+    .right-nav a{ 
+      text-decoration: none;
+      color: #DCEDC8;
+    }
+
   </style>
 
 </head>
@@ -258,7 +265,7 @@
 
   <div class="right-nav">
     <button class="nav-toggle">&dArr;</button>
-      <div class="test-me">
+      <div class="nav-menu">
         <div>&nbsp;</div>
           <% if current_user %>
             <%= current_user.name %>
