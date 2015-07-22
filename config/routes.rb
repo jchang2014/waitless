@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
+ require 'sidekiq/web'
+ mount Sidekiq::Web => 'sidekiq', as: :background_jobs
+ root 'home#index'
 
-	root 'home#index'
-
-	resource :home, only: [:search, :show]
+ resource :home, only: [:search, :show]
 
   # scope constraints: {format: 'json'}, defaults: {format: 'json'} do
 
-	resource :session, only: [:create, :show, :destroy]
+  resource :session, only: [:create, :show, :destroy]
 
   resources :users
 
@@ -14,9 +15,7 @@ Rails.application.routes.draw do
   resources :restaurants, only: [:index, :show, :create] do
   	resources :reservations
 
-    require 'sidekiq/web'
-    mount Sidekiq::Web => 'sidekiq', as: :background_jobs
-    # root to: ''
+
   end
 
   resources :types, only: [:index, :show]

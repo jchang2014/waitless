@@ -15,7 +15,7 @@ class ReservationsController < ApplicationController
 		#@reservation = @restaurant.reservations.new(reservation_params)
 
 		if @reservation.save
-			NotifyUsersWorker.perform_in(@reservation.get_time, @reservation)
+			NotifyUsersWorker.perform_in(@reservation.notification_delay.minutes, @reservation.id)
 
 			redirect_to "/users/#{session[:user_id]}"
 		else
