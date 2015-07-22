@@ -30,7 +30,8 @@ class RestaurantsController < ApplicationController
         categories: @categories.join(', '),
         latitude: @business['location']['coordinate']['latitude'],
         longitude: @business['location']['coordinate']['longitude'],
-        id: @id
+        id: @id,
+        #wait_time: @restaurant.wait_time
         })
     	end
     else
@@ -63,7 +64,8 @@ class RestaurantsController < ApplicationController
               rating: @response['rating_img_url'],
               categories: @categories.join(', '),
               latitude: @response['location']['coordinate']['latitude'],
-              longitude: @response['location']['coordinate']['longitude']
+              longitude: @response['location']['coordinate']['longitude'],
+              review_count: @response['review_count']
               }
     render :show, locals: {result: @result}
   end

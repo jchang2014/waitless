@@ -10,35 +10,47 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
 <nav>
-
   <div class="nav-title"><%= link_to "Waitless", root_path %></div>
 
-  <div class="user-login">
-      <button class="nav-toggle">&dArr;</button>
-        <div class="test-me">
-          <div>&nbsp;</div>
+  <div class="home-search-bar">
+    <%= form_tag(restaurants_path, :method => "get", id:"nav-form") do %>
+      <table align=center class="nav-form">
+        <tr>
+          <td>Restaurant or Category</td>
+          <td>Location</td>
+        </tr>
+        <tr>
+          <td><%= text_field_tag :search, params[:search], placeholder: "Mexican, Philz Coffee, etc." %></td>
+          <td><%= text_field_tag :location, params[:location], placeholder: "San Francisco, CA" %></td>
+          <td><%= submit_tag "Search", :class => 'nav-form-button' %></td>
+          <td class="yelp">Powered by <a href="http://www.yelp.com">Yelp</a></td>
+        </tr>
+      </table>
+    <% end %>
+  </div>
 
+  <div class="right-nav">
+    <button class="nav-toggle">&dArr;</button>
+      <div class="nav-menu">
+        <div>&nbsp;</div>
           <% if current_user %>
-            <%= current_user.name %>
+            <a href="/users/<%= current_user.id %>"><%= current_user.name %></a>
             <div><%= link_to "Signout", session_path, method: 'delete' %></div>
           <% else %>
             <div><%= link_to "Login", session_path %></div>
             <div><%= link_to "Signup", new_user_path %></div>
           <% end %>
-
-        </div>
+      </div>
   </div>
-
 </nav>
 
-<main>
+<div class="body-wrapper">
 	<%= yield %>
-</main>
+</div>
 
 </body>
 </html>

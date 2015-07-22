@@ -35,7 +35,7 @@
 }
 
 .result-wait-time {
-  color: #811212;
+  color: #000000;
   display: inline-block;
   margin-top: 10px;
   width: 33%;
@@ -52,6 +52,8 @@
   border-radius: 20px;
   font-size: 100px;
   text-align: center;
+  margin: auto;
+  width: 50%;
 }
 
 .result-wait-time-text1 {
@@ -87,24 +89,106 @@
   text-align: center;
 }
 
-.result-img-position img {
+.result-img-position img{
   border-radius: 60px;
 }
 
-.quick-waitlist-form {
-  display:block;
-  margin: auto;
-  text-align: center;
-  width: 50%;
+
+.restaurant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.restaurant-img {
+  border-radius: 50px;
+}
+
 .waitlist-table {
-    margin: auto;
+  width: 100%;
+  border-collapse: collapse;
 }
-.waitlist-table td{
+
+.waitlist-table th{
+  background-color: #FFC107;
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+.waitlist-table tr{
+  border-bottom: 1px dotted ghostwhite;
+}
+
+.waitlist-table td  {
+  padding: 20px;
+  text-align:center;
+}
+
+.waitlist-window {
+  display:inline-block;
+  width: 50%;
+  background-color: ghostwhite;
+  margin-right: 10px;
+}
+
+.restaurant {
+  margin: 10px auto 0px auto;
+  text-align: center;
+  width: 85%;
+}
+
+.top-block {
+  display:flex;
+  margin: 10px auto 0px auto;
+  width: 80%;
+}
+
+.restaurant-info {
+  background-color: ghostwhite;
+  display: inline-block;
+  width: 50%;
   padding: 5px;
   text-align: center;
 }
 
-.create-wait-list-position input.create-position {
-  font-size: 15px;
+.restaurant-data-table td{
+  padding: 5px;
+  vertical-align: top;
+  font-size: 20px;
+}
+
+.restaurant-data-table label{
+  font-weight: bold;
+}
+
+.waitlist-form-table td{
+  padding: 10px;
+}
+
+.waitlist-form-table td{
+  padding: 10px;
+}
+
+.waitlist-form-table td input {
+  font-size: 20px;
+}
+
+.waitlist-button {
+  font-size: 40px;
+  width: 200px;
+}
+
+.restaurant-waitlist-info {
+  display: block;
+  margin: auto;
+  width: 80%;
+  padding: 5px;
+}
+
+.waitlist-table tr:nth-child(even) {
+  background-color: #FFF9C4;
+}
+
+.waitlist-table tr:nth-child(odd) {
+  background-color: #FFF8DC;
 }

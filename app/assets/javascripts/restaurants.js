@@ -1,5 +1,6 @@
-$(document).ready(function() {
+$(document).on('page:change',function() {
   queryResults();
+  mapSearchUpdate();
 });
 
 function queryResults() {
@@ -30,13 +31,8 @@ function queryResults() {
     console.log('inside htmlRequest ajax call');
 
     $('.restaurant-results').remove();
-    $('.search-text').remove();
-
+    $('.home-wrapper').remove();
     $('.body-wrapper').append(response);
-
-    var textResponse = "<div class='search-text'><p align=center>You can view your search results below</p></div>";
-    $('.home-explore').append(textResponse);
-
     $('input#search').val('');
     $('input#location').val('');
   });
@@ -78,4 +74,39 @@ function updateMap(markers) {
   }// end for loop
 };
 
+// NAV BAR HOMEPAGE
+var mapSearchUpdate = function() {
+  console.log("starting query");
+  $('.home-search-bar').on('click', '.nav-form-button', function(event){
+    event.preventDefault();
+    var mapRequest = $.ajax({
+      url: "/restaurants",
+      action: "get",
+      dataType: "JSON",
+      data: $('#nav-form').serialize()
+    }); //end getJSON
+    mapRequest.done(function(data){
+      updateMap(data);
 
+    });//end done
+    mapRequest.fail(function(error){
+      alert("sorry your search yielded no results");
+    });//end fail
+
+  var htmlRequest = $.ajax({
+    url: "/restaurants",
+    action: "get",
+    dataType: "html",
+    data: $('#nav-form').serialize()
+  });
+  htmlRequest.done(function(response){
+    console.log('inside htmlRequest ajax call');
+    $('.restaurant-results').remove();
+    $('.home-wrapper').remove();
+    $('.body-wrapper').append(response);
+    $('input#search').val('');
+    $('input#location').val('');
+  });
+
+  }); //end search-form
+}; //end queryResults

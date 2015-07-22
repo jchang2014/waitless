@@ -1,0 +1,9 @@
+<tr>
+  <td><%=reservation.name%></td>
+  <td><%=reservation.number_in_party%></td>
+  <td><%= reservation.created_at.strftime('%r')%></td>
+  <td><%=reservation.timer%></td>
+  <% if current_user && current_user.admin %><td>
+    <%= render :partial => "reservations/reservations_buttons", locals: {reservation: reservation} %></td>
+  <% end %>
+</tr>
