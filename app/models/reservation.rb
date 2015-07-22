@@ -1,8 +1,9 @@
 class Reservation < ActiveRecord::Base
 
-  after_save     :update_times
-	belongs_to      :user
-	belongs_to      :restaurant
+  after_save   :update_times
+	belongs_to   :user
+	belongs_to   :restaurant
+
 
 
   def update_times

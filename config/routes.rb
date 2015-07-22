@@ -3,7 +3,6 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
 
   root 'home#index'
-  post 'reservees/contact', to: 'reservees#contact'
 
   mount Sidekiq::Web, at: '/sidekiq'
 
