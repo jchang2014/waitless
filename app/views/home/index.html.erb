@@ -17,7 +17,23 @@
 
   <div class="nav-title"><%= link_to "Waitless", root_path %></div>
 
-  <div class="home-search">ajax searchbar goes here;appends to body</div>
+  <div class="home-search-bar">
+    <%= form_tag(restaurants_path, :method => "get", id:"search-form") do %>
+      <table align=center class="search-form">
+        <tr>
+          <td>Restaurant or Category</td>
+          <td>
+            <%= text_field_tag :search, params[:search], placeholder: "Mexican, Philz Coffee, etc." %>
+          </td>
+          <td>Location</td>
+          <td><%= text_field_tag :location, params[:location], placeholder: "San Francisco, CA" %></td>
+
+          <td><%= submit_tag "Search", :class => 'home-search' %></td>
+          <td>Powered by <a href="http://www.yelp.com">Yelp</a></td>
+        </tr>
+      </table>
+    <% end %>
+  </div>
 
   <div class="user-login">
       <button class="nav-toggle">&dArr;</button>
