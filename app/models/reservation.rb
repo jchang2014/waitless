@@ -10,7 +10,7 @@ class Reservation < ActiveRecord::Base
     update_column(:table_ready_time, (self.created_at + 15.minutes))
     update_column(:notify_time, (self.table_ready_time - 5.minutes))
     update_column(:notified?, false)
-    update_column(:table_ready, false)
+    update_column(:table_ready?, false)
   end
 
   def notify_now?
