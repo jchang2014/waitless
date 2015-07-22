@@ -41,7 +41,7 @@ results_soma = [
 ]
 
 results_mission = [
-  "sous-beurre-kitchen-san-francisco-2",  
+  "sous-beurre-kitchen-san-francisco-2",
   "thistle-san-francisco-8",
   "bistro-l-aviateur-san-francisco-2",
   "hoffmanns-grill-and-rotisserie-san-francisco",
@@ -101,12 +101,12 @@ results_embarcadero.map {
 
 # Add owners for some restaurants
 dragon_eats = Restaurant.where(yelp_id: "dragoneats-san-francisco-3").first
-dragon_eats.user_id = 1 
+dragon_eats.user_id = 1
 dragon_eats.save
 
 lazy_bear = Restaurant.where(yelp_id: "lazy-bear-san-francisco-5").first
 lazy_bear.user_id = 2
-lazy_bear.save 
+lazy_bear.save
 
 hrd = Restaurant.where(yelp_id: "hrd-san-francisco-2").first
 hrd.user_id = 3
@@ -117,5 +117,5 @@ hrd.save
 users = [5,6,7,8,9]
 
 users.each do |user|
-  dragon_eats.reservations.create(user_id: user, number_in_party: 3)
+  dragon_eats.reservations.create(user_id: user, number_in_party: 3, name: "Person #{user}")
 end
