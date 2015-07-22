@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   mount Sidekiq::Web, at: '/sidekiq'
 
 
+
   resource :home, only: [:search, :show]
 
 
