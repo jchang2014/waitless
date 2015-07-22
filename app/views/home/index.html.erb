@@ -25,20 +25,6 @@
       height: 20px;
       margin-top: 10px;
     }
-    .search-form a:link {
-      color: #B6B6B6;
-      text-decoration: underline;
-    }
-
-    .search-form a:hover {
-      text-decoration: none;
-    }
-
-    .search-form a:visited {
-      color: #B6B6B6;
-      text-decoration: underline;
-    }
-
 
     label {
         color:#727272;
@@ -155,11 +141,11 @@
       letter-spacing: -1px;
     }
 
-    table.nav-form { 
+    table.nav-form {
       font-family: 'Arvo', serif;
     }
 
-    #nav-form input { 
+    #nav-form input {
       padding: 8px;
       font-size: 12px;
     }
@@ -174,7 +160,7 @@
       padding: 5px;
     }
 
-    input.nav-form { 
+    input.nav-form {
       padding:10px;
     }
 
@@ -183,7 +169,7 @@
       font-size: 20px;
     }
 
-    .nav-form td.yelp a { 
+    .nav-form td.yelp a {
       text-decoration: none;
       color: #DCEDC8;
     }
@@ -234,12 +220,12 @@
       width: 70%;
     }
 
-    .right-nav a{ 
+    .right-nav a{
       text-decoration: none;
       color: #DCEDC8;
     }
 
-    .right-nav a:visited{ 
+    .right-nav a:visited{
       text-decoration: none;
       color: #DCEDC8;
     }
@@ -273,7 +259,7 @@
       <div class="nav-menu">
         <div>&nbsp;</div>
           <% if current_user %>
-            <%= current_user.name %>
+            <a href="/users/<%= current_user.id %>"><%= current_user.name %></a>
             <div><%= link_to "Signout", session_path, method: 'delete' %></div>
           <% else %>
             <div><%= link_to "Login", session_path %></div>

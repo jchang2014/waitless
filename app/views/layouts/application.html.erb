@@ -17,7 +17,7 @@
   <div class="nav-title"><%= link_to "Waitless", root_path %></div>
 
   <div class="home-search-bar">
-    <%= form_tag(restaurants_path, :method => "get", id:"nav-form-all") do %>
+    <%= form_tag(restaurants_path, :method => "get", id:"nav-form") do %>
       <table align=center class="nav-form">
         <tr>
           <td>Restaurant or Category</td>
@@ -26,7 +26,7 @@
         <tr>
           <td><%= text_field_tag :search, params[:search], placeholder: "Mexican, Philz Coffee, etc." %></td>
           <td><%= text_field_tag :location, params[:location], placeholder: "San Francisco, CA" %></td>
-          <td><%= submit_tag "Search", :class => 'nav-form-button-all' %></td>
+          <td><%= submit_tag "Search", :class => 'nav-form-button' %></td>
           <td class="yelp">Powered by <a href="http://www.yelp.com">Yelp</a></td>
         </tr>
       </table>
@@ -38,7 +38,7 @@
       <div class="nav-menu">
         <div>&nbsp;</div>
           <% if current_user %>
-            <%= current_user.name %>
+            <a href="/users/<%= current_user.id %>"><%= current_user.name %></a>
             <div><%= link_to "Signout", session_path, method: 'delete' %></div>
           <% else %>
             <div><%= link_to "Login", session_path %></div>

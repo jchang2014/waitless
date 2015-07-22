@@ -2,276 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-    #map-canvas {
-      height: 350px;
-      margin: 10px 0px 0px 0px;
-    }
-
-    body {
-      background-color: #FFFFFF;
-      font-family: helvetica;
-      margin: 0;
-    }
-
-    .separator {
-      background:#4CAF50;
-      height: 20px;
-      margin-top: 10px;
-    }
-    .search-form a:link {
-      color: #B6B6B6;
-      text-decoration: underline;
-    }
-
-    .search-form a:hover {
-      text-decoration: none;
-    }
-
-    .search-form a:visited {
-      color: #B6B6B6;
-      text-decoration: underline;
-    }
-
-
-    label {
-        color:#727272;
-    }
-
-    .home-wrapper {
-      color: #727272;
-      padding: 10px;
-      font-size: 15px;
-      text-align:center;
-    }
-
-    .home-wrapper h1 {
-      color: #586949;
-      font-size: 30px;
-      letter-spacing: 1px;
-    }
-
-    /*BEGIN RESTAURANTS RESULT STYLING */
-    h1{
-      color: #004b00;
-      font-family: helvetica;
-      font-size: 30px;
-      text-align: center;
-    }
-
-    .results-list-wrapper {
-      margin: 10px 0px 10px 0px;
-    }
-
-    .result-wrapper {
-      background-color: #FFFFE0;
-      color: #727272;
-      display: flex;
-      padding: 20px;
-      width: 70%;
-      margin: 0px auto 10px auto;
-    }
-
-    .result-img {
-      display: inline-block;
-      margin-top: 50px;
-      width: 33%;
-    }
-
-    .result-info {
-      display: inline-block;
-      line-height: 25px;
-      padding: 10px;
-      width: 33%;
-    }
-
-    .result-wait-time {
-      color: #811212;
-      display: inline-block;
-      margin-top: 10px;
-      width: 33%;
-    }
-
-    .result-wait-time-text0 {
-      margin-top: 20px;
-      font-size: 20px;
-      text-align: center;
-    }
-
-    .result-wait-time-number {
-      border: 10px solid #CD9B9B;
-      border-radius: 20px;
-      font-size: 100px;
-      text-align: center;
-    }
-
-    .result-wait-time-text1 {
-      font-size: 20px;
-      text-align: center;
-    }
-
-    .result-info label{
-      font-weight: bold;
-    }
-
-    .result-nav {
-      display: block;
-      width:100%;
-    }
-
-    .result-button {
-      background-color: #FF5252;
-      border-radius: 5px;
-      font-size: 15px;
-      color: #FFFFFF;
-      text-decoration: none;
-      padding: 5px;
-    }
-
-    .link-wrapper {
-      display: block;
-      margin-top: 15px;
-      text-align: center;
-    }
-
-    .result-img-position {
-      text-align: center;
-    }
-
-    .result-img-position img {
-      border-radius: 60px;
-    }
-
-    .nav-form td{
-      color: #FFFFFF;
-      letter-spacing: 1px;
-      padding-right: 10px;
-      letter-spacing: -1px;
-    }
-
-    table.nav-form { 
-      font-family: 'Arvo', serif;
-    }
-
-    #nav-form input { 
-      padding: 8px;
-      font-size: 12px;
-    }
-
-    #nav-form input.nav-form-button{
-      color: #FFFFFF;
-      background-color: #CDDC39;
-      border:none;
-      font-size: 20px;
-      border-radius: 10px;
-      font-family: 'Arvo', serif;
-      padding: 5px;
-    }
-
-    input.nav-form { 
-      padding:10px;
-    }
-
-    .nav-form td.yelp {
-      color:#FFFFFF;
-      font-size: 20px;
-    }
-
-    .nav-form td.yelp a { 
-      text-decoration: none;
-      color: #DCEDC8;
-    }
-
-    .nav-title {
-      display:inline-block;
-      font-family: 'Lobster', cursive;
-      font-size: 50px;
-      font-weight: bold;
-      letter-spacing: 5px;
-      text-shadow: 4px 4px 0px #689F38, 7px 7px 0px rgba(0, 0, 0, 0.2);
-      width: 20%;
-    }
-
-    .nav-title a {
-      color: #FFFFFF;
-      text-decoration: none;
-    }
-
-    nav {
-      background-color: #4CAF50;
-      display: flex;
-      font-family: helvetica;
-      font-size: 20px;
-      margin: 0;
-      padding: 10px 0px 0px 10px;
-    }
-
-    .right-nav {
-      width: 10%;
-      text-align: right;
-      margin: 5px 10px 5px 0px;
-      font-size: 18px;
-    }
-
-    .nav-toggle {
-      border: 3px solid #FFFFFF;
-      background-color: #4CAF50;
-      border-radius: 5px;
-      width: 50px;
-      height: 50px;
-      font-size: 30px;
-      color: #FFFFFF;
-    }
-
-    .home-search-bar {
-      margin-top: 5px;
-      width: 70%;
-    }
-
-    .right-nav a{ 
-      text-decoration: none;
-      color: #DCEDC8;
-    }
-
-    .right-nav a:visited{ 
-      text-decoration: none;
-      color: #DCEDC8;
-    }
-    
 body {
   background-color: #FFFFFF;
   font-family: helvetica;
   margin: 0;
-}
-
-#map-canvas {
-  height: 400px;
-  margin: 10px 0px 0px 0px;
-}
-
-.nav-toggle {
-  border: 3px solid #FFFFFF;
-  background-color: #4CAF50;
-  border-radius: 5px;
-  width: 50px;
-  height: 50px;
-  font-size: 30px;
-  color: #FFFFFF;
-}
-
-.separator {
-  background:#4CAF50;
-  height: 20px;
-  margin-top: 10px;
-}
-
-nav {
-  background-color: #4CAF50;
-  display: flex;
-  font-family: helvetica;
-  font-size: 20px;
-  margin: 0;
-  padding: 15px;
 }
 
 .search-form a:link {
@@ -287,57 +21,6 @@ nav {
   color: #B6B6B6;
   text-decoration: underline;
 }
-.nav-title {
-  display:inline-block;
-  font-family: 'Lobster', cursive;
-  font-size: 50px;
-  letter-spacing: 5px;
-  width: 50%;
- text-shadow: 4px 4px 0px #689F38, 7px 7px 0px rgba(0, 0, 0, 0.2);
-}
-
-.nav-title a {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-.user-login {
-  color: #8ED95B;
-  display:inline-block;
-  font-family: helvetica;
-  font-size: 18px;
-  text-align: right;
-  text-decoration: none;
-  width: 50%;
-  margin-top: 10px;
-}
-
-.user-login a{
-  color:#BCED91;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.user-login a:hover{
-  color:#F0FFF0;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.user-login a:visited{
-  color:#BCED91;
-  letter-spacing: 1px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-main {
-  margin: 0 auto;
-}
-
-
 
 label {
   color:#727272;
@@ -345,54 +28,181 @@ label {
 
 .home-wrapper {
   color: #727272;
-  display: flex;
   padding: 10px;
   font-size: 15px;
+  text-align:center;
 }
 
 .home-wrapper h1 {
   color: #586949;
   font-size: 30px;
   letter-spacing: 1px;
-  margin-top: 10px;
-  text-align: center;
 }
 
-.home-info {
-  border-right: 1px solid #B6B6B6;
-  display: inline-block;
-  width: 50%;
-  padding: 10px;
+.nav-form td{
+  color: #FFFFFF;
+  letter-spacing: 1px;
+  padding-right: 10px;
+  letter-spacing: -1px;
 }
 
-.home-explore {
-  display: inline-block;
-  width: 50%;
-  padding: 10px;
+table.nav-form {
+  font-family: 'Arvo', serif;
 }
 
-.search-form td{
-  font-family: helvetica;
-  font-size: 15px;
-  padding: 2px;
+#nav-form input {
+  padding: 8px;
+  font-size: 12px;
 }
 
-.search-form input{
-  font-family: helvetica;
-  font-size: 15px;
+#nav-form input.nav-form-button{
+  color: #FFFFFF;
+  background-color: #CDDC39;
+  border:none;
+  font-size: 20px;
+  border-radius: 10px;
+  font-family: 'Arvo', serif;
   padding: 5px;
 }
 
-.search-form input.home-search{
-  background-color: #8BC34A;
-  border-radius: 10px;
-  letter-spacing: 2px;
+
+.nav-form td.yelp {
+  color:#FFFFFF;
   font-size: 20px;
+}
+
+.nav-form td.yelp a {
+  text-decoration: none;
+  color: #DCEDC8;
+}
+
+.nav-title a {
   color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav {
+  background-color: #4CAF50;
+  display: flex;
+  font-family: helvetica;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px 0px 0px 10px;
+}
+
+.right-nav {
+  width: 10%;
+  text-align: right;
+  margin: 5px 10px 5px 0px;
+  font-size: 18px;
+}
+
+.home-search-bar {
+  margin-top: 5px;
+  width: 70%;
+}
+
+.right-nav a{
+  text-decoration: none;
+  color: #DCEDC8;
+}
+
+.right-nav a:visited{
+  text-decoration: none;
+  color: #DCEDC8;
+}
+
+.nav-toggle {
+border: 3px solid #FFFFFF;
+background-color: #4CAF50;
+border-radius: 5px;
+width: 50px;
+height: 50px;
+font-size: 30px;
+color: #FFFFFF;
+}
+
+.separator {
+background:#4CAF50;
+height: 20px;
+margin-top: 10px;
+}
+
+nav {
+background-color: #4CAF50;
+display: flex;
+font-family: helvetica;
+font-size: 20px;
+margin: 0;
+padding: 15px;
+}
+
+.nav-title {
+display:inline-block;
+font-family: 'Lobster', cursive;
+font-size: 50px;
+letter-spacing: 5px;
+text-shadow: 4px 4px 0px #689F38, 7px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.user-login {
+color: #8ED95B;
+display:inline-block;
+font-family: helvetica;
+font-size: 18px;
+text-align: right;
+text-decoration: none;
+width: 50%;
+margin-top: 10px;
+}
+
+.user-login a{
+color:#BCED91;
+letter-spacing: 1px;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+.user-login a:hover{
+color:#F0FFF0;
+letter-spacing: 1px;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+.user-login a:visited{
+color:#BCED91;
+letter-spacing: 1px;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+main {
+margin: 0 auto;
+}
+
+.search-form td{
+font-family: helvetica;
+font-size: 15px;
+padding: 2px;
+}
+
+.search-form input{
+font-family: helvetica;
+font-size: 15px;
+padding: 5px;
+}
+
+.search-form input.home-search{
+background-color: #8BC34A;
+border-radius: 10px;
+letter-spacing: 2px;
+font-size: 20px;
+color: #FFFFFF;
 }
 
 .search-form {
-  color: #000000;
-  font-family: Helvetica;
-  font-size: 20px;
+color: #000000;
+font-family: Helvetica;
+font-size: 20px;
 }
