@@ -1,5 +1,6 @@
 $(document).on('page:change',function() {
   queryResults();
+  mapSearchUpdate();
 });
 
 function queryResults() {
@@ -73,41 +74,39 @@ function updateMap(markers) {
   }// end for loop
 };
 
-// function queryResults() {
-//   console.log("starting query");
-//   $('.search-form').on('click', '.home-search', function(e){
-//     e.preventDefault();
-//     var mapRequest = $.ajax({
-//       url: "/restaurants",
-//       action: "get",
-//       dataType: "JSON",
-//       data: $('#search-form').serialize()
-//     }); //end getJSON
-//     mapRequest.done(function(data){
-//       updateMap(data);
+// NAV BAR HOMEPAGE
+var mapSearchUpdate = function() {
+  console.log("starting query");
+  $('.home-search-bar').on('click', '.nav-form-button', function(event){
+    event.preventDefault();
+    var mapRequest = $.ajax({
+      url: "/restaurants",
+      action: "get",
+      dataType: "JSON",
+      data: $('#nav-form').serialize()
+    }); //end getJSON
+    mapRequest.done(function(data){
+      updateMap(data);
 
-//     });//end done
-//     mapRequest.fail(function(error){
-//       alert("sorry your search yielded no results");
-//     });//end fail
+    });//end done
+    mapRequest.fail(function(error){
+      alert("sorry your search yielded no results");
+    });//end fail
 
-//   var htmlRequest = $.ajax({
-//     url: "/restaurants",
-//     action: "get",
-//     dataType: "html",
-//     data: $('#search-form').serialize()
-//   });
-//   htmlRequest.done(function(response){
-//     console.log('inside htmlRequest ajax call');
+  var htmlRequest = $.ajax({
+    url: "/restaurants",
+    action: "get",
+    dataType: "html",
+    data: $('#nav-form').serialize()
+  });
+  htmlRequest.done(function(response){
+    console.log('inside htmlRequest ajax call');
+    $('.restaurant-results').remove();
+    $('.home-wrapper').remove();
+    $('.body-wrapper').append(response);
+    $('input#search').val('');
+    $('input#location').val('');
+  });
 
-//     $('.restaurant-results').remove();
-//     $('.home-wrapper').remove();
-//     $('.body-wrapper').append(response);
-//     $('input#search').val('');
-//     $('input#location').val('');
-//   });
-
-//   }); //end search-form
-
-// }
-
+  }); //end search-form
+}; //end queryResults

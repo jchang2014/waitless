@@ -7,7 +7,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-
+  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
   <style>
     #map-canvas {
       height: 350px;
@@ -20,57 +20,10 @@
       margin: 0;
     }
 
-    .nav-toggle {
-      border: 3px solid #FFFFFF;
-      background-color: #4CAF50;
-      border-radius: 5px;
-      width: 50px;
-      height: 50px;
-      font-size: 30px;
-      color: #FFFFFF;
-    }
-
     .separator {
       background:#4CAF50;
       height: 20px;
       margin-top: 10px;
-    }
-
-    nav {
-      background-color: #4CAF50;
-      display: flex;
-      font-family: helvetica;
-      font-size: 20px;
-      margin: 0;
-      padding: 15px;
-    }
-
-    .search-form a:link {
-      color: #B6B6B6;
-      text-decoration: underline;
-    }
-
-    .search-form a:hover {
-      text-decoration: none;
-    }
-
-    .search-form a:visited {
-      color: #B6B6B6;
-      text-decoration: underline;
-    }
-    .nav-title {
-      display:inline-block;
-      font-family: 'Lobster', cursive;
-      font-size: 50px;
-      font-weight: bold;
-      letter-spacing: 5px;
-      width: 50%;
-      text-shadow: 4px 4px 0px #689F38, 7px 7px 0px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-title a {
-      color: #FFFFFF;
-      text-decoration: none;
     }
 
     label {
@@ -88,32 +41,6 @@
       color: #586949;
       font-size: 30px;
       letter-spacing: 1px;
-    }
-
-    .search-form td{
-      font-family: helvetica;
-      font-size: 15px;
-      padding: 2px;
-    }
-
-    .search-form input{
-      font-family: helvetica;
-      font-size: 15px;
-      padding: 5px;
-    }
-
-    .search-form input.home-search{
-      background-color: #8BC34A;
-      border-radius: 10px;
-      letter-spacing: 2px;
-      font-size: 20px;
-      color: #FFFFFF;
-    }
-
-    .search-form {
-      color: #000000;
-      font-family: Helvetica;
-      font-size: 20px;
     }
 
     /*BEGIN RESTAURANTS RESULT STYLING */
@@ -207,6 +134,102 @@
       border-radius: 60px;
     }
 
+    .nav-form td{
+      color: #FFFFFF;
+      padding-right: 10px;
+      letter-spacing: -1px;
+      font-size: 20px;
+    }
+
+    table.nav-form {
+      font-family: 'Arvo', serif;
+    }
+
+    #nav-form input {
+      padding: 8px;
+      font-size: 12px;
+    }
+
+    #nav-form input.nav-form-button{
+      color: #FFFFFF;
+      background-color: #CDDC39;
+      border:none;
+      font-size: 20px;
+      border-radius: 10px;
+      font-family: 'Arvo', serif;
+      padding: 5px;
+    }
+
+    input.nav-form {
+      padding:10px;
+    }
+
+    .nav-form td.yelp {
+      color:#FFFFFF;
+      font-size: 20px;
+    }
+
+    .nav-form td.yelp a {
+      text-decoration: none;
+      color: #DCEDC8;
+    }
+
+    .nav-title {
+      display:inline-block;
+      font-family: 'Lobster', cursive;
+      font-size: 50px;
+      font-weight: bold;
+      letter-spacing: 5px;
+      text-shadow: 4px 4px 0px #689F38, 7px 7px 0px rgba(0, 0, 0, 0.2);
+      width: 20%;
+    }
+
+    .nav-title a {
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    nav {
+      background-color: #4CAF50;
+      display: flex;
+      font-family: helvetica;
+      font-size: 20px;
+      margin: 0;
+      padding: 10px 0px 0px 10px;
+    }
+
+    .right-nav {
+      width: 10%;
+      text-align: right;
+      margin: 5px 10px 5px 0px;
+      font-size: 18px;
+    }
+
+    .nav-toggle {
+      border: 3px solid #FFFFFF;
+      background-color: #4CAF50;
+      border-radius: 5px;
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      color: #FFFFFF;
+    }
+
+    .home-search-bar {
+      margin-top: 5px;
+      width: 70%;
+    }
+
+    .right-nav a{
+      text-decoration: none;
+      color: #DCEDC8;
+    }
+
+    .right-nav a:visited{
+      text-decoration: none;
+      color: #DCEDC8;
+    }
+
   </style>
 
 </head>
@@ -216,25 +239,27 @@
 
   <div class="home-search-bar">
     <%= form_tag(restaurants_path, :method => "get", id:"nav-form") do %>
-      <table align=center class="search-form">
+      <table align=center class="nav-form">
         <tr>
           <td>Restaurant or Category</td>
-          <td><%= text_field_tag :search, params[:search], placeholder: "Mexican, Philz Coffee, etc." %></td>
           <td>Location</td>
+        </tr>
+        <tr>
+          <td><%= text_field_tag :search, params[:search], placeholder: "Mexican, Philz Coffee, etc." %></td>
           <td><%= text_field_tag :location, params[:location], placeholder: "San Francisco, CA" %></td>
-          <td><%= submit_tag "Search", :class => 'nav-form' %></td>
-          <td>Powered by <a href="http://www.yelp.com">Yelp</a></td>
+          <td><%= submit_tag "Search", :class => 'nav-form-button' %></td>
+          <td class="yelp">Powered by <a href="http://www.yelp.com">Yelp</a></td>
         </tr>
       </table>
     <% end %>
   </div>
 
-  <div class="user-login">
+  <div class="right-nav">
     <button class="nav-toggle">&dArr;</button>
-      <div class="test-me">
+      <div class="nav-menu">
         <div>&nbsp;</div>
           <% if current_user %>
-            <%= current_user.name %>
+            <a href="/users/<%= current_user.id %>"><%= current_user.name %></a>
             <div><%= link_to "Signout", session_path, method: 'delete' %></div>
           <% else %>
             <div><%= link_to "Login", session_path %></div>
