@@ -1,4 +1,6 @@
 class Reservation < ActiveRecord::Base
+
+
   after_save     :update_times
   # after_save
 	belongs_to      :user
@@ -16,7 +18,7 @@ class Reservation < ActiveRecord::Base
   end
 
   #run sidekiq if notify_now?
-
+  # NotifyUsersWorker.perform_async('bob', 5)
 
 
   private
