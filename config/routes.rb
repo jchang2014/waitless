@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
 	root 'home#index'
-  post 'reservees/contact', to: 'reservees#contact'
 
 	resource :home, only: [:search, :show]
 

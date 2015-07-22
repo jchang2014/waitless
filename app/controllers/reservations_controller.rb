@@ -15,7 +15,7 @@ class ReservationsController < ApplicationController
 		#@reservation = @restaurant.reservations.new(reservation_params)
 
 		if @reservation.save
-			NotifyUsersWorker.perform_in(@reservation.get_time, @reservation.id)
+			NotifyUsersWorker.perform_in(@reservation.get_time, @reservation)
 
 			redirect_to "/users/#{session[:user_id]}"
 		else
