@@ -5,14 +5,10 @@
       <th>Party Size</th>
       <th>Signed at</th>
       <th>Wait Time</th>
+      <%if current_user && current_user.admin%><th>Remove Party</th><%end%>
     </tr>
       <% @reservations.each do |reservation| %>
-        <tr>
-          <td><%=reservation.name%></td>
-          <td><%=reservation.number_in_party%></td>
-          <td><%= reservation.created_at.strftime('%r')%></td>
-          <td><%=reservation.timer%></td>
-        </tr>
+        <%= render :partial => "reservations/show", locals: {reservation:reservation} %>
       <% end %>
   </table>
 </div>
