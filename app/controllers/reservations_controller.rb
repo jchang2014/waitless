@@ -15,6 +15,7 @@ class ReservationsController < ApplicationController
 
 		if @reservation.save
 			NotifyUsersWorker.perform_in(15.seconds, @reservation.id)
+
 			redirect_to "/users/#{session[:user_id]}"
 		else
 			@errors = @reservation.errors.full_messages
@@ -41,4 +42,5 @@ class ReservationsController < ApplicationController
       }
     end
 	end
+
 end
