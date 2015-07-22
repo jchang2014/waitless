@@ -1,10 +1,18 @@
 class Reservation < ActiveRecord::Base
 
+<<<<<<< HEAD
   after_save   :update_times
 	belongs_to   :user
 	belongs_to   :restaurant
 
 
+=======
+
+  after_save     :update_times
+  # after_save
+	belongs_to      :user
+	belongs_to      :restaurant
+>>>>>>> 8fcdd97417ede989b331d0370a5532e68441397c
 
   def update_times
     update_column(:table_ready_time, (self.created_at + 15.minutes))
@@ -17,6 +25,12 @@ class Reservation < ActiveRecord::Base
     get_diff <= 5 && self.notified? == false
   end
 
+<<<<<<< HEAD
+=======
+  #run sidekiq if notify_now?
+  # NotifyUsersWorker.perform_async('bob', 5)
+
+>>>>>>> 8fcdd97417ede989b331d0370a5532e68441397c
 
   private
     def get_diff
