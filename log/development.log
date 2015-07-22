@@ -4894,3 +4894,1740 @@ Processing by ReservationsController#destroy as JSON
   [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "reservations" WHERE "reservations"."id" = $1[0m  [["id", 36]]
   [1m[35m (1.0ms)[0m  COMMIT
 Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:22:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.3) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.3) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (60.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (59.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (137.3ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:22:25 -0700
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.3) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.3) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (57.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (121.4ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:22:28 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.3) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.3) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (56.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (119.2ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:22:31 -0700
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.3) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.3) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.3) lib/active_support/callbacks.rb:84:in `run_callbacks'
+  actionpack (4.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.3) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.3) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.3) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.3) lib/rails/engine.rb:518:in `call'
+  railties (4.2.3) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.text.erb (65.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (67.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (143.5ms)
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150716225350)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150716225350"]]
+  [1m[36m (15.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRestaurants (20150716225407)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.8ms)[0m  [1mCREATE TABLE "restaurants" ("id" serial primary key, "name" character varying, "location" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150716225407"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTypes (20150716225420)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "types" ("id" serial primary key, "title" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150716225420"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateReservations (20150716230258)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "reservations" ("id" serial primary key, "number_in_party" integer, "timers" integer, "user_id" integer, "restaurant_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE  INDEX  "index_reservations_on_user_id" ON "reservations"  ("user_id")
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_reservations_on_restaurant_id" ON "reservations"  ("restaurant_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150716230258"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateRestaurantTypes (20150716230815)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "restaurant_types" ("id" serial primary key, "restaurant_id" integer, "type_id" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150716230815"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to RemoveLocationFromRestaurants (20150718214831)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "restaurants" DROP "location"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150718214831"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddTimerToRestaurants (20150718215448)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.0ms)[0m  [1mALTER TABLE "restaurants" ADD "timer" integer DEFAULT 0[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150718215448"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Migrating to RenameColumnNameToYelpIdInRestaurants (20150718215649)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "restaurants" RENAME COLUMN "name" TO "yelp_id"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150718215649"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddAdminAndProprietorToUser (20150719180323)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "admin" boolean[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "proprietor" boolean
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150719180323"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to RenameTimerToWaitTimeInRestaurants (20150720165729)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "restaurants" RENAME COLUMN "timer" TO "wait_time"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150720165729"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddUserToRestaurants (20150720215807)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "restaurants" ADD "user_id" integer
+  [1m[36m (0.9ms)[0m  [1mCREATE  INDEX  "index_restaurants_on_user_id" ON "restaurants"  ("user_id")[0m
+  [1m[35m (2.8ms)[0m  ALTER TABLE "restaurants" ADD CONSTRAINT "fk_rails_aef57e41ec"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150720215807"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Migrating to RenameTimersToTimerInReservations (20150720220345)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "reservations" RENAME COLUMN "timers" TO "timer"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150720220345"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddPhoneNumberToUsers (20150720220503)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "phone_number" character varying
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150720220503"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddNotificationTimeColumnsToReservations (20150720221707)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "reservations" ADD "table_ready_time" time
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "reservations" ADD "notify_time" time[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "reservations" ADD "notified?" boolean
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "reservations" ADD "table_ready?" boolean[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150720221707"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddNameToReservations (20150721003028)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "reservations" ADD "name" character varying[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150721003028"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to AddTitleToRestaurants (20150722193542)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "restaurants" ADD "title" text[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150722193542"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'reservations'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.8ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'restaurant_types'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.8ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'restaurants'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'types'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (1.7ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:13 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:16 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:19 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:22 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:25 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:28 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:31 -0700
+
+
+Started GET "/sidekiq/retries" for ::1 at 2015-07-22 15:23:31 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:23:31 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:23:31 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:23:31 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:23:31 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:23:31 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:34 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:37 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 15:23:39 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb (452.8ms)
+Completed 200 OK in 459ms (Views: 458.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:40 -0700
+
+
+Started GET "/assets/restaurants.self-4ed5bba0c55f138274e44cd8cae7bf48f78a96d91e07ece2147bfbec64b3c654.js?body=1" for ::1 at 2015-07-22 15:23:40 -0700
+
+
+Started GET "/assets/users.self-df1d8b6a935ffa994d9bb2580a6e85865bf2a18c885c9ed96e0e07f74e0f923f.js?body=1" for ::1 at 2015-07-22 15:23:40 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:43 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:46 -0700
+
+
+Started GET "/users/new" for ::1 at 2015-07-22 15:23:47 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (5.1ms)
+  Rendered users/new.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 401ms (Views: 340.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/new" for ::1 at 2015-07-22 15:23:48 -0700
+Processing by UsersController#new as HTML
+  Rendered shared/_error_messages.html.erb (1.3ms)
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 76ms (Views: 75.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/special.self-0596bd4fca6b337955c84ce2369d391f16cbdea8dcd19d31b46a1be9ee5d88b8.css?body=1" for ::1 at 2015-07-22 15:23:48 -0700
+
+
+Started GET "/assets/home.self-56163924a85030e979feb062d9c0ec232e6cd772a9c1f1bc154fbcc762107f09.css?body=1" for ::1 at 2015-07-22 15:23:48 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:49 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:52 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:55 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:23:58 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:01 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:04 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:07 -0700
+
+
+Started POST "/users" for ::1 at 2015-07-22 15:24:10 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TfZE2nTU5ej7SJhXkA8pHw2Ap8nL+qn5uSlyFEMIwtcCe+T6bCHGxhjVXgou5oL4hMTJpFeJL5XEyI/p5Lfoqg==", "user"=>{"name"=>"Patrick", "email"=>"wolfjob@job.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Patrick"], ["email", "wolfjob@job.com"], ["password_digest", "$2a$10$B3f9O.fqqvqIZlp5RUz72uvngAG0MwUZSoGgMPVdrtH0SNT1EiLMG"], ["created_at", "2015-07-22 22:24:10.567963"], ["updated_at", "2015-07-22 22:24:10.567963"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 88ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:10 -0700
+
+
+Started GET "/users/1" for ::1 at 2015-07-22 15:24:10 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mReservation Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 143ms (Views: 78.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:13 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:16 -0700
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=Dragon+Eats&location=" for ::1 at 2015-07-22 15:24:17 -0700
+Processing by RestaurantsController#index as JSON
+  Parameters: {"utf8"=>"✓", "search"=>"Dragon Eats", "location"=>""}
+  [1m[35mRestaurant Load (0.4ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "dragoneats-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "perilla-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "le-soleil-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "cordon-bleu-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "vietnam-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "rice-paper-scissors-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "bun-mee-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "urban-picnic-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-slanted-door-san-francisco"]]
+Completed 200 OK in 844ms (Views: 1.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=Dragon+Eats&location=" for ::1 at 2015-07-22 15:24:17 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Dragon Eats", "location"=>""}
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "dragoneats-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "perilla-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "le-soleil-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "cordon-bleu-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "vietnam-restaurant-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "rice-paper-scissors-san-francisco-2"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "bun-mee-san-francisco"]]
+  [1m[35mRestaurant Load (0.1ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "urban-picnic-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "the-slanted-door-san-francisco"]]
+  Rendered restaurants/_result.html.erb (1.3ms)
+  Rendered restaurants/index.html.erb (51.3ms)
+Completed 200 OK in 775ms (Views: 52.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:19 -0700
+
+
+Started GET "/restaurants/new" for ::1 at 2015-07-22 15:24:21 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=new):
+  app/controllers/restaurants_controller.rb:52:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (119.4ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:22 -0700
+
+
+Started GET "/restaurants/new" for ::1 at 2015-07-22 15:24:22 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Restaurant with 'id'=new):
+  app/controllers/restaurants_controller.rb:52:in `show'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-4.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.8ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (126.9ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:25 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:28 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:31 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:34 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:37 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:40 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:43 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:46 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:49 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:52 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:55 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:24:58 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:01 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:04 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:07 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:10 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:13 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:16 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:19 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "scooby"], ["email", "dooby@gmail.com"], ["password_digest", "$2a$10$/kxRj52uroCGbi5DgeEgxuZMvUx4kYlx8HmKTzTbRXjZFMARiOT8S"], ["created_at", "2015-07-22 22:25:25.263351"], ["updated_at", "2015-07-22 22:25:25.263351"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "scrappy"], ["email", "dappy@gmail.com"], ["password_digest", "$2a$10$Nlh5hARntGzyAJDfVNqGGuogBXj0ntM4mNdRzfQDruSsZrqryiUwK"], ["created_at", "2015-07-22 22:25:25.345349"], ["updated_at", "2015-07-22 22:25:25.345349"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "velma"], ["email", "daphne@gmail.com"], ["password_digest", "$2a$10$LxGFLNxT.RFFrsw7oeNGJOnGqHSQal7/iU4DapVVaIZce3akK9fqW"], ["created_at", "2015-07-22 22:25:25.424216"], ["updated_at", "2015-07-22 22:25:25.424216"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "derek"], ["email", "jeter@gmail.com"], ["password_digest", "$2a$10$K.OKE.qQxnMIWAqjXHP2duFUkyjq87Qt9nLcMchAr8.9tbYGmAgoq"], ["created_at", "2015-07-22 22:25:25.503122"], ["updated_at", "2015-07-22 22:25:25.503122"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "mark"], ["email", "mcguire@gmail.com"], ["password_digest", "$2a$10$yKbGZMbmvqb9XglExE//4u1CkgZNnwIGveVSfESL/aBJTXe9.Ujom"], ["created_at", "2015-07-22 22:25:25.582267"], ["updated_at", "2015-07-22 22:25:25.582267"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Patrick"], ["email", "Shelby@gmail.com"], ["password_digest", "$2a$10$4HSwq0BY6fSUq9wARhefqOwxC.VcgogEzAdz6jKkQCWewYPA2ntme"], ["created_at", "2015-07-22 22:25:25.661107"], ["updated_at", "2015-07-22 22:25:25.661107"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "WolfJob"], ["email", "WolfJob@gmail.com"], ["password_digest", "$2a$10$pX14IsCgV0Bq/PYZyQ/DXeqcvSylqhYF1Zekz8mwlHN7qOKtb2iwm"], ["created_at", "2015-07-22 22:25:25.740319"], ["updated_at", "2015-07-22 22:25:25.740319"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["name", "Barry"], ["email", "Bonds@gmail.com"], ["password_digest", "$2a$10$JQ5e6aDF/Dc9nlRAccmL/.rGMP8cMxGN921lXBdQJWkEP6p0JO/sq"], ["created_at", "2015-07-22 22:25:25.819645"], ["updated_at", "2015-07-22 22:25:25.819645"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "sonic"], ["email", "the@the.com"], ["password_digest", "$2a$10$Du2M6q2KannvQlHJyQ2eZuVfCPtauZa2s0v23h7rN63FnRVkuzHZO"], ["created_at", "2015-07-22 22:25:25.898824"], ["updated_at", "2015-07-22 22:25:25.898824"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("name", "email", "password_digest", "admin", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["name", "Jeff"], ["email", "jeff"], ["password_digest", "$2a$10$UcXp/irbDFu.JdPsWAxVC.oiTMyITT2gDnaFdi6FEhquqy32qI87i"], ["admin", "t"], ["created_at", "2015-07-22 22:25:25.978685"], ["updated_at", "2015-07-22 22:25:25.978685"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'mourad-restaurant-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "mourad-restaurant-san-francisco"], ["title", "Mourad Restaurant"], ["created_at", "2015-07-22 22:25:25.999867"], ["updated_at", "2015-07-22 22:25:25.999867"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-flying-falafel-san-francisco-3' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "the-flying-falafel-san-francisco-3"], ["title", "The Flying Falafel"], ["created_at", "2015-07-22 22:25:26.003456"], ["updated_at", "2015-07-22 22:25:26.003456"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'marlowe-san-francisco-2' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "marlowe-san-francisco-2"], ["title", "Marlowe"], ["created_at", "2015-07-22 22:25:26.006245"], ["updated_at", "2015-07-22 22:25:26.006245"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'cockscomb-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "cockscomb-san-francisco"], ["title", "Cockscomb"], ["created_at", "2015-07-22 22:25:26.009010"], ["updated_at", "2015-07-22 22:25:26.009010"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'garaje-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "garaje-san-francisco"], ["title", "Garaje"], ["created_at", "2015-07-22 22:25:26.011711"], ["updated_at", "2015-07-22 22:25:26.011711"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'zero-zero-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "zero-zero-san-francisco"], ["title", "Zero Zero"], ["created_at", "2015-07-22 22:25:26.014557"], ["updated_at", "2015-07-22 22:25:26.014557"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'box-kitchen-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "box-kitchen-san-francisco"], ["title", "Box Kitchen"], ["created_at", "2015-07-22 22:25:26.017251"], ["updated_at", "2015-07-22 22:25:26.017251"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'so-san-francisco-4' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "so-san-francisco-4"], ["title", "SO"], ["created_at", "2015-07-22 22:25:26.020027"], ["updated_at", "2015-07-22 22:25:26.020027"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'tropisueño-san-francisco-3' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "tropisueño-san-francisco-3"], ["title", "Tropisueño"], ["created_at", "2015-07-22 22:25:26.022786"], ["updated_at", "2015-07-22 22:25:26.022786"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-pink-elephant-san-francisco-3' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "the-pink-elephant-san-francisco-3"], ["title", "The Pink Elephant"], ["created_at", "2015-07-22 22:25:26.025568"], ["updated_at", "2015-07-22 22:25:26.025568"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'citizens-band-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "citizens-band-san-francisco"], ["title", "Citizen's Band"], ["created_at", "2015-07-22 22:25:26.028415"], ["updated_at", "2015-07-22 22:25:26.028415"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'little-skillet-san-francisco-2' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "little-skillet-san-francisco-2"], ["title", "Little Skillet"], ["created_at", "2015-07-22 22:25:26.030972"], ["updated_at", "2015-07-22 22:25:26.030972"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'jamber-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "jamber-san-francisco"], ["title", "Jamber"], ["created_at", "2015-07-22 22:25:26.033640"], ["updated_at", "2015-07-22 22:25:26.033640"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'picnic-on-third-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "picnic-on-third-san-francisco"], ["title", "Picnic on Third"], ["created_at", "2015-07-22 22:25:26.036331"], ["updated_at", "2015-07-22 22:25:26.036331"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hrd-san-francisco-2' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "hrd-san-francisco-2"], ["title", "HRD"], ["created_at", "2015-07-22 22:25:26.038961"], ["updated_at", "2015-07-22 22:25:26.038961"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'dragoneats-san-francisco-3' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "dragoneats-san-francisco-3"], ["title", "DragonEats"], ["created_at", "2015-07-22 22:25:26.041443"], ["updated_at", "2015-07-22 22:25:26.041443"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'freshroll-vietnamese-rolls-and-bowls-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "freshroll-vietnamese-rolls-and-bowls-san-francisco"], ["title", "Freshroll Vietnamese Rolls & Bowls"], ["created_at", "2015-07-22 22:25:26.044016"], ["updated_at", "2015-07-22 22:25:26.044016"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'red-dog-restaurant-and-bar-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "red-dog-restaurant-and-bar-san-francisco"], ["title", "Red Dog Restaurant & Bar"], ["created_at", "2015-07-22 22:25:26.046487"], ["updated_at", "2015-07-22 22:25:26.046487"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'bluestem-brasserie-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "bluestem-brasserie-san-francisco"], ["title", "Bluestem Brasserie"], ["created_at", "2015-07-22 22:25:26.049034"], ["updated_at", "2015-07-22 22:25:26.049034"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'archive-bar-and-kitchen-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "archive-bar-and-kitchen-san-francisco"], ["title", "Crepe-Madame"], ["created_at", "2015-07-22 22:25:26.051806"], ["updated_at", "2015-07-22 22:25:26.051806"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'sous-beurre-kitchen-san-francisco-2' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "sous-beurre-kitchen-san-francisco-2"], ["title", "Sous Beurre Kitchen"], ["created_at", "2015-07-22 22:25:26.054590"], ["updated_at", "2015-07-22 22:25:26.054590"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'thistle-san-francisco-8' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "thistle-san-francisco-8"], ["title", "Bistro L'Aviateur"], ["created_at", "2015-07-22 22:25:26.057337"], ["updated_at", "2015-07-22 22:25:26.057337"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'bistro-l-aviateur-san-francisco-2' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "bistro-l-aviateur-san-francisco-2"], ["title", "Hoffmann's Grill & Rotisserie"], ["created_at", "2015-07-22 22:25:26.060436"], ["updated_at", "2015-07-22 22:25:26.060436"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hoffmanns-grill-and-rotisserie-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "hoffmanns-grill-and-rotisserie-san-francisco"], ["title", "Loló"], ["created_at", "2015-07-22 22:25:26.063230"], ["updated_at", "2015-07-22 22:25:26.063230"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'loló-san-francisco-4' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "loló-san-francisco-4"], ["title", "20 Spot"], ["created_at", "2015-07-22 22:25:26.065897"], ["updated_at", "2015-07-22 22:25:26.065897"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = '20-spot-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "20-spot-san-francisco"], ["title", "Stuffed"], ["created_at", "2015-07-22 22:25:26.068635"], ["updated_at", "2015-07-22 22:25:26.068635"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'stuffed-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "stuffed-san-francisco"], ["title", "Beretta"], ["created_at", "2015-07-22 22:25:26.071228"], ["updated_at", "2015-07-22 22:25:26.071228"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'beretta-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "beretta-san-francisco"], ["title", "El Farolito"], ["created_at", "2015-07-22 22:25:26.073955"], ["updated_at", "2015-07-22 22:25:26.073955"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'el-farolito-san-francisco-2' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "el-farolito-san-francisco-2"], ["title", "The Tradesman"], ["created_at", "2015-07-22 22:25:26.076681"], ["updated_at", "2015-07-22 22:25:26.076681"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'californios-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "californios-san-francisco"], ["title", "Californios"], ["created_at", "2015-07-22 22:25:26.079401"], ["updated_at", "2015-07-22 22:25:26.079401"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'kazan-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "kazan-san-francisco"], ["title", "Kazan"], ["created_at", "2015-07-22 22:25:26.082686"], ["updated_at", "2015-07-22 22:25:26.082686"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-tradesman-san-francisco-2' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "the-tradesman-san-francisco-2"], ["title", "Al's Place"], ["created_at", "2015-07-22 22:25:26.085513"], ["updated_at", "2015-07-22 22:25:26.085513"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'prubechu-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "prubechu-san-francisco"], ["title", "Prubechu"], ["created_at", "2015-07-22 22:25:26.088329"], ["updated_at", "2015-07-22 22:25:26.088329"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'als-place-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "als-place-san-francisco"], ["title", "Limón Rotisserie"], ["created_at", "2015-07-22 22:25:26.105080"], ["updated_at", "2015-07-22 22:25:26.105080"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'limón-rotisserie-san-francisco-3' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "limón-rotisserie-san-francisco-3"], ["title", "Lazy Bear"], ["created_at", "2015-07-22 22:25:26.107768"], ["updated_at", "2015-07-22 22:25:26.107768"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'lazy-bear-san-francisco-5' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "lazy-bear-san-francisco-5"], ["title", "Local Mission Eatery"], ["created_at", "2015-07-22 22:25:26.110518"], ["updated_at", "2015-07-22 22:25:26.110518"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'local-mission-eatery-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "local-mission-eatery-san-francisco"], ["title", "The Front Porch"], ["created_at", "2015-07-22 22:25:26.113504"], ["updated_at", "2015-07-22 22:25:26.113504"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-front-porch-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "the-front-porch-san-francisco"], ["title", "Paprika"], ["created_at", "2015-07-22 22:25:26.116375"], ["updated_at", "2015-07-22 22:25:26.116375"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'paprika-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "paprika-san-francisco"], ["title", "Hog & Rocks"], ["created_at", "2015-07-22 22:25:26.119415"], ["updated_at", "2015-07-22 22:25:26.119415"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hog-and-rocks-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "hog-and-rocks-san-francisco"], ["title", "Lolinda"], ["created_at", "2015-07-22 22:25:26.122611"], ["updated_at", "2015-07-22 22:25:26.122611"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'coqueta-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "coqueta-san-francisco"], ["title", "Coqueta"], ["created_at", "2015-07-22 22:25:26.125312"], ["updated_at", "2015-07-22 22:25:26.125312"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hog-island-oyster-co-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "hog-island-oyster-co-san-francisco"], ["title", "Hog Island Oyster Co"], ["created_at", "2015-07-22 22:25:26.128004"], ["updated_at", "2015-07-22 22:25:26.128004"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'roli-roti-gourmet-rotisserie-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "roli-roti-gourmet-rotisserie-san-francisco"], ["title", "Roli Roti Gourmet Rotisserie"], ["created_at", "2015-07-22 22:25:26.130808"], ["updated_at", "2015-07-22 22:25:26.130808"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'il-cane-rosso-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "il-cane-rosso-san-francisco"], ["title", "il Cane Rosso"], ["created_at", "2015-07-22 22:25:26.133549"], ["updated_at", "2015-07-22 22:25:26.133549"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'primavera-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "primavera-san-francisco"], ["title", "Primavera"], ["created_at", "2015-07-22 22:25:26.136344"], ["updated_at", "2015-07-22 22:25:26.136344"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'la-mar-cebichería-peruana-san-francisco-4' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "la-mar-cebichería-peruana-san-francisco-4"], ["title", "La Mar Cebichería Peruana"], ["created_at", "2015-07-22 22:25:26.139211"], ["updated_at", "2015-07-22 22:25:26.139211"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'waterbar-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "waterbar-san-francisco"], ["title", "Waterbar"], ["created_at", "2015-07-22 22:25:26.142301"], ["updated_at", "2015-07-22 22:25:26.142301"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'palomino-san-francisco-3' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "palomino-san-francisco-3"], ["title", "Palomino"], ["created_at", "2015-07-22 22:25:26.145164"], ["updated_at", "2015-07-22 22:25:26.145164"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'chaya-brasserie-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "chaya-brasserie-san-francisco"], ["title", "Chaya Brasserie"], ["created_at", "2015-07-22 22:25:26.148010"], ["updated_at", "2015-07-22 22:25:26.148010"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = '4505-meats-san-francisco-7' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "4505-meats-san-francisco-7"], ["title", "4505 Meats"], ["created_at", "2015-07-22 22:25:26.150796"], ["updated_at", "2015-07-22 22:25:26.150796"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'frog-hollow-farm-market-and-cafe-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "frog-hollow-farm-market-and-cafe-san-francisco"], ["title", "Frog Hollow Farm Market & Cafe"], ["created_at", "2015-07-22 22:25:26.153656"], ["updated_at", "2015-07-22 22:25:26.153656"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'perrys-san-francisco-6' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "perrys-san-francisco-6"], ["title", "Perry's"], ["created_at", "2015-07-22 22:25:26.156487"], ["updated_at", "2015-07-22 22:25:26.156487"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'delica-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "delica-san-francisco"], ["title", "Delica"], ["created_at", "2015-07-22 22:25:26.159333"], ["updated_at", "2015-07-22 22:25:26.159333"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'boccalone-san-francisco-2' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "boccalone-san-francisco-2"], ["title", "Boccalone"], ["created_at", "2015-07-22 22:25:26.161949"], ["updated_at", "2015-07-22 22:25:26.161949"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'the-slanted-door-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "the-slanted-door-san-francisco"], ["title", "The Slanted Door"], ["created_at", "2015-07-22 22:25:26.164887"], ["updated_at", "2015-07-22 22:25:26.164887"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'el-porteño-empanadas-san-francisco-4' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "el-porteño-empanadas-san-francisco-4"], ["title", "El Porteño Empanadas"], ["created_at", "2015-07-22 22:25:26.167446"], ["updated_at", "2015-07-22 22:25:26.167446"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'hillstone-san-francisco-4' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "hillstone-san-francisco-4"], ["title", "Hillstone"], ["created_at", "2015-07-22 22:25:26.170319"], ["updated_at", "2015-07-22 22:25:26.170319"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'pier-23-cafe-san-francisco' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "pier-23-cafe-san-francisco"], ["title", "Pier 23 Cafe"], ["created_at", "2015-07-22 22:25:26.172972"], ["updated_at", "2015-07-22 22:25:26.172972"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'fog-city-san-francisco-2' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "fog-city-san-francisco-2"], ["title", "Fog City"], ["created_at", "2015-07-22 22:25:26.175780"], ["updated_at", "2015-07-22 22:25:26.175780"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE "restaurants"."yelp_id" = 'gotts-roadside-san-francisco-2' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "restaurants" ("yelp_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["yelp_id", "gotts-roadside-san-francisco-2"], ["title", "Gott's Roadside"], ["created_at", "2015-07-22 22:25:26.178555"], ["updated_at", "2015-07-22 22:25:26.178555"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRestaurant Load (0.3ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.3ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE ("restaurants"."yelp_id" = 'dragoneats-san-francisco-3' AND "restaurants"."id" != 16) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "restaurants" SET "user_id" = $1, "updated_at" = $2 WHERE "restaurants"."id" = $3[0m  [["user_id", 10], ["updated_at", "2015-07-22 22:25:26.186435"], ["id", 16]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "lazy-bear-san-francisco-5"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRestaurant Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "restaurants" WHERE ("restaurants"."yelp_id" = 'lazy-bear-san-francisco-5' AND "restaurants"."id" != 36) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "restaurants" SET "user_id" = $1, "updated_at" = $2 WHERE "restaurants"."id" = $3  [["user_id", 2], ["updated_at", "2015-07-22 22:25:26.191321"], ["id", 36]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "hrd-san-francisco-2"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRestaurant Exists (0.2ms)[0m  SELECT  1 AS one FROM "restaurants" WHERE ("restaurants"."yelp_id" = 'hrd-san-francisco-2' AND "restaurants"."id" != 15) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "restaurants" SET "user_id" = $1, "updated_at" = $2 WHERE "restaurants"."id" = $3[0m  [["user_id", 3], ["updated_at", "2015-07-22 22:25:26.194966"], ["id", 15]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "reservations" ("user_id", "number_in_party", "name", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 5], ["number_in_party", 3], ["name", "Person 5"], ["restaurant_id", 16], ["created_at", "2015-07-22 22:25:26.239256"], ["updated_at", "2015-07-22 22:25:26.239256"]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "table_ready_time" = '2015-07-22 22:31:26.239256' WHERE "reservations"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "notify_time" = '2015-07-22 22:26:26.239256' WHERE "reservations"."id" = $1  [["id", 1]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 1]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1  [["id", 1]]
+  [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reservations" ("user_id", "number_in_party", "name", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 6], ["number_in_party", 3], ["name", "Person 6"], ["restaurant_id", 16], ["created_at", "2015-07-22 22:25:26.260891"], ["updated_at", "2015-07-22 22:25:26.260891"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "table_ready_time" = '2015-07-22 22:31:26.260891' WHERE "reservations"."id" = $1  [["id", 2]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "notify_time" = '2015-07-22 22:26:26.260891' WHERE "reservations"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1  [["id", 2]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reservations" ("user_id", "number_in_party", "name", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 7], ["number_in_party", 3], ["name", "Person 7"], ["restaurant_id", 16], ["created_at", "2015-07-22 22:25:26.265781"], ["updated_at", "2015-07-22 22:25:26.265781"]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "table_ready_time" = '2015-07-22 22:31:26.265781' WHERE "reservations"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "notify_time" = '2015-07-22 22:26:26.265781' WHERE "reservations"."id" = $1  [["id", 3]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1  [["id", 3]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "reservations" ("user_id", "number_in_party", "name", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["user_id", 8], ["number_in_party", 3], ["name", "Person 8"], ["restaurant_id", 16], ["created_at", "2015-07-22 22:25:26.270618"], ["updated_at", "2015-07-22 22:25:26.270618"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "table_ready_time" = '2015-07-22 22:31:26.270618' WHERE "reservations"."id" = $1  [["id", 4]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "notify_time" = '2015-07-22 22:26:26.270618' WHERE "reservations"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1  [["id", 4]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "reservations" ("user_id", "number_in_party", "name", "restaurant_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["user_id", 9], ["number_in_party", 3], ["name", "Person 9"], ["restaurant_id", 16], ["created_at", "2015-07-22 22:25:26.275371"], ["updated_at", "2015-07-22 22:25:26.275371"]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "table_ready_time" = '2015-07-22 22:31:26.275371' WHERE "reservations"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "notify_time" = '2015-07-22 22:26:26.275371' WHERE "reservations"."id" = $1  [["id", 5]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1  [["id", 5]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:31 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:34 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:37 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 15:25:39 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (202.6ms)
+Completed 200 OK in 210ms (Views: 206.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:40 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:42 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:45 -0700
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=Dragon+Eats&location=&commit=Search" for ::1 at 2015-07-22 15:25:46 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Dragon Eats", "location"=>"", "commit"=>"Search"}
+  [1m[36mRestaurant Load (0.4ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.3ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "perilla-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "le-soleil-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "cordon-bleu-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "vietnam-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.1ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "rice-paper-scissors-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "bun-mee-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "urban-picnic-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-slanted-door-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.9ms)
+  Rendered restaurants/index.html.erb (4.7ms)
+Completed 200 OK in 772ms (Views: 6.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:48 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:51 -0700
+
+
+Started GET "/restaurants?utf8=%E2%9C%93&search=Dragon+Eats&location=&commit=Search" for ::1 at 2015-07-22 15:25:53 -0700
+Processing by RestaurantsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Dragon Eats", "location"=>"", "commit"=>"Search"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "dragoneats-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "dragoneats-san-francisco-3"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "perilla-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "le-soleil-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "cordon-bleu-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "vietnam-restaurant-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "rice-paper-scissors-san-francisco-2"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "bun-mee-san-francisco"]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1[0m  [["yelp_id", "urban-picnic-san-francisco"]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."yelp_id" = $1  ORDER BY "restaurants"."id" ASC LIMIT 1  [["yelp_id", "the-slanted-door-san-francisco"]]
+  Rendered restaurants/_result.html.erb (0.4ms)
+  Rendered restaurants/index.html.erb (1.3ms)
+Completed 200 OK in 793ms (Views: 2.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:54 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:25:57 -0700
+
+
+Started GET "/restaurants/16" for ::1 at 2015-07-22 15:25:59 -0700
+Processing by RestaurantsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mReservation Load (0.5ms)[0m  [1mSELECT "reservations".* FROM "reservations" WHERE "reservations"."restaurant_id" = $1[0m  [["restaurant_id", 16]]
+  Rendered reservations/_show.html.erb (1.4ms)
+  Rendered reservations/_show.html.erb (0.2ms)
+  Rendered reservations/_show.html.erb (0.1ms)
+  Rendered reservations/_show.html.erb (0.1ms)
+  Rendered reservations/_show.html.erb (0.2ms)
+  Rendered reservations/_reservations.html.erb (10.6ms)
+  Rendered restaurants/show.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 550ms (Views: 193.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:00 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:03 -0700
+
+
+Started POST "/restaurants/16/reservations" for ::1 at 2015-07-22 15:26:05 -0700
+Processing by ReservationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9DpZF0cD6HPJd9Y8xHvSefQkkM2gFJKHe7YjiBim2FO7t/k3X/bLXSrqEGF6knmefWD+oDxnFOsGV951vxnyLg==", "reservation"=>{"name"=>"patrick", "number_in_party"=>"1"}, "commit"=>"Sign me up!", "restaurant_id"=>"16"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "reservations" ("number_in_party", "user_id", "restaurant_id", "timer", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["number_in_party", 1], ["user_id", 1], ["restaurant_id", 16], ["timer", 0], ["name", "patrick"], ["created_at", "2015-07-22 22:26:05.231221"], ["updated_at", "2015-07-22 22:26:05.231221"]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "reservations" SET "table_ready_time" = '2015-07-22 22:32:05.231221' WHERE "reservations"."id" = $1  [["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "notify_time" = '2015-07-22 22:27:05.231221' WHERE "reservations"."id" = $1[0m  [["id", 6]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "reservations" SET "notified?" = 'f' WHERE "reservations"."id" = $1  [["id", 6]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "reservations" SET "table_ready?" = 'f' WHERE "reservations"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 37ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/1" for ::1 at 2015-07-22 15:26:05 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mReservation Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 87ms (Views: 82.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:06 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:09 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:12 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:15 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:18 -0700
+
+
+Started GET "/" for ::1 at 2015-07-22 15:26:19 -0700
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered home/index.html.erb (56.4ms)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:21 -0700
+
+
+Started GET "/sidekiq" for ::1 at 2015-07-22 15:26:21 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:26:21 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:26:21 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:26:21 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:26:21 -0700
+
+
+Started GET "/sidekiq/javascripts/dashboard.js" for ::1 at 2015-07-22 15:26:21 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:26:21 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:23 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:24 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:26:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:26:25 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:26:25 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:26:25 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:26:25 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:26:25 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:26 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:26:27 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:26:27 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:26:27 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:26:27 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:26:27 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:26:28 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:29 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:32 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:35 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:38 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:41 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:44 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:47 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:50 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:53 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:56 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:26:59 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:27:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:27:00 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:27:00 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:27:00 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:27:00 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:27:00 -0700
+
+
+Started GET "/sidekiq/scheduled/1437604025.238708-df0ed3e8ffb09ba9573ef1d2" for ::1 at 2015-07-22 15:27:01 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:27:02 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:27:02 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:27:02 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:27:02 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:02 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:27:02 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:27:04 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:27:04 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:27:04 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:27:04 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:27:04 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:27:04 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:07 -0700
+
+
+Started GET "/sidekiq/queues/default" for ::1 at 2015-07-22 15:27:07 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:27:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:27:07 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:27:07 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:27:07 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:27:07 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:27:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:27:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:27:08 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:27:08 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:27:08 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:27:08 -0700
+
+
+Started GET "/sidekiq/retries" for ::1 at 2015-07-22 15:27:09 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:27:09 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:27:09 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:27:09 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:27:09 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:27:09 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:10 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:27:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:27:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:27:11 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:27:11 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:27:11 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:27:11 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:13 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:27:14 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:27:14 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:27:14 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:27:14 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:27:14 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:27:14 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:15 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:18 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:21 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:23 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:26 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:29 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:32 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:35 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:38 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:27:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:27:39 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:27:39 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:27:39 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:27:39 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:27:39 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:41 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:27:41 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:27:41 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:27:41 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:27:41 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:27:41 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:27:41 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:44 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:47 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:27:50 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:02 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:28:03 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:28:03 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:28:03 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:28:03 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:28:03 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:28:03 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:05 -0700
+
+
+Started GET "/sidekiq/retries" for ::1 at 2015-07-22 15:28:06 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:28:06 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:28:06 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:28:06 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:28:06 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:28:06 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:28:08 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:28:08 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:28:08 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:28:08 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:28:08 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:28:08 -0700
+
+
+Started GET "/sidekiq/morgue" for ::1 at 2015-07-22 15:28:09 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:28:09 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:28:09 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:28:09 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:28:09 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:28:09 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:28:11 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:28:11 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:28:11 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:28:11 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:28:11 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:28:11 -0700
+
+
+Started GET "/sidekiq/morgue" for ::1 at 2015-07-22 15:28:12 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:28:12 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:28:12 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:28:12 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:28:12 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:28:12 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:14 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:28:15 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:28:15 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:28:15 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:28:15 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:28:15 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:28:15 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:17 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:20 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:22 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:25 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:28 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:31 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:34 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:28:35 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:28:35 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:28:35 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:28:35 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:28:35 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:28:35 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:28:36 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:28:36 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:28:36 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:28:36 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:28:36 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:28:36 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:37 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:40 -0700
+
+
+Started GET "/sidekiq/scheduled" for ::1 at 2015-07-22 15:28:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:28:40 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:28:40 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:28:40 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:28:40 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:28:40 -0700
+
+
+Started GET "/sidekiq/" for ::1 at 2015-07-22 15:28:41 -0700
+
+
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2015-07-22 15:28:41 -0700
+
+
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2015-07-22 15:28:41 -0700
+
+
+Started GET "/sidekiq/javascripts/locales/jquery.timeago.en.js" for ::1 at 2015-07-22 15:28:41 -0700
+
+
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2015-07-22 15:28:41 -0700
+
+
+Started GET "/sidekiq/javascripts/dashboard.js" for ::1 at 2015-07-22 15:28:41 -0700
+
+
+Started GET "/sidekiq/images/status-sd8051fd480.png" for ::1 at 2015-07-22 15:28:41 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:43 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:43 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:45 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:46 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:47 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:49 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:49 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:51 -0700
+
+
+Started GET "/sidekiq/stats" for ::1 at 2015-07-22 15:28:52 -0700

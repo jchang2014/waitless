@@ -4,8 +4,6 @@ Rails.application.routes.draw do
   require 'sidekiq/web'
   root 'home#index'
   mount Sidekiq::Web, at: '/sidekiq'
-  root 'home#index'
-
   resource :home, only: [:search, :show]
 
   resource :session, only: [:create, :show, :destroy]
