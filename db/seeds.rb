@@ -15,6 +15,8 @@ user_list.each do |name, email, password|
     User.create(name: name, email: email, password: password)
 end
 
+User.create(name:"Jeff", email: "jeff", password: "jeff", admin: true)
+
 
 #Seed Restaurants from yelp API
 results_soma = [
@@ -101,7 +103,7 @@ results_embarcadero.map {
 
 # Add owners for some restaurants
 dragon_eats = Restaurant.where(yelp_id: "dragoneats-san-francisco-3").first
-dragon_eats.user_id = 1
+dragon_eats.user_id = 10
 dragon_eats.save
 
 lazy_bear = Restaurant.where(yelp_id: "lazy-bear-san-francisco-5").first
@@ -119,3 +121,4 @@ users = [5,6,7,8,9]
 users.each do |user|
   dragon_eats.reservations.create(user_id: user, number_in_party: 3, name: "Person #{user}")
 end
+
