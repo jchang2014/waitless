@@ -1,0 +1,6 @@
+.env
+/tmp
+/.bundle
+/log
+/log/*
+!/log/.keep

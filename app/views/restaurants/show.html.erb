@@ -1,71 +1,33 @@
-<div class="top-block">
-  <div class="waitlist-window">
+<div class="restaurant">
+	<div class="restaurant-info">
+		<%= render :partial => "result", layout: false, locals: {result: result}%>
+	</div>
 
-    <div class="result-show">
-        <div class="result-wait-time-text0">Current wait time</div>
-        <div class="result-wait-time-number">89</div>
-        <div class="result-wait-time-text1">minute(s)</div>
-    </div>
+	<div class="waitlist">
+		<%= form_for [@restaurant, @new_reservation]  do |f| %>
+			<%= f.label :party_number %>
+			<%= f.number_field :number_in_party %>
+			<%= f.submit %>
+		<% end %>
+		<button class="view-my-reservation" id="goes back to home">view my reservation</button>
+	</div>
 
-    <div class="waitlist">
-      <% if current_user %>
-        <%= form_for [@restaurant, @new_reservation], :html =>{:class => 'waitlist-form'} do |f| %>
-          <table align=center class="waitlist-form-table">
-            <tr>
-              <td><label>Name</label></td>
-              <td><%= f.text_field :name %></td>
-            </tr>
-            <tr>
-              <td><label>Party Number</label></td>
-              <td><%= f.text_field :number_in_party %></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><%= f.submit 'Sign me up!', :class => 'waitlist-button' %></td>
-            </tr>
-          </table>
-        <% end %>
-      <% else %>
-        <br>
-        <br>
-        <p align=center><strong><em>Please <a href="/session">login</a> or <a href="/users/new">sign up</a> to waitlist.</em></strong></p>
+	<div class="show">
+		<table align=center>
+      <tr>
+        <td>Name</td>
+        <td>Party Size</td>
+        <td>Signed at:</td>
+        <td>Wait Time</td>
+      </tr>
+      <% @reservations.each do |reservation| %>
+      	<tr>
+        <td><%=reservation.user.name%></td>
+        <td><%=reservation.number_in_party%></td>
+        <td><%=reservation.created_at%></td>
+        <td><%=reservation.timer%></td>
+      </tr>
       <% end %>
-    </div>
-
-  </div>
-
-  <div class="restaurant-info">
-
-    <img src="<%=result[:image]%>" class="restaurant-img"/>
-
-    <table align=center class="restaurant-data-table">
-      <tr>
-          <td><label>Restaurant</label></td>
-          <td><%= @result[:name] %></td>
-      </tr>
-      <tr>
-          <td><label>Location</label></td>
-          <td>
-              <% @result[:location].each do |place| %>
-                <div><%= place %></div>
-              <% end %>
-          </td>
-      </tr>
-      <tr>
-          <td><label>Rating</label></td>
-          <td><img src="<%= @result[:rating] %>"></td>
-      </tr>
-      <tr>
-        <td><label>Categories</label></td>
-        <td><%= @result[:categories] %></td>
-      </tr>
-      <tr>
-        <td><label>Reviews</label></td>
-        <td><%= @result[:review_count] %></td>
-      </tr>
     </table>
-
 	</div>
 </div>
-
-<%= render :partial => "/reservations/reservations", locals: {reservations: @reservations} %>
