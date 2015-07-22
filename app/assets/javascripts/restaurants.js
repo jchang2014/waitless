@@ -89,7 +89,7 @@ var mapSearchUpdate = function() {
 
     });//end done
     mapRequest.fail(function(error){
-      alert("sorry your search yielded no results");
+      alert("No results exist, here's your response", response);
     });//end fail
 
   var htmlRequest = $.ajax({
@@ -100,12 +100,17 @@ var mapSearchUpdate = function() {
   });
 
   htmlRequest.done(function(response){
-    console.log("Error, here's youre response", response);
+    console.log("Success, here's your response", response);
     $('.restaurant-results').remove();
     $('.home-wrapper').remove();
     $('.body-wrapper').append(response);
     $('input#search').val('');
     $('input#location').val('');
+  });
+
+  htmlRequest.fail(function(response){
+    console.log("Fail, here's your response", response);
+
   });
 
   }); //end search-form
