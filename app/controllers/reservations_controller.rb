@@ -12,6 +12,8 @@ class ReservationsController < ApplicationController
 			timer: @restaurant.wait_time,
 			name: params[:reservation][:name],
 		)
+		#@reservation = @restaurant.reservations.new(reservation_params)
+
 		if @reservation.save
 			# NotifyUsersWorker.perform_in(3.minutes, @reservation.id)
 
