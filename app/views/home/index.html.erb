@@ -151,7 +151,7 @@
     .nav-form td{
       color: #FFFFFF;
       letter-spacing: 1px;
-      padding: 5px;
+      padding-right: 15px;
     }
 
     input.nav-form-button{
@@ -198,6 +198,7 @@
     .right-nav {
       width: 30%;
       text-align: right;
+      margin-top: 5px;
     }
 
     .nav-toggle {
@@ -208,9 +209,11 @@
       height: 50px;
       font-size: 30px;
       color: #FFFFFF;
-      margin-top: 15px;
     }
 
+    .home-search-bar {
+      margin-top: 5px;
+    }
   </style>
 
 </head>
@@ -224,8 +227,6 @@
         <tr>
           <td>Restaurant or Category</td>
           <td>Location</td>
-
-          <td></td>
         </tr>
         <tr>
           <td><%= text_field_tag :search, params[:search], placeholder: "Mexican, Philz Coffee, etc." %></td>
