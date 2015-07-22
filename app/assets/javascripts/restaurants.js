@@ -30,8 +30,7 @@ function queryResults() {
     console.log('inside htmlRequest ajax call');
 
     $('.restaurant-results').remove();
-    $('.search-text').remove();
-
+    $('.home-wrapper').remove();
     $('.body-wrapper').append(response);
     $('input#search').val('');
     $('input#location').val('');

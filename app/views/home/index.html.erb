@@ -12,7 +12,7 @@
 
   <style>
     #map-canvas {
-      height: 200px;
+      height: 350px;
       margin: 10px 0px 0px 0px;
     }
 
@@ -74,22 +74,22 @@
       color: #FFFFFF;
       text-decoration: none;
     }
+
     label {
         color:#727272;
     }
 
     .home-wrapper {
       color: #727272;
-      display: flex;
       padding: 10px;
       font-size: 15px;
+      text-align:center;
     }
 
     .home-wrapper h1 {
       color: #586949;
       font-size: 30px;
       letter-spacing: 1px;
-      text-align: center;
     }
 
     .search-form td{
@@ -117,6 +117,97 @@
       font-family: Helvetica;
       font-size: 20px;
     }
+
+    /*BEGIN RESTAURANTS RESULT STYLING */
+    h1{
+      color: #004b00;
+      font-family: helvetica;
+      font-size: 30px;
+      text-align: center;
+    }
+
+.results-list-wrapper {
+  margin: 10px 0px 10px 0px;
+}
+
+.result-wrapper {
+  background-color: #FFFFE0;
+  color: #727272;
+  display: flex;
+  padding: 20px;
+  width: 70%;
+  margin: 0px auto 10px auto;
+}
+
+.result-img {
+  display: inline-block;
+  margin-top: 50px;
+  width: 33%;
+}
+
+.result-info {
+  display: inline-block;
+  line-height: 25px;
+  padding: 10px;
+  width: 33%;
+}
+
+.result-wait-time {
+  color: #811212;
+  display: inline-block;
+  margin-top: 10px;
+  width: 33%;
+}
+
+.result-wait-time-text0 {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.result-wait-time-number {
+  border: 10px solid #CD9B9B;
+  border-radius: 20px;
+  font-size: 100px;
+  text-align: center;
+}
+
+.result-wait-time-text1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.result-info label{
+  font-weight: bold;
+}
+
+.result-nav {
+  display: block;
+  width:100%;
+}
+
+.result-button {
+  background-color: #FF5252;
+  border-radius: 5px;
+  font-size: 15px;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.link-wrapper {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.result-img-position {
+  text-align: center;
+}
+
+.result-img-position img {
+  border-radius: 60px;
+}
 
   </style>
 
@@ -159,7 +250,9 @@
 <div class="separator"></div>
 
 <div class="body-wrapper">
-  <section class="">
+  <section class="home-wrapper">
+    <h1>Welcome to WaitLess</h1>
+    hello
   </section>
 </div>
 </body>
