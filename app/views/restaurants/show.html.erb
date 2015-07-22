@@ -8,21 +8,27 @@
     </div>
 
     <div class="waitlist">
-      <%= form_for [@restaurant, @new_reservation], :html =>{:class => 'waitlist-form'} do |f| %>
-        <table align=center class="waitlist-form-table">
-          <tr>
-            <td><label>Name</label></td>
-            <td><%= f.text_field :name %></td>
-          </tr>
-          <tr>
-            <td><label>Party Number</label></td>
-            <td><%= f.text_field :number_in_party %></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td><%= f.submit 'Submit Reservation', :class => 'waitlist-button' %></td>
-          </tr>
-        </table>
+      <% if current_user %>
+        <%= form_for [@restaurant, @new_reservation], :html =>{:class => 'waitlist-form'} do |f| %>
+          <table align=center class="waitlist-form-table">
+            <tr>
+              <td><label>Name</label></td>
+              <td><%= f.text_field :name %></td>
+            </tr>
+            <tr>
+              <td><label>Party Number</label></td>
+              <td><%= f.text_field :number_in_party %></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><%= f.submit 'Sign me up!', :class => 'waitlist-button' %></td>
+            </tr>
+          </table>
+        <% end %>
+      <% else %>
+        <br>
+        <br>
+        <p align=center><strong><em>Please <a href="/session">login</a> or <a href="/users/new">sign up</a> to waitlist.</em></strong></p>
       <% end %>
     </div>
 
