@@ -32,7 +32,7 @@ function queryResults() {
     $('.restaurant-results').remove();
     $('.search-text').remove();
 
-    $('.results-wrapper').append(response);
+    $('.body-wrapper').append(response);
     $('input#search').val('');
     $('input#location').val('');
   });
