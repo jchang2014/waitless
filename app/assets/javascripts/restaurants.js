@@ -75,9 +75,10 @@ function updateMap(markers) {
 };
 
 // NAV BAR HOMEPAGE
-var mapSearchUpdate = function() {
-  $('.home-search-bar').on('click', '.nav-form', function(event){
-    event.preventDefault();
+function mapSearchUpdate() {
+  console.log("starting query");
+  $('.home-search-bar').on('click', '.nav-form', function(e){
+    e.preventDefault();
     var mapRequest = $.ajax({
       url: "/restaurants",
       action: "get",
@@ -89,7 +90,7 @@ var mapSearchUpdate = function() {
 
     });//end done
     mapRequest.fail(function(error){
-      alert("No results exist, here's your response", response);
+      alert("sorry your search yielded no results");
     });//end fail
 
   var htmlRequest = $.ajax({
@@ -98,9 +99,8 @@ var mapSearchUpdate = function() {
     dataType: "html",
     data: $('#nav-form').serialize()
   });
-
   htmlRequest.done(function(response){
-    console.log("Success, here's your response", response);
+    console.log('inside htmlRequest ajax call');
     $('.restaurant-results').remove();
     $('.home-wrapper').remove();
     $('.body-wrapper').append(response);
@@ -108,11 +108,7 @@ var mapSearchUpdate = function() {
     $('input#location').val('');
   });
 
-  htmlRequest.fail(function(response){
-    console.log("Fail, here's your response", response);
-
-  });
-
   }); //end search-form
-};
+
+} //end queryResults
 
