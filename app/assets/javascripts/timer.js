@@ -1,10 +1,13 @@
 $(document).on('page:change',function() {
   queryResultsTimers();
+  restaurantTimer();
 });
 
 function queryResultsTimers() {
   $('.search-form').on('click', '.home-search', function(e){
     console.log('inside timer');
+
+
     //change counter to total wait time
     var counter = 15;
 
@@ -22,4 +25,22 @@ function queryResultsTimers() {
       counter -= 1;
     };
   });
+}
+
+function restaurantTimer() {
+
+  var timerElem = document.getElementsByClassName("result-wait-time-number")[0].innerHTML;
+  var restaurantTimer = document.getElementsByClassName("result-wait-time-number")[0];
+
+  var timer = setInterval(function() {
+    waitTimer(timerElem);
+  },1000);
+
+  var waitTimer = function(time) {
+    if (timerElem > 0) {
+      restaurantTimer.innerHTML = time;
+    }
+    timerElem -= 1;
+  };
+
 }

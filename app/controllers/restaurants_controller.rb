@@ -66,7 +66,14 @@ class RestaurantsController < ApplicationController
               longitude: @response['location']['coordinate']['longitude'],
               review_count: @response['review_count']
               }
-    render :show, locals: {result: @result}
+    respond_to do |format|
+      format.html {
+        render :show, locals: {result: @result, restaurant: @restaurant}
+      }
+      format.json {
+        render json: @restaurant
+      }
+    end
   end
 
   def new

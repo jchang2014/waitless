@@ -66,7 +66,7 @@ function updateMap(markers) {
             "<br /> " +
             spot.location[0] +
             "<br /> " +
-            "Current wait time: ");
+            "Current wait time: " );
           infoWindow.open(map, marker);
       });
     })(marker, spot);
