@@ -21,7 +21,9 @@ class UsersController < ApplicationController
     else
       @user = User.find(params[:id])
       @reservations = @user.reservations
-      
+      @reservation = @reservations.first
+      @position = @reservation.number_in_party
+      @restaurant = Restaurant.find(@reservation.restaurant_id)
     end
   end
 
