@@ -22,12 +22,11 @@
 
       <div class="current-restaurant">
         <div><label>Restaurant</label></div>
-          <div><%= @restaurant.title %></div>
+          <div><a class="restaurant-link" href="/restaurants/<%=@restaurant.id%>"><%= @restaurant.title %></a></div>
         <div><label>Amount in Your Party</label></div>
           <div><%= @position %></div>
         <div><label>Name on Reservation</label></div>
           <div><%= @reservation.name%></div>
-
       </div>
 
       <div class="current-restaurant-img">

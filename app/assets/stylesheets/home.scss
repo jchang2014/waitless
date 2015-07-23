@@ -8,7 +8,15 @@ body {
   margin: 0;
 }
 
+div.current-restaurant a{ 
+  text-decoration: none;
+  color: maroon;
+}
 
+div.current-restaurant a:visited { 
+  text-decoration: none;
+  color: maroon;
+}
 
 .search-form a:link {
   color: #B6B6B6;
