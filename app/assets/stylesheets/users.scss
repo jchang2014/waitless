@@ -12,15 +12,12 @@
   width: 60%;
 }
 .current-reservation-wrapper {
-	display: flex;
-  margin: auto;
-	width: 90%;
+
 }
 
 .current-restaurant-img { 
   border: 1px solid black;
   display:inline-block;
-  width: 25%;
 }
 
 .current-wait-time {
@@ -30,7 +27,6 @@
   color: #F44336;
 	display:inline-block;
   padding: 10px;
-  width: 25%;
 }
 
 .user-wait-time {
@@ -48,25 +44,16 @@
 	display: inline-block;
   line-height: 25px;
   padding: 10px;
-  width: 25%;
 }
 
 .current-restaurant-img { 
   border: 1px dotted black;
   display: inline-block;
-  width: 25%;
-}
-.section-separator {
-  background-color: #B6B6B6;
-  height: 1px;
-  margin: 20px auto 20px auto;
-  width: 60%;
 }
 
 .user-options {
 	display: inline-block;
   padding: 10px;
-  width: 25%;
 }
 
 .signup-form a:link {

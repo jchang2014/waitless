@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     else
       @user = User.find(params[:id])
       @reservations = @user.reservations
+      
     end
   end
 
