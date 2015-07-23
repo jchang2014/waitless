@@ -1,9 +1,6 @@
 class ReservationsController < ApplicationController
 	before_action :authorize
 	skip_before_filter :verify_authenticity_token, :if => Proc.new { |c| c.request.format == 'application/json' }
-	def index
-
-	end
 
 	def create
 		@restaurant = Restaurant.find(params[:restaurant_id])
@@ -22,10 +19,24 @@ class ReservationsController < ApplicationController
 		end
 	end
 
-	def show
+	def edit
+		@reservation = Reservation.find(params[:id])
+		respond_to do |format|
+			format.html {
+				render :partial => "reservations/edit", locals: {reservation: @reservation} 
+			}
+		end
 	end
 
 	def update
+		@reservation = Reservation.find(params[:id])
+		@reservation.number_in_party = params[:number]
+		@reservation.save
+		respond_to do |format|
+			format.json {
+				render json: @reservation.number_in_party
+			}
+		end
 	end
 
 	def destroy

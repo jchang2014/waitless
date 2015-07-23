@@ -57,6 +57,10 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def edit
+    
+  end
+
   def show
     @restaurant = Restaurant.find(params[:id])
     @response = Yelp.client.business(@restaurant.yelp_id).as_json['hash']
