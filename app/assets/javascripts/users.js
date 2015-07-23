@@ -2,7 +2,7 @@ $(document).on('page:change', function(){
 	$('.delete').on('click', function(event){
 		event.preventDefault;
 
-		var id = $('.delete').attr('id');
+		var id = $(this).attr('id');
 		var path = "/restaurants/1/reservations/"+id
 
 		var request = $.ajax({
@@ -14,6 +14,7 @@ $(document).on('page:change', function(){
 
 		request.done(function(response){
 			console.log("yeah buddy");
+			debugger
 			$('#'+id).closest('tr').remove();
 			console.log(response);
 		});
