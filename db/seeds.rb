@@ -8,7 +8,8 @@ user_list = [
   ['Patrick', 'Shelby@gmail.com', 'Scoobz'],
   ['WolfJob', 'WolfJob@gmail.com', 'WolfJob'],
   ['Barry', 'Bonds@gmail.com', 'steroids'],
-  ['sonic', 'the@the.com', 'hedgehog']
+  ['sonic', 'the@the.com', 'hedgehog'],
+  ['diana', 'waitlesstheapp@gmail.com', 'waitless']
 ]
 
 user_list.each do |name, email, password|
@@ -117,8 +118,9 @@ hrd.save
 
 #Seed reservations
 users = [5,6,7,8,9]
+names = [0,1,2,3,4,"Masha","Brick","Hunter","Jen","Jordan"]
 
 users.each do |user|
-  dragon_eats.reservations.create(user_id: user, number_in_party: 3, name: "Person #{user}", timer: 25)
+  dragon_eats.reservations.create(user_id: user, number_in_party: 3, name: names[user], timer: 25)
 end
 dragon_eats.update_wait_time
