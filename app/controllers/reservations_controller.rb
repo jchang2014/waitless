@@ -23,7 +23,14 @@ class ReservationsController < ApplicationController
 	end
 
 	def update
-
+		@reservation = Reservation.find(params[:id])
+		@reservation.number_in_party = params[:number]
+		@reservation.save
+		respond_to do |format|
+			format.json {
+				render json: @reservation.number_in_party
+			}
+		end
 	end
 
 	def destroy
