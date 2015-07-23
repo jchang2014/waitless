@@ -13,8 +13,8 @@ function queryResults() {
       data: $('#search-form').serialize()
     }); //end getJSON
     mapRequest.done(function(data){
+      console.log(data);
       updateMap(data);
-
     });//end done
     mapRequest.fail(function(error){
       alert("sorry your search yielded no results");

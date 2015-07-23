@@ -19,6 +19,7 @@ class UsersController < ApplicationController
         @restaurant_hash = nil
       end
     else
+      @user = User.find(params[:id])
       @reservations = @user.reservations
     end
   end
