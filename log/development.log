@@ -13224,3 +13224,37 @@ Started GET "/assets/users.self-26b64f5af2212421efbe10c44c1a8a115f362d02e83ee0c0
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-07-23 14:06:12 -0700
+
+
+Started GET "/users/11" for ::1 at 2015-07-23 14:07:11 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 11]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mReservation Load (1.1ms)[0m  [1mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1  ORDER BY "reservations"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mReservation Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mReservation Load (0.4ms)[0m  SELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1 AND "reservations"."user_id" = $2  ORDER BY "reservations"."id" ASC LIMIT 1  [["user_id", 11], ["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  Rendered users/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 519ms (Views: 185.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/users.self-5dd08fd216abcc2896d482ca866940017ae7cc048d73779ff79f623fa0b3d587.css?body=1" for ::1 at 2015-07-23 14:07:11 -0700
+
+
+Started GET "/users/11" for ::1 at 2015-07-23 14:07:25 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mReservation Load (0.2ms)[0m  SELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1  ORDER BY "reservations"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mRestaurant Load (0.2ms)[0m  [1mSELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mReservation Exists (0.3ms)[0m  SELECT  1 AS one FROM "reservations" WHERE "reservations"."user_id" = $1 LIMIT 1  [["user_id", 11]]
+  [1m[36mReservation Load (0.3ms)[0m  [1mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1 AND "reservations"."user_id" = $2  ORDER BY "reservations"."id" ASC LIMIT 1[0m  [["user_id", 11], ["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "restaurants".* FROM "restaurants" WHERE "restaurants"."id" = $1 LIMIT 1  [["id", 16]]
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 786ms (Views: 214.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/users.self-f13def882b6707ca4cc678790d42323854e06946c0e32e645bc256ba40e71db4.css?body=1" for ::1 at 2015-07-23 14:07:26 -0700
