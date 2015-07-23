@@ -104,6 +104,8 @@ dragon_eats.user_id = 10
 
 dragon_eats.save
 
+
+
 lazy_bear = Restaurant.where(yelp_id: "lazy-bear-san-francisco-5").first
 lazy_bear.user_id = 2
 lazy_bear.save
@@ -117,5 +119,6 @@ hrd.save
 users = [5,6,7,8,9]
 
 users.each do |user|
-  dragon_eats.reservations.create(user_id: user, number_in_party: 3, name: "Person #{user}")
+  dragon_eats.reservations.create(user_id: user, number_in_party: 3, name: "Person #{user}", timer: 25)
 end
+dragon_eats.update_wait_time

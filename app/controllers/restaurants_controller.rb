@@ -39,8 +39,7 @@ class RestaurantsController < ApplicationController
         categories: @categories.join(', '),
         latitude: @business['location']['coordinate']['latitude'],
         longitude: @business['location']['coordinate']['longitude'],
-        id: @id,
-        #wait_time: @restaurant.wait_time
+        id: @id
         })
     	end
     else
@@ -80,7 +79,14 @@ class RestaurantsController < ApplicationController
               longitude: @response['location']['coordinate']['longitude'],
               review_count: @response['review_count']
               }
-    render :show, locals: {result: @result}
+    respond_to do |format|
+      format.html {
+        render :show, locals: {result: @result, restaurant: @restaurant}
+      }
+      format.json {
+        render json: @restaurant
+      }
+    end
   end
 
   def new

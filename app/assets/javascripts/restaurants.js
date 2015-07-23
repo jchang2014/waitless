@@ -14,8 +14,8 @@ function queryResults() {
       data: $('#search-form').serialize()
     }); //end getJSON
     mapRequest.done(function(data){
+      console.log(data);
       updateMap(data);
-
     });//end done
     mapRequest.fail(function(error){
       alert("sorry your search yielded no results");
@@ -67,7 +67,7 @@ function updateMap(markers) {
             "<br /> " +
             spot.location[0] +
             "<br /> " +
-            "Current wait time: ");
+            "Current wait time: " );
           infoWindow.open(map, marker);
       });
     })(marker, spot);
