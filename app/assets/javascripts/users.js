@@ -1,5 +1,8 @@
-$(document).on('page:change', function(){
-	$('.delete').on('click', function(event){
+$(document).on('ready page:change', function(){
+	console.log("starting user page");
+
+	$('.delete-reservation').on('click', function(event){
+		debugger
 		var id = $(this).closest('tr').attr('id');
 		var restaurant = $(this).closest('table').attr('id');
 		var path = "/restaurants/"+restaurant+"/reservations/"+id
@@ -10,9 +13,10 @@ $(document).on('page:change', function(){
 			data: id,
 			dataType: 'json'
 		});
-
+		debugger
 		request.done(function(response){
 			$('#'+id).closest('tr').remove();
+			console.log("this shit done");
 		});
 
 		request.fail(function(response){
@@ -20,7 +24,8 @@ $(document).on('page:change', function(){
 		});
 	});
 
-	$('.edit').on('click',function(event){
+	$('.edit-reservation').on('click',function(event){
+		debugger
 		var id = $(this).closest('tr').attr('id');
 		var restaurant = $(this).closest('table').attr('id');
 		var path = "/restaurants/"+restaurant+"/reservations/"+id+"/edit"
@@ -31,9 +36,10 @@ $(document).on('page:change', function(){
 			data: id,
 			dataType: 'html'
 		});
-
+		debugger
 		request.done(function(response){
 			$('#'+id).closest('tr').children().eq(1).html(response);
+			console.log("this also done");
 		});
 
 		request.fail(function(response){
