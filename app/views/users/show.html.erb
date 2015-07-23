@@ -1,6 +1,4 @@
 <h1>Welcome Back <%= current_user.name %></h1>
-
-<div class="body-wrapper">
   <% if current_user.admin %>
     <% if @restaurant %>
         <h1>Here is your waitlist for <%=@restaurant_hash['name']%></h1>
@@ -29,14 +27,14 @@
           <div><%= @position %></div>
         <div><label>Name on Reservation</label></div>
           <div><%= @reservation.name%></div>
-          <div><img src="<%=@restaurant_hash['image_url']%>"></div>
+
       </div>
 
-<!--       <div class="current-restaurant-img">
-        
-      </div> -->
+      <div class="current-restaurant-img">
+           <div><img src="<%=@restaurant_hash['image_url']%>"></div>
+      </div>
 
-<!--       <div class="user-options">
+   <!--    <div class="user-options">
         <div><a href="#" class="result-button">Edit Reservation</a></div>
         <div><a href="#" class="result-button">Remove From List</a></div>
       </div> -->
