@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "patreek3@gmail.com"
+  default from: "waitlesstheapp@gmail.com"
   layout 'mailer'
 end
