@@ -101,7 +101,7 @@ results_embarcadero.map {
 
 # Add owners for some restaurants
 dragon_eats = Restaurant.where(yelp_id: "dragoneats-san-francisco-3").first
-dragon_eats.user_id = 10
+dragon_eats.user_id = 11
 
 dragon_eats.save
 
