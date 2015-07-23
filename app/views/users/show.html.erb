@@ -1,11 +1,11 @@
 <h1>Welcome Back <%= current_user.name %></h1>
 
 <div class="body-wrapper">
-  <% if current_user.admin %> 
+  <% if current_user.admin %>
     <% if @restaurant %>
         <h1>Here is your waitlist for <%=@restaurant_hash['name']%></h1>
         <% @reservations = @restaurant.reservations %>
-        <%= render :partial => "reservations/reservations", locals: {reservations: @reservations} %>
+        <%= render :partial => "reservations/reservations", locals: {reservations: @reservations,restaurant:@restaurant} %>
         <% if @reservations.length == 0 %>
           <h1>You don't have any reservations yet!</h1>
         <% end %>
@@ -14,10 +14,11 @@
     <% end %>
   <% else %>
     <% if @reservations.any? %>
+      <% find_user_reservation = @reservations.where(user_id: @user.id).first %>
       <h1>Current Reservation</h1>
       <div class="current-reservation-wrapper">
         <div class="current-wait-time">
-  		    <div class="user-wait-time">@reservations.first.timer</div>
+  		    <div class="user-wait-time"><%= find_user_reservation.restaurant.wait_time %></div>
   		    <div class="user-wait-time-text">minute(s) until you are seated</div>
         </div>
       </div>
@@ -62,5 +63,5 @@
       </div>
     <% end %>
   <% end %>
-  
+
 </div>

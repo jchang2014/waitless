@@ -19,7 +19,15 @@ class RestaurantsController < ApplicationController
         end
 
         @restaurant = Restaurant.where(yelp_id: @business['id']).first
-        @id = @restaurant ? @restaurant.id : 'new'
+        # @id = @restaurant ? @restaurant.id : 'new'
+        # @restaurant.id if @id = @restaurant.id
+        if !@restaurant
+          @restaurant = Restaurant.create(
+            yelp_id: @business['id'],
+            title: @business['name'],
+            wait_time: 30
+            )
+        end
 
         @results.push(
         {
@@ -30,8 +38,8 @@ class RestaurantsController < ApplicationController
         categories: @categories.join(', '),
         latitude: @business['location']['coordinate']['latitude'],
         longitude: @business['location']['coordinate']['longitude'],
-        id: @id,
-        #wait_time: @restaurant.wait_time
+        id: @restaurant.id,
+        wait_time: @restaurant.wait_time
         })
     	end
     else
@@ -46,6 +54,10 @@ class RestaurantsController < ApplicationController
         render json: @results
       }
     end
+  end
+
+  def edit
+    
   end
 
   def show
@@ -67,10 +79,18 @@ class RestaurantsController < ApplicationController
               longitude: @response['location']['coordinate']['longitude'],
               review_count: @response['review_count']
               }
-    render :show, locals: {result: @result}
+    respond_to do |format|
+      format.html {
+        render :show, locals: {result: @result, restaurant: @restaurant, reservations: @reservations}
+      }
+      format.json {
+        render json: @restaurant
+      }
+    end
   end
 
   def new
-    #admin stuff
+
   end
+
 end

@@ -1,25 +1,47 @@
+$(document).on('page:change',function() {
+  queryResultsTimers();
+  restaurantTimer();
+});
 
-var counter =15
+function queryResultsTimers() {
+  //$('form#nav-form').on('submit', function(e){
+  $('.home-search-bar').on('click', '.nav-form-button', function(event){
+    console.log('inside timer');
 
-var timer = setInterval(function(){waitTimer(counter)},1000);
 
-var waitTimer = function(time) {
-  if (counter > 0) {
-    var d = time;
-    document.getElementsByClassName("result-wait-time-number")[0].innerHTML = d;
-  }
-  counter -= 1
+    //change counter to total wait time
+    var counter = 30;
+
+    var timer = setInterval(function() {
+      waitTimer(counter);
+    },5000);
+
+    var waitTimer = function(time) {
+      if (counter > 0) {
+        var queryResults = document.getElementsByClassName("result-wait-time-number");
+        for (var i = 0; i < queryResults.length; i++){
+          queryResults[i].innerHTML = time;
+        }
+      }
+      counter -= 1;
+    };
+  });
 }
 
+function restaurantTimer() {
 
-  // var changeHTML = function(.forEach(
-  //     function for (i=0; i<array.length; i++) {
-  //     console.log(elements[i]);
-  //     elements[i].innerHTML = (d);
-//       d -= 1;
-//     }
-//   }
-//   counter -= 1;
-// }
+  var timerElem = document.getElementsByClassName("result-wait-time-number")[0].innerHTML;
+  var restaurantTimer = document.getElementsByClassName("result-wait-time-number")[0];
 
+  var timer = setInterval(function() {
+    waitTimer(timerElem);
+  },1000);
 
+  var waitTimer = function(time) {
+    if (timerElem > 0) {
+      restaurantTimer.innerHTML = time;
+    }
+    timerElem -= 1;
+  };
+
+}
