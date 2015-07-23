@@ -25,7 +25,7 @@ class RestaurantsController < ApplicationController
           @restaurant = Restaurant.create(
             yelp_id: @business['id'],
             title: @business['name'],
-            wait_time: 15
+            wait_time: 30
             )
         end
 

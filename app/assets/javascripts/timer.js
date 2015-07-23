@@ -10,7 +10,7 @@ function queryResultsTimers() {
 
 
     //change counter to total wait time
-    var counter = 15;
+    var counter = 30;
 
     var timer = setInterval(function() {
       waitTimer(counter);
