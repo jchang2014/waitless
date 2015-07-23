@@ -19,7 +19,16 @@ class RestaurantsController < ApplicationController
         end
 
         @restaurant = Restaurant.where(yelp_id: @business['id']).first
-        @id = @restaurant ? @restaurant.id : 'new'
+        # @id = @restaurant ? @restaurant.id : 'new'
+        # @restaurant.id if @id = @restaurant.id
+        if !@restaurant
+          @restaurant = Restaurant.create(
+            yelp_id: @business['id'],
+            title: @business['name']
+            )
+        end
+
+        @id = @restaurant.id
 
         @results.push(
         {
@@ -71,6 +80,7 @@ class RestaurantsController < ApplicationController
   end
 
   def new
-    #admin stuff
+
   end
+
 end
