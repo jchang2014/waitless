@@ -21,9 +21,11 @@ class UsersController < ApplicationController
     else
       @reservations = @user.reservations
       @reservation = @reservations.first
-      @position = @reservation.number_in_party
-      @restaurant = Restaurant.find(@reservation.restaurant_id)
-      @restaurant_hash = Yelp.client.business(@restaurant.yelp_id).as_json['hash']
+      if @reservation
+        @position = @reservation.number_in_party
+        @restaurant = Restaurant.find(@reservation.restaurant_id)
+        @restaurant_hash = Yelp.client.business(@restaurant.yelp_id).as_json['hash']
+      end
     end
   end
 
