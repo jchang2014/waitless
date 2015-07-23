@@ -4,7 +4,8 @@ $(document).on('page:change',function() {
 });
 
 function queryResultsTimers() {
-  $('.search-form').on('click', '.home-search', function(e){
+  //$('form#nav-form').on('submit', function(e){
+  $('.home-search-bar').on('click', '.nav-form-button', function(event){
     console.log('inside timer');
 
 

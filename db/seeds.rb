@@ -86,15 +86,15 @@ results_embarcadero = [["coqueta-san-francisco", "Coqueta"],
  ["gotts-roadside-san-francisco-2", "Gott's Roadside"]]
 
 results_soma.map {
-  |result| Restaurant.create(yelp_id: result[0], title: result[1])
+  |result| Restaurant.create(yelp_id: result[0], title: result[1], wait_time: 30)
 }
 
 results_mission.map {
-  |result| Restaurant.create(yelp_id: result[0], title: result[1])
+  |result| Restaurant.create(yelp_id: result[0], title: result[1], wait_time: 30)
 }
 
 results_embarcadero.map {
-  |result| Restaurant.create(yelp_id: result[0], title: result[1])
+  |result| Restaurant.create(yelp_id: result[0], title: result[1], wait_time: 30)
 }
 
 

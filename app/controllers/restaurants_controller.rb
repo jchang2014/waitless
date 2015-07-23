@@ -24,11 +24,10 @@ class RestaurantsController < ApplicationController
         if !@restaurant
           @restaurant = Restaurant.create(
             yelp_id: @business['id'],
-            title: @business['name']
+            title: @business['name'],
+            wait_time: 15
             )
         end
-
-        @id = @restaurant.id
 
         @results.push(
         {
@@ -39,7 +38,8 @@ class RestaurantsController < ApplicationController
         categories: @categories.join(', '),
         latitude: @business['location']['coordinate']['latitude'],
         longitude: @business['location']['coordinate']['longitude'],
-        id: @id
+        id: @restaurant.id,
+        wait_time: @restaurant.wait_time
         })
     	end
     else
@@ -81,7 +81,7 @@ class RestaurantsController < ApplicationController
               }
     respond_to do |format|
       format.html {
-        render :show, locals: {result: @result, restaurant: @restaurant}
+        render :show, locals: {result: @result, restaurant: @restaurant, reservations: @reservations}
       }
       format.json {
         render json: @restaurant
