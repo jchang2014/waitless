@@ -102,9 +102,8 @@ function createMarker(place) {
       '<br />' +
       place.vicinity +
       '<br />' +
-      waitTime +
-      '<br />' +
-      '<a href="restaurants/show">' + "Put partial here" + '</a>')
+      waitTime
+      )
 ;
     infowindow.open(map, this);
   });
