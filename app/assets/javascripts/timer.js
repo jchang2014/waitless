@@ -32,7 +32,7 @@ $(document).on('page:change',function() {
     });
   };
 
-  setInterval(tick, 1000 * 60);
+  setInterval(tick, 10000);
 
 });
 
