@@ -9,14 +9,14 @@ user_list = [
   ['WolfJob', 'WolfJob@gmail.com', 'WolfJob'],
   ['Barry', 'Bonds@gmail.com', 'steroids'],
   ['sonic', 'the@the.com', 'hedgehog'],
-  ['diana', 'waitlesstheapp@gmail.com', 'waitless']
+  ['patrick', 'waitlesstheapp@gmail.com', 'patrick']
 ]
 
 user_list.each do |name, email, password|
     User.create(name: name, email: email, password: password)
 end
 
-User.create(name:"Jeff", email: "jeff", password: "jeff", admin: true)
+User.create(name:"Jenga", email: "jenga@gmail.com", password: "jenga", admin: true)
 
 
 #Seed Restaurants from yelp API
@@ -87,15 +87,15 @@ results_embarcadero = [["coqueta-san-francisco", "Coqueta"],
  ["gotts-roadside-san-francisco-2", "Gott's Roadside"]]
 
 results_soma.map {
-  |result| Restaurant.create(yelp_id: result[0], title: result[1], wait_time: 30)
+  |result| Restaurant.create(yelp_id: result[0], title: result[1], wait_time: 10)
 }
 
 results_mission.map {
-  |result| Restaurant.create(yelp_id: result[0], title: result[1], wait_time: 30)
+  |result| Restaurant.create(yelp_id: result[0], title: result[1], wait_time: 15)
 }
 
 results_embarcadero.map {
-  |result| Restaurant.create(yelp_id: result[0], title: result[1], wait_time: 30)
+  |result| Restaurant.create(yelp_id: result[0], title: result[1], wait_time: 20)
 }
 
 
@@ -105,22 +105,11 @@ dragon_eats.user_id = 11
 
 dragon_eats.save
 
-
-
-lazy_bear = Restaurant.where(yelp_id: "lazy-bear-san-francisco-5").first
-lazy_bear.user_id = 2
-lazy_bear.save
-
-hrd = Restaurant.where(yelp_id: "hrd-san-francisco-2").first
-hrd.user_id = 3
-hrd.save
-
-
 #Seed reservations
 users = [5,6,7,8,9]
 names = [0,1,2,3,4,"Masha","Brick","Hunter","Jen","Jordan"]
 
 users.each do |user|
-  dragon_eats.reservations.create(user_id: user, number_in_party: 3, name: names[user], timer: 25)
+  dragon_eats.reservations.create(user_id: user, number_in_party: 3, name: names[user], timer: 10)
 end
 dragon_eats.update_wait_time
