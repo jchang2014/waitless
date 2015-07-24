@@ -13,15 +13,15 @@ class Reservation < ActiveRecord::Base
   def notification_delay
     (self.notify_time - self.created_at)/60
   end
-  
+
   def update_timer
     case self.number_in_party
     when 1..2
-      update_column(:timer, 20)
+      update_column(:timer, 5)
     when 3..4
-      update_column(:timer, 30)
+      update_column(:timer, 10)
     else
-      update_column(:timer, 40)
+      update_column(:timer, 15)
     end
   end
 
