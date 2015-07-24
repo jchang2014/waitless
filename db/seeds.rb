@@ -102,14 +102,15 @@ results_embarcadero.map {
 # Add owners for some restaurants
 dragon_eats = Restaurant.where(yelp_id: "dragoneats-san-francisco-3").first
 dragon_eats.user_id = 11
-
+dragon_eats.wait_time = 0
 dragon_eats.save
 
 #Seed reservations
-users = [5,6,7,8,9]
-names = [0,1,2,3,4,"Masha","Brick","Hunter","Jen","Jordan"]
+users = [5,6,7]
+names = [0,1,2,3,4,"Masha","Brick","Hunter"]
+timers = [0,1,2,3,4,5,10,15]
 
 users.each do |user|
-  dragon_eats.reservations.create(user_id: user, number_in_party: 3, name: names[user], timer: 10)
+  dragon_eats.reservations.create(user_id: user, number_in_party: 3, name: names[user], timer: timers[user])
 end
 dragon_eats.update_wait_time

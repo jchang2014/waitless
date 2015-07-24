@@ -15,8 +15,9 @@
       <% find_user_reservation = @reservations.where(user_id: @user.id).first %>
       <h1>Current Reservation</h1>
       <div class="current-reservation-wrapper">
-        <div class="current-wait-time">
-  		    <div class="user-wait-time"><%= find_user_reservation.restaurant.wait_time %></div>
+        <div class="current-wait-time"> 
+          <!--user-wait-time-->
+  		    <div class="result-wait-time-number"><%= find_user_reservation.restaurant.wait_time %></div>
   		    <div class="user-wait-time-text">minute(s) until you are seated</div>
           </div>
 
