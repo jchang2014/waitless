@@ -4,6 +4,7 @@ class ReservationsController < ApplicationController
 
 	def create
 		@restaurant = Restaurant.find(params[:restaurant_id])
+		@restaurant.update_wait_time
 		@reservation = @restaurant.reservations.new(
 			number_in_party: params[:reservation][:number_in_party],
 			user_id: session[:user_id],

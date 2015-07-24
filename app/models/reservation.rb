@@ -17,11 +17,11 @@ class Reservation < ActiveRecord::Base
   def update_timer
     case self.number_in_party
     when 1..2
-      update_column(:timer, 5)
-    when 3..4
       update_column(:timer, 10)
-    else
+    when 3..4
       update_column(:timer, 15)
+    else
+      update_column(:timer, 20)
     end
   end
 
