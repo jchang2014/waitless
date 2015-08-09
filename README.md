@@ -8,7 +8,11 @@ This app is available at [http://wait-less.herokuapp.com/](http://wait-less.hero
 
 ## Database Schema
 
+![waitless-schema](images/waitless-schema.png)
+
 ## Wireframe
+
+
 
 ## User Stories
 
