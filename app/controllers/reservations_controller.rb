@@ -4,7 +4,7 @@ class ReservationsController < ApplicationController
 
 	def create
 		@restaurant = Restaurant.find(params[:restaurant_id])
-		@restaurant.update_wait_time
+		@restaurant.update_wait_time if @restaurant.reservations.length > 0
 		@reservation = @restaurant.reservations.new(
 			number_in_party: params[:reservation][:number_in_party],
 			user_id: session[:user_id],
@@ -12,6 +12,7 @@ class ReservationsController < ApplicationController
 			timer: @restaurant.wait_time, name: params[:reservation][:name])
 
 		if @reservation.save
+			p @reservation
 			NotifyUsersWorker.perform_in(@reservation.notification_delay.minutes, @reservation.id)
 			@restaurant.update_wait_time
 			@reservation.update_timer
