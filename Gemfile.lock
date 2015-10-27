@@ -231,6 +231,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt
+  coffee-rails (~> 4.1.0)
   dotenv-rails
   jbuilder (~> 2.0)
   jquery-rails

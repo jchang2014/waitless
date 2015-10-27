@@ -69,5 +69,6 @@
 
 </div>
 
-<%= render :partial => "/reservations/reservations", locals: {reservations: @reservations, restaurant: @restaurant} %>
+<%= react_component 'Reservations', {data: @reservations} %>
+<%#= render :partial => "/reservations/reservations", locals: {reservations: @reservations, restaurant: @restaurant} %>
 
