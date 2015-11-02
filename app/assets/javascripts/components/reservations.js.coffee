@@ -1,6 +1,11 @@
 @Reservations = React.createClass
   getInitialState: ->
     reservations: @props.data
+  addReservation: ->
+    reservations = React.addons.update(@state.reservations, {$push: [reservation]})
+  updateReservation: (reservation, data) ->
+    index = @state.reservations.indexOf reservation
+    
   render: ->
     React.DOM.div
       className: 'restaurant-waitlist-info'

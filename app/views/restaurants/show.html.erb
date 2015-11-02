@@ -9,22 +9,23 @@
 
     <div class="waitlist">
       <% if current_user %>
-        <%= form_for [@restaurant, @new_reservation], :html =>{:class => 'waitlist-form'} do |f| %>
-          <table align=center class="waitlist-form-table">
+        <%= react_component 'ReservationForm' %>
+        <%#= form_for [@restaurant, @new_reservation], :html =>{:class => 'waitlist-form'} do |f| %>
+          <!-- <table align=center class="waitlist-form-table">
             <tr>
               <td><label>Name</label></td>
-              <td><%= f.text_field :name %></td>
+              <td><%#= f.text_field :name %></td>
             </tr>
             <tr>
               <td><label>Party Number</label></td>
-              <td><%= f.text_field :number_in_party %></td>
+              <td><%#= f.text_field :number_in_party %></td>
             </tr>
             <tr>
               <td></td>
-              <td><%= f.submit 'Sign me up!', :class => 'waitlist-button' %></td>
+              <td><%#= f.submit 'Sign me  up!', :class => 'waitlist-button' %></td>
             </tr>
           </table>
-        <% end %>
+        <#% end %> -->
       <% else %>
         <br>
         <br>
@@ -70,5 +71,5 @@
 </div>
 
 <%= react_component 'Reservations', {data: @reservations} %>
-<%#= render :partial => "/reservations/reservations", locals: {reservations: @reservations, restaurant: @restaurant} %>
+
 

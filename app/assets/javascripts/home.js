@@ -63,7 +63,9 @@ function createMap(lat, longit) {
   };
 
   var mapDiv = document.getElementById('map-canvas');
-  map = new google.maps.Map(mapDiv, mapOptions);
+  if (mapDiv) {
+    map = new google.maps.Map(mapDiv, mapOptions);
+  };
 
     //Add wolfjob restaurant
   var request = {

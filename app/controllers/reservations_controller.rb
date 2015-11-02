@@ -14,10 +14,12 @@ class ReservationsController < ApplicationController
 			NotifyUsersWorker.perform_in(@reservation.notification_delay.minutes, @reservation.id)
 			@restaurant.update_wait_time
 			@reservation.update_timer
-			redirect_to "/users/#{session[:user_id]}"
+			render json: @reservation
+			#redirect_to "/users/#{session[:user_id]}"
 		else
 			@errors = @reservation.errors.full_messages
-			redirect "/restaurant/#{params[:restaurant_id]}"
+			render json: @reservation.errors, status: :unprocessable_entity
+			#redirect "/restaurant/#{params[:restaurant_id]}"
 		end
 	end
 
